@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*--------------------------------------------------
+  Charte graphique et typographies (Figma)
+--------------------------------------------------*/
+@layer base {
+  :root {
+    /* Couleurs principales (HSL) */
+    --background: 207 13% 94%;
+    /* #ECF0F1 */
+    --foreground: 213 31% 10%;
+    /* #0E141A */
+    --primary: 218 35% 26%;
+    /* #2C3E50 */
+    --secondary: 28 100% 34%;
+    /* #E67E22 */
+    --variant: 207 68% 50%;
+    /* #2980B9 */
+
+    /* Tonalités complémentaires */
+    --muted: 207 20% 40%;
+    /* gris moyen */
+    --accent-foreground: 213 31% 91%;
+
+    /* Rayons et bordures */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+
+  /* Reset des fonds et texte */
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Titres et hiérarchie typographique */
+  h1 {
+    font-family: "plus-jakarta-sans", sans-serif;
+    font-size: 2.5rem;
+    /* 40px */
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--primary);
+  }
+
+  h2 {
+    font-family: "plus-jakarta-sans", sans-serif;
+    font-size: 2rem;
+    /* 32px */
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--foreground);
+  }
+
+  h3 {
+    font-family: "plus-jakarta-sans", sans-serif;
+    font-size: 1.75rem;
+    /* 28px */
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--foreground);
+  }
+
+  h4 {
+    font-family: "inter", sans-serif;
+    font-size: 1.5rem;
+    /* 24px */
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--foreground);
+  }
+
+  h5 {
+    font-family: "inter", sans-serif;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--foreground);
+  }
+
+  h6 {
+    font-family: "inter", sans-serif;
+    font-size: 1rem;
+    /* 16px */
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--foreground);
+  }
+
+  /* Paragraphes et petits textes */
+  p,
+  li {
+    font-family: "inter", sans-serif;
+    font-size: 1rem;
+    /* 16px */
+    font-weight: 400;
+    letter-spacing: 0.5%;
+    color: var(--foreground);
+  }
+
+  .text-alt,
+  small {
+    font-family: "inter", sans-serif;
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 400;
+    letter-spacing: 0.25%;
+    color: var(--muted);
+  }
+
+  /* Liens */
+  a {
+    font-family: "inter", sans-serif;
+    color: var(--secondary);
+    letter-spacing: 0.5%;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--variant);
+    text-decoration: none;
+  }
+
+  /* Boutons */
+  .btn {
+    font-family: "inter", sans-serif;
+    display: inline-block;
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 600;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    @apply bg-primary text-accent-foreground rounded-md px-6 py-4;
+    transition: background-color 0.2s;
+  }
+
+  .btn:hover {
+    background-color: hsl(var(--variant));
+  }
+}
