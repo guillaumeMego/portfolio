@@ -48,23 +48,22 @@ export default function Home() {
               <Link href={`/projects/${project.id}`} key={project.id}>
                 <motion.div
                   className="group rounded-lg overflow-hidden cursor-pointer shadow-xl"
-                  initial={{ opacity: 0 }} // ❌ pas de y:20 → évite le layout shift
+                  initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   {/* Image + overlay */}
                   <div className="relative w-full h-[300px]">
                     {" "}
-                    {/* ✅ hauteur explicite */}
+                    {/* Hauteur fixe = pas de layout shift */}
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      priority={index === 0} // ✅ LCP optimisé
+                      priority={index === 0} // important pour LCP
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover" // ❌ pas de transition au premier paint
+                      className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
 
                   {/* Titre + description */}
