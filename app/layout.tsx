@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
+import { CanonicalHead } from "@/components/CanonicalHead";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -73,23 +74,19 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        {/* Favicon basique */}
+        {/* Charset */}
+        <meta charSet="UTF-8" />
+
+        {/* Canonical (si dynamique avec usePathname, voir en dessous) */}
+        <CanonicalHead />
+
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
-
-        {/* SVG favicon pour une meilleure qualité */}
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-
-        {/* Pour iOS */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-        {/* Pour le manifest */}
         <link rel="manifest" href="/manifest.webmanifest" />
-
-        {/* Pour Windows */}
         <meta name="msapplication-TileColor" content="#0f172a" />
         <meta name="msapplication-TileImage" content="/icon-144.png" />
-
-        {/* Thème */}
         <meta name="theme-color" content="#0f172a" />
       </head>
       <body className={inter.className}>
