@@ -46,27 +46,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 z-10">
             {filteredProjects.map((project, index) => (
               <Link href={`/projects/${project.id}`} key={project.id}>
-                <motion.div
+                <div
                   className="group rounded-lg overflow-hidden cursor-pointer shadow-xl"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  style={{ minHeight: "460px" }} // ✅ Réserve de place = pas de CLS
                 >
-                  {/* Image + overlay */}
                   <div className="relative w-full h-[300px]">
-                    {" "}
-                    {/* Hauteur fixe = pas de layout shift */}
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      priority={index === 0} // important pour LCP
+                      priority={index === 0}
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105" // ✅ EFFET scale conservé
                     />
                   </div>
 
-                  {/* Titre + description */}
                   <div className="p-6 bg-background">
                     <div className="flex items-center gap-2 mb-2">
                       {project.category === "dev" ? (
@@ -81,8 +75,6 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground font-normal">
                       {project.description.minidescription}
                     </p>
-
-                    {/* Technologies */}
                     <div className="flex flex-wrap gap-2 mt-3">
                       {project.technologies?.map((tech) => (
                         <span
@@ -94,7 +86,7 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </Link>
             ))}
           </div>
