@@ -21,9 +21,10 @@ export default function HeroClient() {
       </motion.h1>
       <motion.p
         className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-normal"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        style={{ minHeight: "4.5rem" }} // ✅ stabilité du bloc texte
       >
         Je suis <strong className="font-semibold">Guillaume</strong>,
         développeur full stack & designer web à Angoulême. Spécialisé en{" "}
