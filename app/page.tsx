@@ -48,20 +48,19 @@ export default function Home() {
               <Link href={`/projects/${project.id}`} key={project.id}>
                 <motion.div
                   className="group relative h-[300px] rounded-lg overflow-hidden cursor-pointer shadow-xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="relative h-full">
+                  <div className="relative w-full h-[300px]">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      priority={index === 0} // optimise LCP
+                      priority={index === 0}
                       className="object-cover"
                     />
-                    {/* … gradient overlay & caption */}
                   </div>
                 </motion.div>
               </Link>
