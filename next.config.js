@@ -21,12 +21,12 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value: `
-    default-src 'self';
-    script-src 'self' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
-    object-src 'none';
-    frame-ancestors 'none';
-  `.replace(/\s{2,}/g, ' ').trim()
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline';
+        object-src 'none';
+        frame-ancestors 'none';
+      `.replace(/\s{2,}/g, ' ').trim(),
           },
         ],
       },
@@ -40,7 +40,8 @@ const nextConfig = {
   },
   trailingSlash: true,
   experimental: {
-    optimizeCss: true
+    optimizeCss: true,
+    optimizeFonts: true,
   }
 };
 

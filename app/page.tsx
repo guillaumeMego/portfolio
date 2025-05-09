@@ -47,20 +47,53 @@ export default function Home() {
             {filteredProjects.map((project, index) => (
               <Link href={`/projects/${project.id}`} key={project.id}>
                 <motion.div
-                  className="group relative h-[300px] rounded-lg overflow-hidden cursor-pointer shadow-xl"
-                  initial={{ opacity: 0 }}
+                  className="group rounded-lg overflow-hidden cursor-pointer shadow-xl"
+                  initial={{ opacity: 0 }} // ❌ pas de y:20 → évite le layout shift
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
+                  {/* Image + overlay */}
                   <div className="relative w-full h-[300px]">
+                    {" "}
+                    {/* ✅ hauteur explicite */}
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
+                      priority={index === 0} // ✅ LCP optimisé
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      priority={index === 0}
-                      className="object-cover"
+                      className="object-cover" // ❌ pas de transition au premier paint
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  </div>
+
+                  {/* Titre + description */}
+                  <div className="p-6 bg-background">
+                    <div className="flex items-center gap-2 mb-2">
+                      {project.category === "dev" ? (
+                        <Code className="h-5 w-5 text-primary" />
+                      ) : (
+                        <Film className="h-5 w-5 text-primary" />
+                      )}
+                      <h2 className="text-xl font-semibold text-foreground">
+                        {project.title}
+                      </h2>
+                    </div>
+                    <p className="text-sm text-muted-foreground font-normal">
+                      {project.description.minidescription}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {project.technologies?.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary-foreground font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               </Link>
