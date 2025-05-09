@@ -20,7 +20,13 @@ const nextConfig = {
           // Protection XSS (exemple de CSP simple à adapter)
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none';"
+            value: `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';
+    frame-ancestors 'none';
+  `.replace(/\s{2,}/g, ' ').trim()
           },
         ],
       },
