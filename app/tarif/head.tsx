@@ -46,5 +46,5 @@ export const metadata: Metadata = {
 };
 
 export default function Head() {
-  return null; // Next injecte automatiquement
+  return null;
 }
