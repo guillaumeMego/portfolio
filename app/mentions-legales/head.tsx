@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Mentions Légales | Guillaume Ganne",
   description:
     "Mentions légales et informations juridiques concernant le site web de Guillaume Ganne, développeur web et vidéaste à Angoulême. RGPD, cookies et droits d'auteur.",
+  alternates: {
+    canonical: "https://guillaumeganne.com/mentions-legales",
+  },
   keywords: [
     "mentions légales",
     "RGPD",

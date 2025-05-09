@@ -5,6 +5,9 @@ export const metadata: Metadata = {
     "À Propos | Guillaume Ganne – Développeur Web Freelance & Designer UX/UI à Angoulême",
   description:
     "En savoir plus sur Guillaume Ganne, développeur web freelance & designer UX/UI basé à Angoulême. Expert en création de sites sur-mesure, optimisation SEO local et accessibilité Opquast.",
+  alternates: {
+    canonical: "https://guillaumeganne.com/a-propos",
+  },
   keywords: [
     "développeur web freelance Angoulême",
     "designer UX UI Angoulême",

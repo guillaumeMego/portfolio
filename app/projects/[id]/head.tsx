@@ -27,6 +27,9 @@ export async function generateMetadata({
   return {
     title: `${project.title} | Portfolio de Guillaume Ganne`,
     description: project.description.storytelling.slice(0, 155) + "...",
+    alternates: {
+      canonical: "https://guillaumeganne.com/projects/" + project.id,
+    },
     keywords: [
       project.category === "dev" ? "développement web" : "production vidéo",
       "portfolio",

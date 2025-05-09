@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     "Contact | Guillaume Création – Développeur Web & Vidéaste à Angoulême",
   description:
     "Contactez Guillaume Création, développeur web full-stack et vidéaste à Angoulême, pour un devis rapide sur vos projets de site internet, d'identité visuelle ou de production vidéo.",
+  alternates: {
+    canonical: "https://guillaumeganne.com/contact",
+  },
   keywords: [
     "contact guillaume création",
     "devis site internet angoulême",
