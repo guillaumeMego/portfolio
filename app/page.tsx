@@ -54,14 +54,12 @@ export default function Home() {
                 >
                   <div className="relative h-full">
                     <Image
-                      src={project.image.src}
-                      width={project.image.width}
-                      height={project.image.height}
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      quality={75}
-                      priority={index === 0}
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      src={project.image}
                       alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={index === 0} // optimise LCP
+                      className="object-cover"
                     />
                     {/* … gradient overlay & caption */}
                   </div>
