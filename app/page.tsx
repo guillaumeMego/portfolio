@@ -48,16 +48,16 @@ export default function Home() {
               <Link href={`/projects/${project.id}`} key={project.id}>
                 <div
                   className="group rounded-lg overflow-hidden cursor-pointer shadow-xl"
-                  style={{ minHeight: "460px" }} // ✅ Réserve de place = pas de CLS
+                  style={{ minHeight: "460px" }}
                 >
                   <div className="relative w-full h-[300px]">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      priority={index === 0}
+                      priority={index < 2}
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105" // ✅ EFFET scale conservé
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
