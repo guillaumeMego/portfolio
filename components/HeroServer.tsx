@@ -7,10 +7,7 @@ export default function HeroServer() {
       >
         Création de site web sur mesure pour les pros exigeants
       </h1>
-      <p
-        className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-normal"
-        style={{ minHeight: "4.5rem" }} // ✅ stabilité du bloc texte
-      >
+      <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-normal min-h-[4.5rem]">
         Je suis <strong className="font-semibold">Guillaume</strong>,
         développeur full stack & designer web à Angoulême. Spécialisé en{" "}
         <em>création de site internet à Angoulême</em> : site vitrine,

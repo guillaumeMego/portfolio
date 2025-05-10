@@ -11,6 +11,7 @@ const HeroServer = dynamic(() => import("@/components/HeroServer"), {
 });
 const HeroClient = dynamic(() => import("@/components/HeroClient"), {
   ssr: false,
+  loading: () => <div className="h-[500px] bg-background" />,
 });
 
 export default function Home() {
