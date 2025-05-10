@@ -11,12 +11,17 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const Icon = project.category === "dev" ? Code : Film;
   return (
-    <Link href={`/projects/${project.id}`} prefetch={false}>
+    <Link
+      href={`/projects/${project.id}`}
+      prefetch={false}
+      aria-label={`Voir les détails du projet : ${project.title}`}
+    >
       <article className="group rounded-lg overflow-hidden cursor-pointer shadow-xl min-h-[460px]">
         <div className="relative w-full h-[300px]">
           <Image
             src={project.image}
-            alt={project.title}
+            // alt descriptif pour éviter la redondance
+            alt={`Capture d'écran du projet : ${project.title}`}
             fill
             priority={index < 2}
             sizes="(max-width: 768px) 100vw, 50vw"

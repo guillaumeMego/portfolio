@@ -3,7 +3,7 @@ export default function HeroServer() {
     <div className="text-center max-w-3xl mx-auto mt-24 px-4">
       <h1
         className="text-4xl md:text-5xl font-bold mb-4 text-primary"
-        style={{ minHeight: "3.5rem" }} // ✅ stabilité CLS si contenu change
+        style={{ minHeight: "3.5rem" }}
       >
         Création de site web sur mesure pour les pros exigeants
       </h1>
