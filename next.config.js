@@ -38,7 +38,7 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
-  trailingSlash: true,
+  trailingSlash: false,
   experimental: {
     optimizeCss: true,
     optimizeFonts: true,
