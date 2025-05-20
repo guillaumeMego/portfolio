@@ -3,14 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import DotPattern from "@/components/ui/dot-pattern";
 import { Code, Palette } from "lucide-react";
 
 export default function About() {
   return (
     <>
-      <div className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 bg-background relative my-24">
-        <DotPattern className="absolute inset-0 opacity-50 z-0" />
+      <div className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 relative my-24">
         <motion.div
           className="max-w-7xl mx-auto relative z-10 space-y-12"
           initial={{ opacity: 0, y: 20 }}

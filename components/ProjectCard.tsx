@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Code, Film } from "lucide-react";
 import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -9,7 +8,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const Icon = project.category === "dev" ? Code : Film;
   return (
     <Link
       href={`/projects/${project.id}`}
@@ -30,7 +28,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
         <div className="p-6 bg-background">
           <div className="flex items-center gap-2 mb-2">
-            <Icon className="h-5 w-5 text-primary" />
             <h2 className="text-xl font-semibold text-foreground">
               {project.title}
             </h2>

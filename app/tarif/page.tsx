@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import { DotPattern } from "@/components/ui/dot-pattern";
 
 export default function Tarif() {
   const webServices = [
@@ -59,8 +58,7 @@ export default function Tarif() {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-background text-foreground relative mt-24">
-      <DotPattern className="absolute inset-0 opacity-50 z-0" />
+    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-foreground relative mt-24">
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         {/* Header */}
         <motion.div

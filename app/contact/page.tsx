@@ -17,8 +17,7 @@ export default function ContactPage() {
   // Affiche un message de succès
   if (state.succeeded) {
     return (
-      <div className="min-h-screen flex items-center justify-center pt-24 px-4 bg-background text-foreground">
-        <DotPattern className="absolute inset-0 opacity-15 z-0" />
+      <div className="min-h-screen flex items-center justify-center pt-24 px-4 text-foreground">
         <motion.div
           className="relative z-10 bg-card p-8 rounded-lg shadow-lg text-center max-w-md"
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +28,7 @@ export default function ContactPage() {
             Votre message a bien été envoyé. Je vous recontacterai très vite.
           </p>
           <Link href="/" className="text-primary hover:underline">
-            ← Retour à l’accueil
+            ← Retour à l'accueil
           </Link>
         </motion.div>
       </div>
@@ -37,8 +36,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-background text-foreground relative mt-24">
-      <DotPattern className="absolute inset-0 opacity-50 z-0" />
+    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-foreground relative mt-24">
       <motion.div
         className="relative z-10 max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12"
         initial={{ opacity: 0, y: 20 }}
@@ -177,7 +175,7 @@ export default function ContactPage() {
             </label>
           </div>
 
-          {/* Bouton d’envoi */}
+          {/* Bouton d'envoi */}
           <ShimmerButton
             type="submit"
             className="w-full py-3 bg-primary text-white rounded-lg hover:bg-primary/80 transition"

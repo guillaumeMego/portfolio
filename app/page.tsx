@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 const HeroServer = dynamic(() => import("@/components/HeroServer"), {
   ssr: true,
@@ -15,30 +15,19 @@ const HeroClient = dynamic(() => import("@/components/HeroClient"), {
 });
 
 export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showClientHero, setShowClientHero] = useState(false);
 
   useEffect(() => {
     setShowClientHero(true);
   }, []);
 
-  const filtered = useMemo(
-    () =>
-      selectedCategory
-        ? projects.filter((p) => p.category === selectedCategory)
-        : projects,
-    [selectedCategory]
-  );
-
   return (
-    <div className="min-h-screen pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-background text-foreground relative">
-      <DotPattern className="absolute inset-0 opacity-50 z-0" />
-
+    <div className="min-h-screen pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-foreground relative">
       {showClientHero ? <HeroClient /> : <HeroServer />}
 
       <div className="max-w-7xl mx-auto space-y-16 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filtered.map((p, i) => (
+          {projects.map((p, i) => (
             <ProjectCard key={p.id} project={p} index={i} />
           ))}
         </div>

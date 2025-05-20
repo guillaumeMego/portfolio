@@ -3,12 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { DotPattern } from "@/components/ui/dot-pattern";
 
 export default function LegalPage() {
   return (
     <div className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8">
-      <DotPattern className="absolute inset-0 opacity-50 z-0" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

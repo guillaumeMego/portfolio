@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { CanonicalHead } from "@/components/CanonicalHead";
+import { DotPattern } from "@/components/ui/dot-pattern";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -106,9 +107,10 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen relative">
+            <DotPattern className="absolute inset-0 opacity-50 z-0" />
             <Navigation />
-            <main className="flex-grow mb-10">{children}</main>
+            <main className="flex-grow mb-10 relative z-10">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

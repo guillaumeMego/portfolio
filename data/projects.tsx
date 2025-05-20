@@ -1,7 +1,6 @@
 export interface Project {
   id: number;
   title: string;
-  category: "dev";
   type:
     | "Client"
     | "Projet Personnel"
@@ -46,7 +45,6 @@ export const projects: Project[] = sortProjectsByDate([
   {
     id: 1,
     title: "Les Créas de Rose Bleue",
-    category: "dev",
     type: "Client",
     image: { src: "/images/creas.png", width: 1200, height: 800 },
     description: {
@@ -70,7 +68,6 @@ export const projects: Project[] = sortProjectsByDate([
   {
     id: 2,
     title: "Pendu Pokémon",
-    category: "dev",
     type: "Projet Étudiant",
     image: { src: "/images/pokemon.png", width: 1200, height: 800 },
     description: {
@@ -91,7 +88,6 @@ export const projects: Project[] = sortProjectsByDate([
   {
     id: 3,
     title: "Soup' Ô Potes",
-    category: "dev",
     type: "Client",
     image: { src: "/images/soupsite.webp", width: 1200, height: 800 },
     description: {

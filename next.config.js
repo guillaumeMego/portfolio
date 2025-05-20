@@ -1,4 +1,22 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
+const cspValue = isProd
+  ? `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';
+    frame-ancestors 'none';
+  `.replace(/\s{2,}/g, ' ').trim()
+  : `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval';
+    style-src 'self' 'unsafe-inline';
+    object-src 'none';
+    frame-ancestors 'none';
+  `.replace(/\s{2,}/g, ' ').trim();
+
 const nextConfig = {
   async headers() {
     return [
@@ -14,19 +32,13 @@ const nextConfig = {
           // Réduit les infos de referrer envoyées
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
 
-          // Désactive l’accès à certaines API navigateur
+          // Désactive l'accès à certaines API navigateur
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
 
           // Protection XSS (exemple de CSP simple à adapter)
           {
             key: "Content-Security-Policy",
-            value: `
-        default-src 'self';
-        script-src 'self' 'unsafe-inline';
-        style-src 'self' 'unsafe-inline';
-        object-src 'none';
-        frame-ancestors 'none';
-      `.replace(/\s{2,}/g, ' ').trim(),
+            value: cspValue,
           },
         ],
       },
