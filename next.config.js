@@ -54,7 +54,44 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizeFonts: true,
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/projects/3',
+        destination: '/projects/soup-o-potes',
+        permanent: true,
+      },
+      {
+        source: '/projects/2',
+        destination: '/projects/pendu-pokemon',
+        permanent: true,
+      },
+      {
+        source: '/projects/1',
+        destination: '/projects/les-creas-de-rose-bleue',
+        permanent: true,
+      },
+      {
+        // Redirige http et non-www vers https://www.guillaumeganne.com
+        source: '/:path*',
+        has: [
+          { type: 'host', value: 'guillaumeganne.com' },
+        ],
+        destination: 'https://www.guillaumeganne.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        has: [
+          { type: 'host', value: 'www.guillaumeganne.com' },
+          { type: 'protocol', value: 'http' },
+        ],
+        destination: 'https://www.guillaumeganne.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
