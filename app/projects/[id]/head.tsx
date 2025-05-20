@@ -31,7 +31,6 @@ export async function generateMetadata({
       canonical: "https://guillaumeganne.com/projects/" + project.id,
     },
     keywords: [
-      project.category === "dev" ? "développement web" : "production vidéo",
       "portfolio",
       "projet",
       project.type,
