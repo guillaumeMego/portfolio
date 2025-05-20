@@ -80,6 +80,11 @@ const nextConfig = {
         destination: '/projects/les-creas-de-rose-bleue',
         permanent: true,
       },
+      {
+        source: '/plan-du-site-guillaume-ganne/',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
