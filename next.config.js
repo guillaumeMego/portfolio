@@ -50,13 +50,21 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  optimizeFonts: true,
   trailingSlash: false,
   experimental: {
     optimizeCss: true,
-    optimizeFonts: true,
   },
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [
+          { type: 'host', value: 'guillaumeganne.com' },
+        ],
+        destination: 'https://www.guillaumeganne.com/:path*',
+        permanent: true,
+      },
       {
         source: '/projects/3',
         destination: '/projects/soup-o-potes',
@@ -70,24 +78,6 @@ const nextConfig = {
       {
         source: '/projects/1',
         destination: '/projects/les-creas-de-rose-bleue',
-        permanent: true,
-      },
-      {
-        // Redirige http et non-www vers https://www.guillaumeganne.com
-        source: '/:path*',
-        has: [
-          { type: 'host', value: 'guillaumeganne.com' },
-        ],
-        destination: 'https://www.guillaumeganne.com/:path*',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [
-          { type: 'host', value: 'www.guillaumeganne.com' },
-          { type: 'protocol', value: 'http' },
-        ],
-        destination: 'https://www.guillaumeganne.com/:path*',
         permanent: true,
       },
     ];
