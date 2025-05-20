@@ -4,14 +4,15 @@ import type { Metadata } from "next";
 
 interface ProjectDetailsProps {
   params: {
-    id: string;
+    slug: string;
   };
 }
 
 export async function generateMetadata({
   params,
 }: ProjectDetailsProps): Promise<Metadata> {
-  const project = projects.find((p) => p.id === parseInt(params.id));
+  const project = projects.find((p) => p.slug === params.slug);
+  const canonicalUrl = `https://www.guillaumeganne.com/projects/${params.slug}`;
 
   if (!project) {
     return {
@@ -21,6 +22,7 @@ export async function generateMetadata({
         index: false,
         follow: false,
       },
+      alternates: { canonical: canonicalUrl },
     };
   }
 
@@ -28,7 +30,7 @@ export async function generateMetadata({
     title: `${project.title} | Portfolio de Guillaume Ganne`,
     description: project.description.storytelling.slice(0, 155) + "...",
     alternates: {
-      canonical: "https://guillaumeganne.com/projects/" + project.id,
+      canonical: canonicalUrl,
     },
     keywords: [
       "portfolio",
@@ -41,7 +43,7 @@ export async function generateMetadata({
       description: project.description.minidescription,
       type: "article",
       locale: "fr_FR",
-      url: `https://guillaumeganne.com/projects/${project.id}`,
+      url: `https://guillaumeganne.com/projects/${project.slug}`,
       siteName: "Guillaume Ganne",
       images: [
         {

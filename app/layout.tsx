@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { CanonicalHead } from "@/components/CanonicalHead";
 import { DotPattern } from "@/components/ui/dot-pattern";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,21 +16,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://guillaumeganne.com"),
-  title: {
-    default: "Guillaume Ganne | Développeur Web & Vidéaste",
-    template: "%s | Guillaume Ganne",
-  },
+  metadataBase: new URL("https://www.guillaumeganne.com"),
+  title: "Web designer & développeur full-stack – Guillaume Ganne, Angoulême",
   description:
-    "Portfolio de Guillaume Ganne – Développeur Web Full-Stack & Vidéaste à Angoulême. Création de sites internet sur-mesure, WordPress, e-commerce et contenus vidéo optimisés SEO local.",
+    "Portfolio de Guillaume Ganne, web designer et développeur full-stack à Angoulême. Sites vitrines, e-commerce et web-apps sur-mesure optimisés SEO local.",
+  alternates: {
+    canonical: "https://www.guillaumeganne.com/",
+  },
   keywords: [
     "développeur web",
-    "vidéaste",
+    "web designer",
     "full stack",
     "react",
     "next.js",
     "angoulême",
-    "création vidéo",
+    "création site web",
   ],
   authors: [{ name: "Guillaume Ganne" }],
   creator: "Guillaume Ganne",
@@ -42,17 +43,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://guillaumeganne.com",
-    title: "Guillaume Ganne | Développeur Web & Vidéaste",
+    url: "https://www.guillaumeganne.com",
+    title: "Web designer & développeur full-stack – Guillaume Ganne, Angoulême",
     description:
-      "Portfolio de Guillaume Ganne - Développeur Web Full Stack et Vidéaste basé à Angoulême",
+      "Portfolio de Guillaume Ganne, web designer et développeur full-stack à Angoulême. Sites vitrines, e-commerce et web-apps sur-mesure optimisés SEO local.",
     siteName: "Guillaume Ganne",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guillaume Ganne | Développeur Web & Vidéaste",
+    title: "Web designer & développeur full-stack – Guillaume Ganne, Angoulême",
     description:
-      "Portfolio de Guillaume Ganne - Développeur Web Full Stack et Vidéaste basé à Angoulême",
+      "Portfolio de Guillaume Ganne, web designer et développeur full-stack à Angoulême. Sites vitrines, e-commerce et web-apps sur-mesure optimisés SEO local.",
   },
   robots: {
     index: true,
@@ -78,7 +79,8 @@ export default function RootLayout({
         {/* Charset */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        {/* Canonical (fixe pour la home) */}
+        <link rel="canonical" href="https://www.guillaumeganne.com/" />
         {/* Canonical (si dynamique avec usePathname, voir en dessous) */}
         <CanonicalHead />
 
@@ -99,8 +101,54 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Guillaume Ganne",
+              url: "https://www.guillaumeganne.com",
+              jobTitle: "Web designer & développeur full-stack",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Angoulême",
+                addressCountry: "FR",
+              },
+              telephone: "+33-6-00-00-00-00",
+              sameAs: [
+                "https://www.linkedin.com/in/guillaume-ganne",
+                "https://github.com/GuillaumeG",
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Accueil",
+                  item: "https://www.guillaumeganne.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Projets",
+                  item: "https://www.guillaumeganne.com#projets",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
+        <Script src="/js/main.js" strategy="lazyOnload" />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

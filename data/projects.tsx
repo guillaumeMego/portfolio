@@ -1,5 +1,4 @@
 export interface Project {
-  id: number;
   title: string;
   type:
     | "Client"
@@ -23,6 +22,7 @@ export interface Project {
   date: string; // Format YYYY-MM
   role?: string;
   clientTestimonial?: string;
+  slug: string;
 }
 
 const standardizeDate = (date: string): string => {
@@ -43,7 +43,6 @@ const sortProjectsByDate = (projects: Project[]): Project[] => {
 
 export const projects: Project[] = sortProjectsByDate([
   {
-    id: 1,
     title: "Les Créas de Rose Bleue",
     type: "Client",
     image: { src: "/images/creas.png", width: 1200, height: 800 },
@@ -64,9 +63,9 @@ export const projects: Project[] = sortProjectsByDate([
     role: "Développeur Web & Designer",
     clientTestimonial:
       "« Le nouveau site a transformé notre activité en ligne, nous recevons des commandes chaque jour ! » - Rose Bleue",
+    slug: "les-creas-de-rose-bleue",
   },
   {
-    id: 2,
     title: "Pendu Pokémon",
     type: "Projet Étudiant",
     image: { src: "/images/pokemon.png", width: 1200, height: 800 },
@@ -84,9 +83,9 @@ export const projects: Project[] = sortProjectsByDate([
     date: "2023-05",
     role: "Développeur Front-End",
     clientTestimonial: "",
+    slug: "pendu-pokemon",
   },
   {
-    id: 3,
     title: "Soup' Ô Potes",
     type: "Client",
     image: { src: "/images/soupsite.webp", width: 1200, height: 800 },
@@ -107,5 +106,6 @@ export const projects: Project[] = sortProjectsByDate([
     role: "Développeur Web & Designer",
     clientTestimonial:
       "« Le site et le logo ont revitalisé notre association, merci pour ce superbe travail ! »",
+    slug: "soup-o-potes",
   },
 ]);

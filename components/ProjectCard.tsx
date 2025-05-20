@@ -10,7 +10,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <Link
-      href={`/projects/${project.id}`}
+      href={`/projects/${project.slug}`}
       prefetch={false}
       aria-label={`Voir les détails du projet : ${project.title}`}
     >

@@ -24,7 +24,7 @@ export default function HeroClient() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        style={{ minHeight: "4.5rem" }} // ✅ stabilité du bloc texte
+        style={{ minHeight: "4.5rem" }}
       >
         Je suis <strong className="font-semibold">Guillaume</strong>,
         développeur full stack & designer web à Angoulême. Spécialisé en{" "}

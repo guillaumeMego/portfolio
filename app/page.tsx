@@ -28,7 +28,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto space-y-16 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
-            <ProjectCard key={p.id} project={p} index={i} />
+            <ProjectCard key={p.slug} project={p} index={i} />
           ))}
         </div>
       </div>
