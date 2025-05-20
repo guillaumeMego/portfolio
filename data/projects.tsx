@@ -45,7 +45,11 @@ export const projects: Project[] = sortProjectsByDate([
   {
     title: "Les Créas de Rose Bleue",
     type: "Client",
-    image: { src: "/images/creas.png", width: 1200, height: 800 },
+    image: {
+      src: "/images/ecommerce-woocommerce-charente.png",
+      width: 1200,
+      height: 800,
+    },
     description: {
       minidescription: "E-commerce de bougies artisanales bio",
       storytelling:
@@ -68,7 +72,11 @@ export const projects: Project[] = sortProjectsByDate([
   {
     title: "Pendu Pokémon",
     type: "Projet Étudiant",
-    image: { src: "/images/pokemon.png", width: 1200, height: 800 },
+    image: {
+      src: "/images/developpement-webapp-react.png",
+      width: 1200,
+      height: 800,
+    },
     description: {
       minidescription: "Jeu du pendu interactif en React",
       storytelling:
