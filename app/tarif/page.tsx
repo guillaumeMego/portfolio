@@ -17,7 +17,7 @@ export default function Tarif() {
         "Formulaire de contact intégré",
       ],
       price: "À partir de 1500€",
-      src: "/images/vitrine.jpg",
+      src: "/images/creation-site-vitrine-angouleme.jpg",
     },
     {
       title: "Site Vitrine + Maquette & SEO",
@@ -41,7 +41,7 @@ export default function Tarif() {
         "Passerelle de paiement et sécurité HTTPS",
       ],
       price: "À partir de 2800€",
-      src: "/images/creas.png",
+      src: "/images/ecommerce-woocommerce-charente.png",
     },
     {
       title: "Application Web Sur-Mesure",
@@ -53,7 +53,7 @@ export default function Tarif() {
         "Interface d'administration sécurisée",
       ],
       price: "À partir de 3500€",
-      src: "/images/pokemon.png",
+      src: "/images/developpement-webapp-react.png",
     },
   ];
 
