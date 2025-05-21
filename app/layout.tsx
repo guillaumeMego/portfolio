@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio de Guillaume Ganne, web designer et développeur full-stack à Angoulême. Sites vitrines, e-commerce et web-apps sur-mesure optimisés SEO local.",
   alternates: {
-    canonical: "https://www.guillaumeganne.com/",
+    canonical: "https://guillaumeganne.com/",
   },
   keywords: [
     "développeur web",
@@ -80,7 +80,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Canonical (fixe pour la home) */}
-        <link rel="canonical" href="https://www.guillaumeganne.com/" />
+        <link rel="canonical" href="https://guillaumeganne.com/" />
         {/* Canonical (si dynamique avec usePathname, voir en dessous) */}
         <CanonicalHead />
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Découvrez mes services de développement web et production vidéo. Site vitrine à partir de 1500€, vidéos promotionnelles à partir de 300€. Solutions sur mesure pour votre entreprise à Angoulême.",
   alternates: {
-    canonical: "https://www.guillaumeganne.com/tarif",
+    canonical: "https://guillaumeganne.com/tarif",
   },
   keywords: [
     "tarifs",

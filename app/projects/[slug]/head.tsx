@@ -12,7 +12,7 @@ export async function generateMetadata({
   params,
 }: ProjectDetailsProps): Promise<Metadata> {
   const project = projects.find((p) => p.slug === params.slug);
-  const canonicalUrl = `https://www.guillaumeganne.com/projects/${params.slug}`;
+  const canonicalUrl = `https://guillaumeganne.com/projects/${params.slug}`;
 
   if (!project) {
     return {

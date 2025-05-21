@@ -60,9 +60,9 @@ const nextConfig = {
       {
         source: '/:path*',
         has: [
-          { type: 'host', value: 'guillaumeganne.com' },
+          { type: 'host', value: 'www.guillaumeganne.com' },
         ],
-        destination: 'https://www.guillaumeganne.com/:path*',
+        destination: 'https://guillaumeganne.com/:path*',
         permanent: true,
       },
       {
