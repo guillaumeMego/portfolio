@@ -57,14 +57,14 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/:path*',
-        has: [
-          { type: 'host', value: 'www.guillaumeganne.com' },
-        ],
-        destination: 'https://guillaumeganne.com/:path*',
-        permanent: true,
-      },
+      // {
+      //   source: '/:path*',
+      //   has: [
+      //     { type: 'host', value: 'www.guillaumeganne.com' },
+      //   ],
+      //   destination: 'https://guillaumeganne.com/:path*',
+      //   permanent: true,
+      // },
       {
         source: '/projects/3',
         destination: '/projects/soup-o-potes',
