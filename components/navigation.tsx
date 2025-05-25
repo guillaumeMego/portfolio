@@ -49,7 +49,7 @@ export function Navigation() {
               width={70}
               height={70}
             />
-            <span>Guillaume Création</span>
+            <span className="hidden md:block text-xl">Guillaume Création</span>
           </Link>
 
           <div className="hidden md:flex space-x-8" role="menubar">

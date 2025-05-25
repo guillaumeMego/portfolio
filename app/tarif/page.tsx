@@ -85,7 +85,7 @@ export default function Tarif() {
             {webServices.map((svc, idx) => (
               <motion.div
                 key={svc.title}
-                className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full"
+                className="bg-[#ECF0F1] p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.2 }}

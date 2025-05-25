@@ -17,7 +17,7 @@ export default function About() {
         >
           {/* Introduction SEO-rich */}
           <section className="space-y-6">
-            <h1 className="text-4xl font-extrabold text-primary">
+            <h1 className="text-4xl md:text-5xl text-center font-extrabold text-primary mb-4">
               À propos de moi
             </h1>
             <p className="text-base md:text-lg leading-relaxed font-normal">

@@ -24,12 +24,13 @@ export default function Home() {
   return (
     <div className="min-h-screen pt-28 pb-16 px-4 sm:px-6 lg:px-8 text-foreground relative">
       {showClientHero ? <HeroClient /> : <HeroServer />}
-
-      <div className="max-w-7xl mx-auto space-y-16 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.slug} project={p} index={i} />
-          ))}
+      <div className="max-w-7xl mx-auto space-y-20 z-10">
+        <div className="py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {projects.map((p, i) => (
+              <ProjectCard key={p.slug} project={p} index={i} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
