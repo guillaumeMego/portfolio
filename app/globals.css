@@ -10,6 +10,8 @@
     /* Couleurs principales (HSL) */
     --background: 207 13% 94%;
     /* #ECF0F1 */
+    --card: 207 13% 94%;
+    /* même valeur que background pour un fond opaque sur les cards */
     --foreground: 213 31% 10%;
     /* #0E141A */
     --primary: 218 35% 26%;
@@ -140,5 +142,15 @@
 
   .btn:hover {
     background-color: hsl(var(--variant));
+  }
+}
+
+@layer utilities {
+  .font-montserrat {
+    font-family: var(--font-montserrat), 'Montserrat', Arial, sans-serif;
+  }
+
+  .font-inter {
+    font-family: var(--font-inter), 'Inter', Arial, sans-serif;
   }
 }

@@ -9,7 +9,6 @@ import { DotPattern } from "@/components/ui/dot-pattern";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import Head from "next/head";
-import { Footer } from "@/components/footer";
 
 export default function ContactPage() {
   // Remplacez "xanojanz" par votre ID Formspree
@@ -19,7 +18,7 @@ export default function ContactPage() {
   // Affiche un message de succès
   if (state.succeeded) {
     return (
-      <>
+      <div className="flex flex-col min-h-[100vh]">
         <div className="flex flex-col min-h-[100vh]">
           <div className="flex-1 flex items-center justify-center pt-24 pb-24 px-4 text-foreground max-h-[100vh]">
             <motion.div
@@ -39,32 +38,36 @@ export default function ContactPage() {
               </Link>
             </motion.div>
           </div>
-          <Footer />
         </div>
-      </>
+      </div>
     );
   }
 
   return (
     <>
-      <Head>
-        <title>Contactez-moi | Guillaume Ganne - Webdesigner à Angoulême</title>
-        <meta
-          name="description"
-          content="Prenez contact avec Guillaume Ganne, webdesigner à Angoulême, pour discuter de votre projet web, obtenir un devis ou des conseils en création de site internet et design."
-        />
-      </Head>
+      <div className="bg-background">
+        <Head>
+          <title>
+            Contactez-moi | Guillaume Ganne - Webdesigner à Angoulême
+          </title>
+          <meta
+            name="description"
+            content="Prenez contact avec Guillaume Ganne, webdesigner à Angoulême, pour discuter de votre projet web, obtenir un devis ou des conseils en création de site internet et design."
+          />
+        </Head>
+      </div>
+
       <div className="flex flex-col min-h-[100vh]">
-        <div className="flex-1 flex items-center justify-center pt-24 pb-24 px-4 text-foreground relative mt-24 max-h-[100vh]">
+        <div className="flex-1 flex items-center justify-center pt-32 md:pt-24 pb-24 px-4 text-foreground relative mt-12 md:mt-24">
           <motion.div
-            className="relative z-10 max-w-4xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            className="relative z-10 max-w-4xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             {/* Colonne 1 : Informations de contact */}
-            <div className="space-y-8 text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
+            <div className="space-y-8 text-left">
+              <h1 className="text-3xl md:text-5xl font-extrabold text-primary mb-4">
                 Contactez-moi
               </h1>
               <p className="text-lg leading-relaxed mb-4">
@@ -74,7 +77,7 @@ export default function ContactPage() {
                 accompagner dans la réussite de votre projet digital.
               </p>
               <div className="space-y-6">
-                <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <div className="flex items-start gap-4">
                   <Mail className="h-8 w-8 text-secondary mt-1" />
                   <div>
                     <h3 className="text-base font-semibold">Email</h3>
@@ -86,7 +89,7 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <div className="flex items-start gap-4">
                   <Phone className="h-8 w-8 text-secondary mt-1" />
                   <div>
                     <h3 className="text-base font-semibold">Téléphone</h3>
@@ -98,7 +101,7 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 justify-center lg:justify-start">
+                <div className="flex items-start gap-4">
                   <MapPin className="h-8 w-8 text-secondary mt-1" />
                   <div>
                     <h3 className="text-base font-semibold">Localisation</h3>
@@ -212,7 +215,6 @@ export default function ContactPage() {
             </form>
           </motion.div>
         </div>
-        <Footer />
       </div>
     </>
   );

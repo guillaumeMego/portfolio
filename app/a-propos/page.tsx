@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Code, Palette } from "lucide-react";
+import { Code, Palette, ChevronRight } from "lucide-react";
 
 export default function About() {
   return (
@@ -17,7 +17,7 @@ export default function About() {
         >
           {/* Introduction SEO-rich */}
           <section className="space-y-6">
-            <h1 className="text-4xl md:text-5xl text-center font-extrabold text-primary mb-4">
+            <h1 className="text-4xl md:text-5xl text-center font-extrabold text-primary mb-8 mt-8">
               À propos de moi
             </h1>
             <p className="text-base md:text-lg leading-relaxed font-normal">
@@ -37,7 +37,7 @@ export default function About() {
             <div className="space-y-6">
               <div className="relative h-[300px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/guillaume.png"
+                  src="/images/guillaume.webp"
                   alt="Portrait de Guillaume Ganne"
                   fill
                   className="object-cover"
@@ -75,7 +75,7 @@ export default function About() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Code className="h-8 w-8 text-secondary" />
-                  <h2 className="text-2xl font-semibold text-foreground">
+                  <h2 className="text-2xl font-bold text-foreground mb-4">
                     Conception web sur-mesure
                   </h2>
                 </div>
@@ -84,17 +84,25 @@ export default function About() {
                   marque : design personnalisé, structure SEO-first, et
                   intégration WordPress ou CMS headless.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-sm text-foreground ml-4">
-                  <li>
+                <div className="space-y-2 text-sm text-foreground">
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
                     Analyse des besoins et UX research pour un parcours
                     utilisateur optimisé
-                  </li>
-                  <li>Maquettes Figma interactives validées étape par étape</li>
-                  <li>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
+                    Maquettes Figma interactives validées étape par étape
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
                     Développement front-end performant et back-end sécurisé
-                  </li>
-                  <li>Formation pour prise en main autonome du site</li>
-                </ul>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
+                    Formation pour prise en main autonome du site
+                  </p>
+                </div>
               </motion.div>
 
               {/* Service 2 */}
@@ -106,7 +114,7 @@ export default function About() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Palette className="h-8 w-8 text-secondary" />
-                  <h2 className="text-2xl font-semibold text-foreground">
+                  <h2 className="text-2xl font-bold text-foreground mb-4">
                     Design UX/UI avancé
                   </h2>
                 </div>
@@ -115,25 +123,33 @@ export default function About() {
                   sur une méthodologie centrée utilisateur et conforme aux
                   normes accessibilité Opquast.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-sm text-foreground ml-4">
-                  <li>
+                <div className="space-y-2 text-sm text-foreground">
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
                     Wireframes et prototypes clairs pour valider chaque
                     fonctionnalité
-                  </li>
-                  <li>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
                     Design system modulable pour maintenir la consistance
                     visuelle
-                  </li>
-                  <li>Tests utilisateurs et ajustements itératifs</li>
-                  <li>Documents de style et guidelines pour votre équipe</li>
-                </ul>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
+                    Tests utilisateurs et ajustements itératifs
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <ChevronRight className="h-4 w-4 text-primary" />
+                    Documents de style et guidelines pour votre équipe
+                  </p>
+                </div>
               </motion.div>
             </div>
           </section>
 
           {/* Section Preuves */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-center text-primary">
+            <h2 className="text-3xl font-bold text-center text-primary mb-8 mt-8">
               Pourquoi me faire confiance
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

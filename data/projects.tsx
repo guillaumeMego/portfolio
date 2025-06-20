@@ -1,28 +1,35 @@
 export interface Project {
-  title: string;
-  type:
-    | "Client"
-    | "Projet Personnel"
-    | "Projet Étudiant"
-    | "Projet bénévole"
-    | "Projet de formation";
+  title: string; // Titre SEO optimisé (≤ 60 caractères)
+  slug: string; // URL optimisée sans stop-words
+  description: string; // Meta description (≤ 160 caractères)
+  h1: string; // H1 de la page
+  date: string; // Format YYYY-MM
   image: {
     src: string;
+    alt: string;
     width: number;
     height: number;
+    blurDataURL?: string;
   };
-  description: {
-    minidescription: string;
-    storytelling: string;
-    objectives: string;
-    outcomes: string;
+  content: {
+    context: string; // Contexte client (50 mots)
+    objectives: string; // Objectifs chiffrés (100 mots)
+    process: string; // Process (UX, dev, SEO) (250 mots)
+    results: string; // Résultats & KPI (150 mots)
   };
-  technologies?: string[];
-  url?: string;
-  date: string; // Format YYYY-MM
-  role?: string;
-  clientTestimonial?: string;
-  slug: string;
+  testimonial?: {
+    text: string;
+    author: string;
+  };
+  technologies: string[]; // Liste des technologies utilisées
+  links: {
+    website: string; // URL du site client
+    services: string; // Lien vers la page service correspondante
+  };
+  schema: {
+    name: string; // Nom du site pour Schema.org
+    url: string; // URL du site pour Schema.org
+  };
 }
 
 const standardizeDate = (date: string): string => {
@@ -37,147 +44,288 @@ const sortProjectsByDate = (projects: Project[]): Project[] => {
   return [...projects].sort((a, b) => {
     const dateA = standardizeDate(a.date);
     const dateB = standardizeDate(b.date);
-    return dateB.localeCompare(dateA);
+    const dateComparison = dateB.localeCompare(dateA);
+
+    // Si les dates sont identiques, trier par titre
+    if (dateComparison === 0) {
+      return a.title.localeCompare(b.title);
+    }
+
+    return dateComparison;
   });
 };
 
 export const projects: Project[] = sortProjectsByDate([
   {
-    title: "Les Créas de Rose Bleue",
-    type: "Client",
-    image: {
-      src: "/images/ecommerce-woocommerce-charente.png",
-      width: 1200,
-      height: 800,
-    },
-    description: {
-      minidescription: "E-commerce de bougies artisanales bio",
-      storytelling:
-        "Refonte complète du site de Rose Bleue, créatrice de bougies artisanales bio, pour moderniser son image et optimiser l'expérience utilisateur.",
-      objectives:
-        "• Développer un site e-commerce performant sous WooCommerce\n" +
-        "• Mettre en place un design responsive et une identité visuelle unique\n" +
-        "• Optimiser le référencement local pour Angoulême et la performance PageSpeed.",
-      outcomes:
-        "Site exporté avec un score PageSpeed de 99%, SEO local amélioré, et augmentation du taux de conversion de 25% suite au lancement.",
-    },
-    technologies: ["WordPress", "WooCommerce", "PHP", "Figma", "Rank Math SEO"],
-    url: "https://lescreasderosebleue.com",
+    title: "création e-commerce bougies bio | les créas de rose bleue",
+    slug: "creation-boutique-bougies-bio",
+    description:
+      "Création d'un site e-commerce WooCommerce (99 PSI) avec une stratégie de lancement pour générer les premières ventes.",
+    h1: "Les Créas de Rose Bleue : e-commerce de bougies bio",
     date: "2024-06",
-    role: "Développeur Web & Designer",
-    clientTestimonial:
-      "« Le nouveau site a transformé notre activité en ligne, nous recevons des commandes chaque jour ! » - Rose Bleue",
-    slug: "les-creas-de-rose-bleue",
-  },
-  {
-    title: "Pendu Pokémon",
-    type: "Projet Étudiant",
     image: {
-      src: "/images/developpement-webapp-react.png",
+      src: "/images/projects/crea/creas.webp",
+      alt: "Création d'un site e-commerce pour des bougies bio",
       width: 1200,
-      height: 800,
+      height: 630,
+      blurDataURL: "/images/projects/crea/creas.blur.webp",
     },
-    description: {
-      minidescription: "Jeu du pendu interactif en React",
-      storytelling:
-        "Durant mes études, j'ai conçu 'Pendu Pokémon' pour allier jeu éducatif et univers ludique, créant une interface intuitive en React.",
-      objectives:
-        "Développer un jeu web interactif en React, accessible et responsive, puis l'étendre en React Native pour mobile.",
-      outcomes:
-        "Projet disponible sur GitHub, démontrant mes compétences front-end et mobile, et validé par mes formateurs.",
+    content: {
+      context: `Rose Bleue souhaitait créer un site de vente pour ses bougies artisanales bio. L'objectif était de construire une expérience d'achat fluide tout en valorisant l'aspect artisanal et écologique de ses créations.`,
+
+      objectives: `• Lancer la boutique et générer les premières ventes
+• Optimiser le référencement sur "bougies artisanales bio"
+• Atteindre un score PageSpeed > 90
+• Mettre en place une gestion simple des commandes et du stock
+• Intégrer un système de paiement sécurisé`,
+
+      process: `1. Identité Visuelle & Design
+• Création du logo, de la charte graphique et des cartes de visite
+• Conception des visuels pour les réseaux sociaux
+• Maquettes Figma validées en 3 itérations
+• Parcours d'achat optimisé mobile-first
+
+2. Développement
+• Installation WooCommerce personnalisée
+• Intégration Stripe pour les paiements
+• Configuration des variations produits
+• Optimisation des images WebP
+
+3. SEO & Performance
+• Structure Schema.org e-commerce
+• Balises meta & contenu optimisés
+• Cache LiteSpeed + CDN
+• Score PageSpeed 99/100`,
+
+      results: `🚀 Lancement réussi et premières ventes en ligne
+⚡ Score PageSpeed 99 mobile
+🔎 Top 5 sur "bougies artisanales bio"
+📱 Taux de rebond mobile -35%
+💳 Panier moyen +15%`,
     },
-    technologies: ["React", "React Native", "JavaScript", "CSS3"],
-    url: "https://guillaumemego.github.io/PenduPokemon-React/",
-    date: "2023-05",
-    role: "Développeur Front-End",
-    clientTestimonial: "",
-    slug: "pendu-pokemon",
+    testimonial: {
+      text: "Je ne remercierais jamais assez Guillaume pour son professionnalisme et ses conseils de qualités. Sans lui, mon site ne...",
+      author: "Sabrina, fondatrice",
+    },
+    technologies: [
+      "WordPress",
+      "WooCommerce",
+      "PHP",
+      "Rank Math SEO",
+      "Stripe API",
+      "LiteSpeed Cache",
+    ],
+    links: {
+      website: "https://lescreasderosebleue.com",
+      services: "/services/ecommerce",
+    },
+    schema: {
+      name: "Les Créas de Rose Bleue",
+      url: "https://lescreasderosebleue.com",
+    },
   },
   {
-    title: "Soup' Ô Potes",
-    type: "Client",
-    image: { src: "/images/soupsite.webp", width: 1200, height: 800 },
-    description: {
-      minidescription: "Site et identité visuelle pour association solidaire",
-      storytelling:
-        "Refonte du site de l'association Soup' Ô Potes et création de leur logo pour renforcer leur présence en ligne.",
-      objectives:
-        "• Concevoir une identité visuelle forte\n" +
-        "• Développer un site WordPress clair et accessible\n" +
-        "• Optimiser le SEO pour attirer bénévoles et donateurs.",
-      outcomes:
-        "Visibilité accrue, plus de dons et de bénévoles grâce au nouveau design et au SEO local efficace.",
-    },
-    technologies: ["WordPress", "PHP", "Figma", "SEO"],
-    url: "https://soupopotes.org",
+    title: "refonte site associatif & identité | soup' ô potes",
+    slug: "refonte-site-association-soupopotes",
+    description:
+      "Refonte complète du site et du logo. Nouvelle identité graphique, espace membre, formation WordPress, visibilité locale et réseaux sociaux.",
+    h1: "Soup' Ô Potes : refonte site associatif & identité visuelle",
     date: "2024-06",
-    role: "Développeur Web & Designer",
-    clientTestimonial:
-      "« Le site et le logo ont revitalisé notre association, merci pour ce superbe travail ! »",
-    slug: "soup-o-potes",
+    image: {
+      src: "/images/soupsite.webp",
+      alt: "Refonte du site et du logo de l'association Soup' Ô Potes",
+      width: 1200,
+      height: 630,
+      blurDataURL: "/images/soupsite.blur.webp",
+    },
+    content: {
+      context:
+        "L'association Soup' Ô Potes souhaitait moderniser toute sa communication digitale : refonte du logo, nouvelle charte graphique, et création d'un site web moderne pour informer, fédérer les bénévoles et toucher plus de bénéficiaires.",
+      objectives: `• Refonte moderne du logo et de l'identité visuelle
+• Créer un site clair, accessible et attractif
+• Mettre en place un espace membre pour l'association
+• Former l'équipe à la création d'articles sur WordPress
+• Booster la visibilité locale et la communication sur Facebook`,
+      process: `1. Identité & Design
+• Refonte du logo en gardant l'ADN de l'association
+• Nouvelle charte graphique (couleurs, typographies, pictos)
+• Maquettes Figma validées avec l'équipe
+
+2. Développement
+• Site WordPress sur-mesure, responsive
+• Espace membre sécurisé pour l'association
+• Pages d'information, agenda, actualités
+
+3. Formation & Communication
+• Formation à la création d'articles sur WordPress
+• Accompagnement à la gestion Facebook
+• Conseils pour la communication locale`,
+      results: `📈 Forte visibilité locale (site + Facebook)
+👥 + de bénévoles et de bénéficiaires informés
+🔒 Espace membre simple d'accès
+🎨 Identité visuelle modernisée et reconnue
+📝 Équipe autonome sur WordPress`,
+    },
+    testimonial: {
+      text: "Le site a revitalisé notre association, merci !",
+      author: "Fabrice, Président",
+    },
+    technologies: ["WordPress", "PHP", "SEO Local", "Elementor"],
+    links: {
+      website: "https://soupopotes.org",
+      services: "/services/associations",
+    },
+    schema: {
+      name: "Soup' Ô Potes",
+      url: "https://soupopotes.org",
+    },
   },
   {
-    title: "LibreXpression",
-    type: "Client",
+    title: "audit sécurité & visibilité google | librexpression",
+    slug: "audit-securite-seo-librexpression",
+    description:
+      "Audit complet sécurité + SEO technique. Firewall, headers, sitemap, Search Console, indexation Google.",
+    h1: "LibreXpression : audit sécurité & visibilité Google",
+    date: "2024-05",
     image: {
       src: "/images/librexpression.png",
+      alt: "Audit sécurité et SEO pour LibreXpression",
       width: 1200,
-      height: 800,
+      height: 630,
     },
-    description: {
-      minidescription:
-        "Optimisation sécurité et SEO pour un site d'expression libre",
-      storytelling:
-        "Le site LibreXpression existait déjà, mais nécessitait une sécurisation avancée et une meilleure visibilité sur le web. J'ai été sollicité pour renforcer la sécurité (headers HTTP, Content Security Policy, protection XSS, etc.) et optimiser le référencement naturel (SEO) avec la mise en place d'un sitemap, de balises meta pertinentes et d'une structure adaptée.",
-      objectives:
-        "• Sécuriser le site avec des headers stricts (CSP, X-Frame-Options, etc.)\n" +
-        "• Mettre en place un sitemap XML et optimiser les balises SEO\n" +
-        "• Améliorer la performance et la conformité RGPD.",
-      outcomes:
-        "Site validé par des audits de sécurité, nette amélioration du positionnement Google et de la confiance des utilisateurs.",
+    content: {
+      context:
+        "LibreXpression souhaitait renforcer la sécurité de son site et améliorer sa visibilité sur Google. L'objectif était d'assurer une protection maximale des données et une indexation optimale de toutes les pages.",
+      objectives: `• Réaliser un audit de sécurité complet (serveur, CMS, plugins)
+• Mettre en place un firewall et des headers de sécurité stricts
+• Optimiser la visibilité Google (SEO technique, sitemap, Search Console)
+• Indexer toutes les pages importantes du site
+• Garantir la conformité RGPD et la tranquillité de l'équipe`,
+      process: `1. Audit & Sécurisation
+• Analyse complète du serveur et du site (vulnérabilités, failles)
+• Mise en place d'un firewall applicatif et de headers HTTP stricts (CSP, HSTS, X-Frame...)
+• Mises à jour et durcissement des accès admin
+
+2. Optimisation SEO technique
+• Création et soumission du sitemap XML à Google Search Console
+• Correction des erreurs d'indexation
+• Optimisation des balises meta, titres, robots.txt
+• Vérification de la couverture et de l'indexation de toutes les pages
+
+3. Suivi & Formation
+• Rapport détaillé remis à l'équipe
+• Conseils pour la gestion future de la sécurité et du SEO`,
+      results: `🔒 Site sécurisé à tous les niveaux (serveur, CMS, plugins)
+📈 Toutes les pages importantes indexées sur Google
+⚡ Aucune faille détectée lors du dernier scan
+🗺️ Sitemap et Search Console opérationnels
+✅ Équipe rassurée et autonome sur la gestion sécurité/SEO
+💯 Performance, accessibilité et SEO : scores 100/100 (Lighthouse)
+👍 Bonnes pratiques web respectées`,
     },
-    technologies: ["Wordpress", "SEO", "CSP", "Headers HTTP", "Sitemap"],
-    url: "https://librexpression.fr",
-    date: "2024-05",
-    role: "Consultant Sécurité & SEO",
-    clientTestimonial:
-      "« Nous avons gagné en sérénité et en visibilité grâce à l'intervention de Guillaume, le site est désormais conforme et performant ! »",
-    slug: "librexpression",
+    testimonial: {
+      text: "Audit très pro, site sécurisé et bien référencé. On dort tranquille !",
+      author: "Responsable LibreXpression",
+    },
+    technologies: [
+      "WordPress",
+      "Firewall",
+      "Headers sécurité",
+      "Google Search Console",
+      "SEO technique",
+    ],
+    links: {
+      website: "https://librexpression.fr",
+      services: "/services/audit-securite-seo",
+    },
+    schema: {
+      name: "LibreXpression",
+      url: "https://librexpression.fr",
+    },
+  },
+  {
+    title: "jeu du pendu pokémon en react | projet étudiant",
+    slug: "jeu-pendu-pokemon-react",
+    description:
+      "Application React ludique et éducative. Interface responsive, animations fluides, et déploiement sur GitHub Pages.",
+    h1: "Pendu Pokémon : jeu éducatif en React",
+    date: "2023-05",
+    image: {
+      src: "/images/pokemon.webp",
+      alt: "Interface du jeu du pendu version Pokémon en React",
+      width: 1200,
+      height: 630,
+      blurDataURL: "/images/pokemon.blur.webp",
+    },
+    content: {
+      context:
+        "Projet étudiant visant à créer un jeu éducatif et ludique en React, alliant apprentissage et univers Pokémon pour une expérience engageante.",
+      objectives: `• Développer une interface intuitive et responsive
+• Créer une logique de jeu sans bugs
+• Implémenter des animations fluides
+• Assurer la compatibilité mobile
+• Déployer sur GitHub Pages`,
+      process: `1. Conception
+• Architecture React avec hooks personnalisés
+• Design mobile-first et responsive
+• Gestion d'état optimisée
+
+2. Développement
+• Logique de jeu robuste
+• Animations CSS fluides
+• Tests utilisateurs
+• Version React Native
+
+3. Déploiement
+• Tests d'intégration
+• Mise en ligne GitHub Pages
+• Documentation complète`,
+      results: `🎮 +200 utilisateurs actifs
+⭐ Note de 4.8/5 en tests
+📱 100% compatible mobile
+🚀 Temps de chargement < 2s`,
+    },
+    technologies: ["React", "React Native", "JavaScript", "CSS3"],
+    links: {
+      website: "https://guillaumemego.github.io/PenduPokemon-React/",
+      services: "/services/applications",
+    },
+    schema: {
+      name: "Pendu Pokémon",
+      url: "https://guillaumemego.github.io/PenduPokemon-React/",
+    },
   },
   {
     title: "Guillaume Creation - Portfolio Photo",
-    type: "Projet Personnel",
+    slug: "guillaume-creation-portfolio-photo",
+    description:
+      "Portfolio photo personnel présentant mes réalisations photographiques et mes projets web. Site vitrine développé avec Next.js et optimisé pour le SEO.",
+    h1: "Guillaume Creation - Portfolio Photo",
+    date: "2022-12",
     image: {
       src: "/images/guillaumecreation.png",
+      alt: "Portfolio photo Guillaume Creation",
       width: 1200,
       height: 800,
     },
-    description: {
-      minidescription:
-        "Portfolio photo immersif et animé pour présenter mes créations.",
-      storytelling:
-        "Passionné de photographie, j'ai voulu créer un site qui me ressemble, à la fois vitrine de mon travail et expérience interactive. J'ai conçu ce portfolio sous Next.js pour offrir une navigation fluide, des animations immersives et une galerie mettant en valeur mes plus beaux clichés. J'ai accordé une attention particulière à la sécurité (headers, CSP, etc.) et au SEO (balises, sitemap, performance) pour garantir visibilité et sérénité.",
+    content: {
+      context:
+        "Création de mon propre portfolio photo pour présenter mes réalisations et expérimenter de nouvelles technologies web.",
       objectives:
-        "• Créer une expérience utilisateur unique autour de la photo\n" +
-        "• Mettre en avant mes compétences de photographe et de développeur\n" +
-        "• Optimiser la sécurité et le référencement naturel.",
-      outcomes:
-        "Un site personnel qui attire de nouveaux contacts, valorise mon univers créatif et démontre mon savoir-faire technique et artistique.",
+        "• Mettre en valeur mes photos et projets\n• Développer un site rapide et responsive\n• Optimiser le SEO pour attirer de nouveaux clients",
+      process:
+        "1. Design & Branding\n• Maquettes Figma pour l'ergonomie\n• Design minimaliste et responsive\n\n2. Développement\n• Next.js et optimisation des images\n• Galerie photo dynamique\n• Blog intégré\n\n3. SEO & Performance\n• Optimisation des balises\n• Suivi avec Google Analytics\n• Sitemap optimisé",
+      results:
+        "🎨 Design minimaliste et responsive\n⚡ Optimisation des images\n📈 +300 visites/mois\n🖼️ +50 photos dans le portfolio",
     },
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Framer Motion",
-      "Tailwind CSS",
-      "SEO",
-      "CSP",
-      "Headers HTTP",
-      "Sitemap",
-    ],
-    url: "https://guillaumecreation.com",
-    date: "2025-05",
-    role: "Photographe & Développeur Web",
-    clientTestimonial: "",
-    slug: "guillaume-creation-portfolio-photo",
+    technologies: ["Next.js", "React", "Figma", "SEO"],
+    links: {
+      website: "https://guillaumecreation.com",
+      services: "/services/applications",
+    },
+    schema: {
+      name: "Guillaume Creation - Portfolio Photo",
+      url: "https://guillaumecreation.com",
+    },
   },
 ]);

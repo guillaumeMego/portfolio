@@ -6,21 +6,34 @@ import { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://guillaumeganne.com";
+  const baseUrl = "https://www.guillaumeganne.com";
 
-  // 1) Routes statiques
-  const staticPaths: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/`, lastModified: new Date() },
-    { url: `${baseUrl}/a-propos`, lastModified: new Date() },
-    { url: `${baseUrl}/tarif`, lastModified: new Date() },
-    { url: `${baseUrl}/contact`, lastModified: new Date() },
+  // Pages statiques
+  const staticRoutes = [
+    "",
+    "/a-propos",
+    "/contact",
+    "/tarif",
+    "/mentions-legales",
+    "/politique-confidentialite",
+    "/cookies",
+    "/creation-site-web-angouleme",
   ];
 
-  // 2) Routes dynamiques pour les projets
-  const projectPaths: MetadataRoute.Sitemap = projects.map((project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    lastModified: new Date(project.date + "-01"),
+  const staticPages = staticRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: route === "" ? 1 : 0.8,
   }));
 
-  return [...staticPaths, ...projectPaths];
+  // Pages de projets
+  const projectPages = projects.map((project) => ({
+    url: `${baseUrl}/projects/${project.slug}`,
+    lastModified: new Date(project.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...projectPages];
 }

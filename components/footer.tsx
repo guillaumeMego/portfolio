@@ -28,18 +28,16 @@ export function Footer() {
     <footer className="mt-auto py-8 border-t border-border" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <nav
-              className="flex gap-4 text-sm text-muted-foreground"
-              aria-label="Liens légaux"
-            >
-              <Link
-                href="/mentions-legales"
-                className="hover:text-primary transition-colors"
-              >
-                Mentions légales
-              </Link>
-            </nav>
+          <div className="flex gap-4 text-sm text-gray-500">
+            <Link href="/mentions-legales" className="hover:underline">
+              Mentions légales
+            </Link>
+            <Link href="/politique-confidentialite" className="hover:underline">
+              Politique de confidentialité
+            </Link>
+            <Link href="/cookies" className="hover:underline">
+              Cookies
+            </Link>
           </div>
 
           <div className="flex gap-4">

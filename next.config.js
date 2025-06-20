@@ -1,46 +1,29 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
 
-const cspValue = isProd
-  ? `
-    default-src 'self';
-    script-src 'self' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
-    object-src 'none';
-    frame-ancestors 'none';
-  `.replace(/\s{2,}/g, ' ').trim()
-  : `
-    default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval';
-    style-src 'self' 'unsafe-inline';
-    object-src 'none';
-    frame-ancestors 'none';
-  `.replace(/\s{2,}/g, ' ').trim();
+const securityHeaders = [
+  // Protège contre le clickjacking
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // Empêche le navigateur de deviner les types MIME
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  // Contrôle les informations de referrer envoyées
+  { key: "Referrer-Policy", value: "origin-when-cross-origin" },
+  // Active la protection XSS des navigateurs
+  { key: "X-XSS-Protection", value: "1; mode=block" },
+  // Politique de sécurité du contenu
+  {
+    key: "Content-Security-Policy",
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://assets.calendly.com; style-src 'self' 'unsafe-inline'; object-src 'none'; frame-ancestors 'none';",
+  },
+];
 
 const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
   async headers() {
     return [
       {
         source: "/(.*)",
-        headers: [
-          // Protège contre clickjacking
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-
-          // Empêche le browser de deviner les types MIME
-          { key: "X-Content-Type-Options", value: "nosniff" },
-
-          // Réduit les infos de referrer envoyées
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-
-          // Désactive l'accès à certaines API navigateur
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-
-          // Protection XSS (exemple de CSP simple à adapter)
-          {
-            key: "Content-Security-Policy",
-            value: cspValue,
-          },
-        ],
+        headers: securityHeaders,
       },
     ];
   },
@@ -48,41 +31,25 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   optimizeFonts: true,
   trailingSlash: false,
   experimental: {
     optimizeCss: true,
+    optimizePackageImports: ["lucide-react"],
   },
   async redirects() {
     return [
-      // {
-      //   source: '/:path*',
-      //   has: [
-      //     { type: 'host', value: 'www.guillaumeganne.com' },
-      //   ],
-      //   destination: 'https://guillaumeganne.com/:path*',
-      //   permanent: true,
-      // },
       {
-        source: '/projects/3',
-        destination: '/projects/soup-o-potes',
-        permanent: true,
-      },
-      {
-        source: '/projects/2',
-        destination: '/projects/pendu-pokemon',
-        permanent: true,
-      },
-      {
-        source: '/projects/1',
-        destination: '/projects/les-creas-de-rose-bleue',
-        permanent: true,
-      },
-      {
-        source: '/plan-du-site-guillaume-ganne/',
-        destination: '/',
+        source: "/:path*",
+        has: [{ type: "host", value: "guillaumeganne.com" }],
+        destination: "https://www.guillaumeganne.com/:path*",
         permanent: true,
       },
     ];
