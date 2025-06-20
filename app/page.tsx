@@ -58,7 +58,9 @@ export default function Home() {
     <div className="min-h-screen pt-28 pb-0 text-foreground relative">
       {showClientHero ? <HeroClient /> : <HeroServer />}
 
-      <Features />
+      <section className="bg-white pt-24 pb-12 min-h-[300px]">
+        <Features />
+      </section>
 
       {/* Section Pourquoi Angoulême */}
       <section
@@ -72,17 +74,18 @@ export default function Home() {
         <div className="pb-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row-reverse gap-12 items-center">
             {/* Illustration Angoulême */}
-            <div className="w-full md:w-[40%] flex justify-center md:justify-end">
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
                 src="/images/mascotte/france.webp"
                 alt="Carte stylisée Angoulême France"
                 width={500}
                 height={500}
                 className="w-60 h-60 md:w-[95%] md:max-w-[500px] md:h-auto object-contain"
+                sizes="(max-width: 767px) 240px, 500px"
               />
             </div>
             {/* Texte */}
-            <div className="w-full md:w-[70%] md:pl-12 md:pr-4 py-6">
+            <div className="w-full md:w-1/2 md:pl-12 md:pr-4 py-6">
               <p className="text-lg md:text-xl text-foreground mb-8 leading-relaxed">
                 Vous cherchez un expert en{" "}
                 <strong>création de site web à Angoulême</strong> capable de
