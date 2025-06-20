@@ -192,7 +192,7 @@ export default function RootLayout({
           <div
             className="flex flex-col min-h-screen relative"
             style={{
-              backgroundImage: "url(/images/fond.png)",
+              backgroundImage: "url(/images/fond.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",

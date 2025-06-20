@@ -27,7 +27,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             src={webpSrc}
             alt={project.image.alt}
             fill
-            priority={index < 2}
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain transition-transform duration-500"
             placeholder="blur"

@@ -79,7 +79,6 @@ export default function Home() {
                 width={500}
                 height={500}
                 className="w-60 h-60 md:w-[95%] md:max-w-[500px] md:h-auto object-contain"
-                priority
               />
             </div>
             {/* Texte */}
