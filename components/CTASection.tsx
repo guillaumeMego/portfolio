@@ -40,7 +40,7 @@ export function CTASection() {
             href="https://calendly.com/guillaume-ganne/30min?background_color=ecf0f1&text_color=0e141a&primary_color=2c3e50"
             target="_blank"
             rel="noopener"
-            className="rounded-2xl bg-[#C25B0B] px-8 py-4 font-semibold shadow-lg hover:bg-[#a94e00]"
+            className="rounded-2xl bg-[#C25B0B] px-8 py-4 font-semibold text-white shadow-lg hover:bg-[#a94e00]"
           >
             Réserver sur Calendly
           </a>
