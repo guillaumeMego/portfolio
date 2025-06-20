@@ -8,6 +8,7 @@ import Image from "next/image";
 import { MapPin, Zap, Users, TrendingUp, Leaf } from "lucide-react";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
+import { Features } from "@/components/Feature";
 
 // Import dynamique des composants lourds
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"), {
@@ -18,13 +19,6 @@ const CTASection = dynamic(
     import("@/components/CTASection").then((mod) => ({
       default: mod.CTASection,
     })),
-  {
-    ssr: true,
-  }
-);
-const Features = dynamic(
-  () =>
-    import("@/components/Feature").then((mod) => ({ default: mod.Features })),
   {
     ssr: true,
   }
@@ -58,7 +52,7 @@ export default function Home() {
     <div className="min-h-screen pt-28 pb-0 text-foreground relative">
       {showClientHero ? <HeroClient /> : <HeroServer />}
 
-      <section className="bg-white pt-24 pb-12 min-h-[300px]">
+      <section className="bg-white pt-24 pb-12">
         <Features />
       </section>
 
