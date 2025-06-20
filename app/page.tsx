@@ -3,12 +3,13 @@
 import dynamic from "next/dynamic";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MapPin, Zap, Users, TrendingUp, Leaf } from "lucide-react";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 import { Features } from "@/components/Feature";
+import Hero from "@/components/Hero";
 
 // Import dynamique des composants lourds
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"), {
@@ -23,20 +24,11 @@ const CTASection = dynamic(
     ssr: true,
   }
 );
-const HeroServer = dynamic(() => import("@/components/HeroServer"), {
-  ssr: true,
-});
-const HeroClient = dynamic(() => import("@/components/HeroClient"), {
-  ssr: false,
-  loading: () => <div className="h-[500px] bg-background" />,
-});
 
 export default function Home() {
-  const [showClientHero, setShowClientHero] = useState(false);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
 
   useEffect(() => {
-    setShowClientHero(true);
     // Sticky CTA mobile : affiché après passage de la section why-angouleme
     const handleScroll = () => {
       const section = document.getElementById("why-angouleme");
@@ -50,7 +42,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen pt-28 pb-0 text-foreground relative">
-      {showClientHero ? <HeroClient /> : <HeroServer />}
+      <Hero />
 
       <section className="bg-white pt-24 pb-12">
         <Features />
