@@ -28,19 +28,19 @@ export async function generateMetadata({
 
   return {
     title: `${project.title} | Portfolio de Guillaume Ganne`,
-    description: project.description.storytelling.slice(0, 155) + "...",
+    description: project.description.slice(0, 155) + "...",
     alternates: {
       canonical: canonicalUrl,
     },
     keywords: [
       "portfolio",
       "projet",
-      project.type,
+      project.links.services.split("/").pop() || "",
       ...(project.technologies ?? []),
     ],
     openGraph: {
       title: project.title,
-      description: project.description.minidescription,
+      description: project.description,
       type: "article",
       locale: "fr_FR",
       url: `https://guillaumeganne.com/projects/${project.slug}`,
