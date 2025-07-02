@@ -25,4 +25,5 @@ export const metadata = {
   title: "Politique de cookies | Guillaume Ganne",
   description:
     "Découvrez comment nous utilisons les cookies pour améliorer votre expérience sur notre site.",
+  alternates: { canonical: "https://www.guillaumeganne.com/cookies" },
 };

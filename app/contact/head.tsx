@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Contactez Guillaume Ganne pour un devis ou des informations sur la création de votre site web à Angoulême.",
   alternates: {
-    canonical: "https://guillaumeganne.com/contact",
+    canonical: "https://www.guillaumeganne.com/contact",
   },
   keywords: [
     "contact guillaume création",

@@ -15,3 +15,10 @@ export default function ProjectsPage() {
     </main>
   );
 }
+
+export const metadata = {
+  title: "Projets web & réalisations | Guillaume Ganne",
+  description:
+    "Découvrez mes réalisations web : sites vitrines, e-commerce, applications sur-mesure pour PME et entrepreneurs à Angoulême.",
+  alternates: { canonical: "https://www.guillaumeganne.com/projets" },
+};

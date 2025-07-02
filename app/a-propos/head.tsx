@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Découvrez le parcours, les valeurs et l'expertise de Guillaume Ganne, créateur de sites web à Angoulême. Expert en création de sites sur-mesure, optimisation SEO local et accessibilité Opquast.",
   alternates: {
-    canonical: "https://guillaumeganne.com/a-propos",
+    canonical: "https://www.guillaumeganne.com/a-propos",
   },
   keywords: [
     "développeur web freelance Angoulême",

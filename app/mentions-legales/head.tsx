@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Informations légales, RGPD et droits d'auteur du site guillaumeganne.com.",
   alternates: {
-    canonical: "https://guillaumeganne.com/mentions-legales",
+    canonical: "https://www.guillaumeganne.com/mentions-legales",
   },
   keywords: [
     "mentions légales",

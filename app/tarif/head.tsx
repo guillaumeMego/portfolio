@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Consultez les tarifs pour la création de sites web, e-commerce et prestations vidéo à Angoulême.",
   alternates: {
-    canonical: "https://guillaumeganne.com/tarif",
+    canonical: "https://www.guillaumeganne.com/tarif",
   },
   keywords: [
     "tarifs",

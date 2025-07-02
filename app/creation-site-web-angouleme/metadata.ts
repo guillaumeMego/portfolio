@@ -26,4 +26,7 @@ export const metadata: Metadata = {
       "Besoin d'un site web performant à Angoulême et son agglomération ? Je conçois sites vitrines, e-commerce et apps sur-mesure avec SEO local boosté. Devis gratuit !",
     images: ["/images/creation-site-vitrine-angouleme.jpg"],
   },
+  alternates: {
+    canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme",
+  },
 };
