@@ -22,16 +22,12 @@ export async function generateMetadata({
         index: false,
         follow: false,
       },
-      alternates: { canonical: canonicalUrl },
     };
   }
 
   return {
     title: `${project.title} | Portfolio de Guillaume Ganne`,
     description: project.description.slice(0, 155) + "...",
-    alternates: {
-      canonical: canonicalUrl,
-    },
     keywords: [
       "portfolio",
       "projet",
