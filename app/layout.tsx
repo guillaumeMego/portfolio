@@ -74,8 +74,6 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -83,23 +81,6 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#0f172a" />
         <meta name="msapplication-TileImage" content="/icon-144.png" />
         <meta name="theme-color" content="#0f172a" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <link
-          rel="alternate"
-          href="https://www.guillaumeganne.com"
-          hrefLang="fr-FR"
-        />
-        <link
-          rel="alternate"
-          href="https://www.guillaumeganne.com"
-          hrefLang="x-default"
-        />
-        <meta name="geo.region" content="FR-16" />
-        <meta name="geo.placename" content="Angoulême" />
-        <meta name="geo.position" content="45.648377;0.156237" />
-        <meta name="ICBM" content="45.648377, 0.156237" />
-        <meta name="revisit-after" content="7 days" />
         <meta name="author" content="Guillaume Ganne" />
         <meta name="copyright" content="© 2024 Guillaume Ganne" />
         <script
