@@ -31,7 +31,7 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Accueil", icon: Home },
-    { href: "/projects", label: "Projets", icon: Briefcase },
+    { href: "/projets", label: "Projets", icon: Briefcase },
     { href: "/a-propos", label: "À Propos", icon: User },
     { href: "/tarif", label: "Mes tarifs", icon: CreditCard },
     { href: "/creation-site-web-angouleme", label: "Angoulême", icon: MapPin },

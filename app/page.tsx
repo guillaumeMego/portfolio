@@ -179,7 +179,7 @@ export default function Home() {
         </div>
         <div className="flex justify-center mt-8">
           <a
-            href="/projects"
+            href="/projets"
             className="bg-primary inline-block px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30"
           >
             Voir tous les projets

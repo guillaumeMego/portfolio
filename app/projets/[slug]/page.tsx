@@ -127,7 +127,7 @@ export default function ProjectPage({ params }: Props) {
         <meta property="og:image" content={project.image.src} />
         <meta
           property="og:url"
-          content={`https://guillaumeganne.com/projects/${project.slug}`}
+          content={`https://guillaumeganne.com/projets/${project.slug}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
