@@ -116,12 +116,12 @@ export const projects: Project[] = sortProjectsByDate([
       "LiteSpeed Cache",
     ],
     links: {
-      website: "https://lescreasderosebleue.com",
+      website: "https://www.lescreasderosebleue.com",
       services: "/services/ecommerce",
     },
     schema: {
       name: "Les Créas de Rose Bleue",
-      url: "https://lescreasderosebleue.com",
+      url: "https://www.lescreasderosebleue.com",
     },
   },
   {
