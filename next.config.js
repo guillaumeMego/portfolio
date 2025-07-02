@@ -52,6 +52,11 @@ const nextConfig = {
         destination: "https://www.guillaumeganne.com/:path*",
         permanent: true,
       },
+      {
+        source: '/projects/:slug*',
+        destination: '/projets/:slug*',
+        permanent: true,
+      },
     ];
   },
 };
