@@ -85,10 +85,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f172a" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta
-          name="keywords"
-          content="création site web angoulême, développeur web, web designer, full stack, wordpress, next.js, angoulême"
-        />
         <link
           rel="alternate"
           href="https://www.guillaumeganne.com"
