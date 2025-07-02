@@ -15,15 +15,9 @@ import Hero from "@/components/Hero";
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"), {
   ssr: true,
 });
-const CTASection = dynamic(
-  () =>
-    import("@/components/CTASection").then((mod) => ({
-      default: mod.CTASection,
-    })),
-  {
-    ssr: true,
-  }
-);
+const CTASection = dynamic(() => import("@/components/CTASection"), {
+  ssr: true,
+});
 
 export default function HomeClient() {
   const [showStickyCTA, setShowStickyCTA] = useState(false);

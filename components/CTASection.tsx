@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -7,7 +8,7 @@ import Image from "next/image";
  * À placer APRÈS les témoignages.
  * Deux options pour le prospect : réservation Calendly ou page Contact.
  */
-export function CTASection() {
+export default function CTASection() {
   return (
     <section id="cta" className="bg-[#2C3E50] py-20 text-white text-center">
       <div className="container mx-auto px-4">

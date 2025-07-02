@@ -1,4 +1,4 @@
-"use client";
+import { metadata } from "./metadata";
 
 import Image from "next/image";
 import {
@@ -17,15 +17,9 @@ import dynamic from "next/dynamic";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 
-const CTASection = dynamic(
-  () =>
-    import("@/components/CTASection").then((mod) => ({
-      default: mod.CTASection,
-    })),
-  {
-    ssr: true,
-  }
-);
+const CTASection = dynamic(() => import("@/components/CTASection"), {
+  ssr: true,
+});
 
 export default function CreationSiteWebAngouleme() {
   return (

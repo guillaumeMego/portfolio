@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   title: "création site web angoulême | guillaume ganne, dev & designer",
   description:
     "Création de site web à Angoulême : vitrines, e-commerce et apps sur mesure avec SEO local. Devis gratuit en 24 h.",
-  alternates: { canonical: "https://www.guillaumeganne.com" },
   keywords: [
     "création site web angoulême",
     "développeur web",
