@@ -29,4 +29,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme",
   },
+  keywords: [
+    "création site web angoulême",
+    "développeur web",
+    "web designer",
+    "seo local",
+    "site vitrine",
+    "site professionnel",
+    "angoulême",
+  ],
 };

@@ -8,14 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.guillaumeganne.com/mentions-legales",
   },
-  keywords: [
-    "mentions légales",
-    "RGPD",
-    "cookies",
-    "droits auteur",
-    "Guillaume Ganne",
-    "Angoulême",
-  ],
+  keywords: ["mentions légales", "rgpd", "droits d'auteur", "guillaume ganne"],
   openGraph: {
     title: "Mentions Légales | Guillaume Ganne",
     description: "Informations légales et juridiques",

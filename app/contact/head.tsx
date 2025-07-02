@@ -8,16 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.guillaumeganne.com/contact",
   },
-  keywords: [
-    "contact guillaume création",
-    "devis site internet angoulême",
-    "développeur web freelance",
-    "vidéaste angoulême",
-    "demande de devis web",
-    "production vidéo",
-    "design UI UX",
-    "SEO local angoulême",
-  ],
+  keywords: ["contact", "devis site web", "angoulême", "guillaume ganne"],
   openGraph: {
     title: "Contact | Guillaume Création",
     description:

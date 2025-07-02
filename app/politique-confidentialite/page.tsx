@@ -44,4 +44,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.guillaumeganne.com/politique-confidentialite",
   },
+  keywords: [
+    "politique de confidentialité",
+    "données personnelles",
+    "guillaume ganne",
+  ],
 };
