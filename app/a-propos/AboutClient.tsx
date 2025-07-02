@@ -37,7 +37,7 @@ export default function AboutClient() {
             <div className="space-y-6">
               <div className="relative h-[300px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/guillaume.webp"
+                  src="/images/guillaume-ganne-portrait.webp"
                   alt="Portrait de Guillaume Ganne"
                   fill
                   className="object-cover"

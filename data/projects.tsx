@@ -64,7 +64,7 @@ export const projects: Project[] = sortProjectsByDate([
     h1: "Les Créas de Rose Bleue : e-commerce de bougies bio",
     date: "2024-06",
     image: {
-      src: "/images/projects/crea/creas.webp",
+      src: "/images/projects/crea/creation-ecommerce-bougies-bio-angouleme.webp",
       alt: "Création d'un site e-commerce pour des bougies bio",
       width: 1200,
       height: 630,
@@ -132,7 +132,7 @@ export const projects: Project[] = sortProjectsByDate([
     h1: "Soup' Ô Potes : refonte site associatif & identité visuelle",
     date: "2024-06",
     image: {
-      src: "/images/soupsite.webp",
+      src: "/images/soupsite-refonte-site-association-soupopotes.webp",
       alt: "Refonte du site et du logo de l'association Soup' Ô Potes",
       width: 1200,
       height: 630,

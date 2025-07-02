@@ -54,7 +54,7 @@ export function Navigation() {
             aria-label="Guillaume Ganne - Retour à l'accueil"
           >
             <Image
-              src="/logo.svg"
+              src="/logo-guillaume-ganne-webdesigner-angouleme.svg"
               alt="Logo Guillaume Ganne"
               width={70}
               height={70}

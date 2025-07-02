@@ -24,7 +24,7 @@ export default function Hero() {
           }}
         >
           <Image
-            src="/images/mascotte/mascotte.webp"
+            src="/images/mascotte/mascotte-guillaume-ganne-webdesigner.webp"
             alt="Mascotte Guillaume Ganne"
             width={240}
             height={240}

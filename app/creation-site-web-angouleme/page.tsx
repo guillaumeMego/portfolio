@@ -38,7 +38,7 @@ export default function CreationSiteWebAngouleme() {
             </p>
             <div className="relative inline-block">
               <Image
-                src="/images/mascotte/portable.webp"
+                src="/images/mascotte/mascotte-portable-guillaume-ganne.webp"
                 alt="Mascotte avec un ordinateur portable"
                 width={120}
                 height={120}
@@ -101,7 +101,7 @@ export default function CreationSiteWebAngouleme() {
               </div>
               <div className="relative">
                 <Image
-                  src="/images/mascotte/figma.webp"
+                  src="/images/mascotte/mascotte-figma-guillaume-ganne.webp"
                   alt="Mascotte avec Figma"
                   width={100}
                   height={100}
@@ -179,7 +179,7 @@ export default function CreationSiteWebAngouleme() {
               Ils me font confiance
             </h2>
             <Image
-              src="/images/mascotte/cafe.webp"
+              src="/images/mascotte/mascotte-cafe-guillaume-ganne.webp"
               alt="Mascotte avec un café"
               width={100}
               height={100}
@@ -271,7 +271,7 @@ export default function CreationSiteWebAngouleme() {
               Zone d&apos;intervention
             </h2>
             <Image
-              src="/images/mascotte/france.webp"
+              src="/images/mascotte/carte-angouleme-france.webp"
               alt="Mascotte avec un drapeau français"
               width={100}
               height={100}

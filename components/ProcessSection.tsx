@@ -75,7 +75,7 @@ export default function ProcessSection() {
             >
               {i === 0 && (
                 <Image
-                  src="/images/mascotte/cafe.webp"
+                  src="/images/mascotte/mascotte-cafe-guillaume-ganne.webp"
                   alt="Mascotte café"
                   width={96}
                   height={96}
@@ -85,7 +85,7 @@ export default function ProcessSection() {
               )}
               {i === 1 && (
                 <Image
-                  src="/images/mascotte/figma.webp"
+                  src="/images/mascotte/mascotte-figma-guillaume-ganne.webp"
                   alt="Mascotte figma"
                   width={96}
                   height={96}
@@ -95,7 +95,7 @@ export default function ProcessSection() {
               )}
               {i === 2 && (
                 <Image
-                  src="/images/mascotte/portable.webp"
+                  src="/images/mascotte/mascotte-portable-guillaume-ganne.webp"
                   alt="Mascotte portable"
                   width={96}
                   height={96}
@@ -105,7 +105,7 @@ export default function ProcessSection() {
               )}
               {i === 3 && (
                 <Image
-                  src="/images/mascotte/enseigner.webp"
+                  src="/images/mascotte/mascotte-enseigner-guillaume-ganne.webp"
                   alt="Mascotte enseigner"
                   width={96}
                   height={96}

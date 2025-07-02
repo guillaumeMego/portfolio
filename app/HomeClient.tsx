@@ -56,7 +56,7 @@ export default function HomeClient() {
             {/* Illustration Angoulême */}
             <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
-                src="/images/mascotte/france.webp"
+                src="/images/mascotte/carte-angouleme-france.webp"
                 alt="Carte stylisée Angoulême France"
                 width={500}
                 height={500}
@@ -133,14 +133,14 @@ export default function HomeClient() {
                 {/* Logos clients (placeholders) */}
                 <div className="flex gap-2 ml-2">
                   <Image
-                    src="/images/logo/soupe.png"
+                    src="/images/logo/logo-client-soupe-o-potes.png"
                     alt="Logo client 1"
                     width={32}
                     height={32}
                     className="w-8 h-8 rounded-full object-contain"
                   />
                   <Image
-                    src="/images/logo/logo.svg"
+                    src="/images/logo/logo-client-2.svg"
                     alt="Logo client 2"
                     width={32}
                     height={32}

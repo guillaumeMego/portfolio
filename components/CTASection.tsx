@@ -30,7 +30,7 @@ export default function CTASection() {
         <div className="mt-10 flex flex-row items-center justify-center gap-4 w-full">
           <div className="w-24 h-24 rounded-full bg-background/80 items-center justify-center shadow-lg hidden sm:flex">
             <Image
-              src="/images/mascotte/mail.webp"
+              src="/images/mascotte/mascotte-mail-guillaume-ganne.webp"
               alt="Mascotte mail"
               width={96}
               height={96}
@@ -53,7 +53,7 @@ export default function CTASection() {
           </a>
           <div className="w-24 h-24 rounded-full bg-background/80 items-center justify-center shadow-lg hidden sm:flex">
             <Image
-              src="/images/mascotte/calendly.webp"
+              src="/images/mascotte/mascotte-calendly-guillaume-ganne.webp"
               alt="Mascotte calendly"
               width={96}
               height={96}
