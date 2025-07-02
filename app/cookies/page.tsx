@@ -20,3 +20,9 @@ export default function Cookies() {
     </main>
   );
 }
+
+export const metadata = {
+  title: "Politique de cookies | Guillaume Ganne",
+  description:
+    "Découvrez comment nous utilisons les cookies pour améliorer votre expérience sur notre site.",
+};

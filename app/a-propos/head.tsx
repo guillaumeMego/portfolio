@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "À Propos | Guillaume Ganne – Développeur Web Freelance & Designer UX/UI à Angoulême",
+  title: "À propos de Guillaume Ganne | Développeur web & designer à Angoulême",
   description:
-    "En savoir plus sur Guillaume Ganne, développeur web freelance & designer UX/UI basé à Angoulême. Expert en création de sites sur-mesure, optimisation SEO local et accessibilité Opquast.",
+    "Découvrez le parcours, les valeurs et l'expertise de Guillaume Ganne, créateur de sites web à Angoulême. Expert en création de sites sur-mesure, optimisation SEO local et accessibilité Opquast.",
   alternates: {
     canonical: "https://guillaumeganne.com/a-propos",
   },

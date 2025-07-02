@@ -2,9 +2,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tarifs & Services | Guillaume Ganne",
+  title: "Tarifs création site web | Guillaume Ganne",
   description:
-    "Découvrez mes services de développement web et production vidéo. Site vitrine à partir de 1500€, vidéos promotionnelles à partir de 300€. Solutions sur mesure pour votre entreprise à Angoulême.",
+    "Consultez les tarifs pour la création de sites web, e-commerce et prestations vidéo à Angoulême.",
   alternates: {
     canonical: "https://guillaumeganne.com/tarif",
   },

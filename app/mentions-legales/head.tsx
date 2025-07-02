@@ -2,9 +2,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mentions Légales | Guillaume Ganne",
+  title: "Mentions légales | Guillaume Ganne",
   description:
-    "Mentions légales et informations juridiques concernant le site web de Guillaume Ganne, développeur web et vidéaste à Angoulême. RGPD, cookies et droits d'auteur.",
+    "Informations légales, RGPD et droits d'auteur du site guillaumeganne.com.",
   alternates: {
     canonical: "https://guillaumeganne.com/mentions-legales",
   },

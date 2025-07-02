@@ -2,10 +2,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Contact | Guillaume Création – Développeur Web & Vidéaste à Angoulême",
+  title: "Contact | Guillaume Ganne",
   description:
-    "Contactez Guillaume Création, développeur web full-stack et vidéaste à Angoulême, pour un devis rapide sur vos projets de site internet, d'identité visuelle ou de production vidéo.",
+    "Contactez Guillaume Ganne pour un devis ou des informations sur la création de votre site web à Angoulême.",
   alternates: {
     canonical: "https://guillaumeganne.com/contact",
   },

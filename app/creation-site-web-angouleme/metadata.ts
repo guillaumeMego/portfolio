@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "création site web angoulême et agglomération | Guillaume Ganne",
+  title: "Création site web à Angoulême | Guillaume Ganne",
   description:
-    "Besoin d'un site web performant à Angoulême et son agglomération ? Je conçois sites vitrines, e-commerce et apps sur-mesure avec SEO local boosté. Devis gratuit !",
+    "Spécialiste de la création de sites web professionnels à Angoulême, optimisés pour le SEO local.",
   openGraph: {
     title: "création site web angoulême et agglomération | Guillaume Ganne",
     description:

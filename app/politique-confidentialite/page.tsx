@@ -36,3 +36,9 @@ export default function PolitiqueConfidentialite() {
     </main>
   );
 }
+
+export const metadata = {
+  title: "Politique de confidentialité | Guillaume Ganne",
+  description:
+    "Comment vos données personnelles sont collectées, utilisées et protégées sur guillaumeganne.com.",
+};
