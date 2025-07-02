@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   title: "Mentions légales | Guillaume Ganne",
   description:
     "Informations légales, RGPD et droits d'auteur du site guillaumeganne.com.",
+  keywords: ["mentions légales", "rgpd", "droits d'auteur", "guillaume ganne"],
   alternates: {
     canonical: "https://www.guillaumeganne.com/mentions-legales",
   },
-  keywords: ["mentions légales", "rgpd", "droits d'auteur", "guillaume ganne"],
   openGraph: {
     title: "Mentions Légales | Guillaume Ganne",
     description: "Informations légales et juridiques",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   robots: {
     index: true,
-    follow: false,
+    follow: true,
     nocache: true,
   },
 };

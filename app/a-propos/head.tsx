@@ -3,10 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "À propos de Guillaume Ganne | Développeur web & designer à Angoulême",
   description:
-    "Découvrez le parcours, les valeurs et l'expertise de Guillaume Ganne, créateur de sites web à Angoulême. Expert en création de sites sur-mesure, optimisation SEO local et accessibilité Opquast.",
-  alternates: {
-    canonical: "https://www.guillaumeganne.com/a-propos",
-  },
+    "Découvrez le parcours, les valeurs et l'expertise de Guillaume Ganne, créateur de sites web à Angoulême.",
   keywords: [
     "guillaume ganne",
     "développeur web",
@@ -14,6 +11,10 @@ export const metadata: Metadata = {
     "parcours",
     "angoulême",
   ],
+  alternates: {
+    canonical: "https://www.guillaumeganne.com/a-propos",
+  },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "À Propos | Guillaume Ganne",
     description:

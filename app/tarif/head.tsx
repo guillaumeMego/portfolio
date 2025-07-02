@@ -5,15 +5,15 @@ export const metadata: Metadata = {
   title: "Tarifs création site web | Guillaume Ganne",
   description:
     "Consultez les tarifs pour la création de sites web, e-commerce et prestations vidéo à Angoulême.",
-  alternates: {
-    canonical: "https://www.guillaumeganne.com/tarif",
-  },
   keywords: [
     "tarifs site web",
     "prix création site",
     "angoulême",
     "guillaume ganne",
   ],
+  alternates: {
+    canonical: "https://www.guillaumeganne.com/tarif",
+  },
   openGraph: {
     title: "Tarifs & Services | Guillaume Ganne",
     description:
