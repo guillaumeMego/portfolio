@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/politique-confidentialite",
     "/cookies",
     "/creation-site-web-angouleme",
+    "/blog",
   ];
 
   const staticPages = staticRoutes.map((route) => ({
@@ -35,5 +36,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...projectPages];
+  // Articles de blog
+  const blogPages = [
+    {
+      url: `${baseUrl}/blog/creation-site-internet-1001-astuces`,
+      lastModified: new Date("2024-01-15"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9, // Priorité élevée pour l'article principal
+    },
+  ];
+
+  return [...staticPages, ...projectPages, ...blogPages];
 }
