@@ -7,10 +7,21 @@ export default function robots(): MetadataRoute.Robots {
   const baseUrl = "https://www.guillaumeganne.com";
 
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [
+          "/projects/", // Bloquer les anciennes URLs
+          "/gallery", // Ancienne page
+          "/accessibilite", // Ancienne page
+          "/plan-du-site-guillaume-ganne", // Ancienne page
+          "/api/",
+          "/_next/",
+          "/admin/",
+        ],
+      },
+    ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

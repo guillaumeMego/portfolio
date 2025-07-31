@@ -2,12 +2,14 @@
 
 import { usePathname } from "next/navigation";
 
-export function CanonicalHead() {
-  const pathname = usePathname();
-  const canonical =
-    pathname === "/"
-      ? "https://www.guillaumeganne.com"
-      : `https://www.guillaumeganne.com${pathname}`;
+interface CanonicalHeadProps {
+  path?: string;
+}
 
-  return <link rel="canonical" href={canonical} />;
+export default function CanonicalHead({ path }: CanonicalHeadProps) {
+  const pathname = usePathname();
+  const canonicalPath = path || pathname;
+  const canonicalUrl = `https://www.guillaumeganne.com${canonicalPath}`;
+
+  return <link rel="canonical" href={canonicalUrl} />;
 }

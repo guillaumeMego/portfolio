@@ -73,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        <link rel="canonical" href="https://www.guillaumeganne.com" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link
           rel="icon"
