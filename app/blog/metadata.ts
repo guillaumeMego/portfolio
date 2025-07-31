@@ -1,0 +1,100 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "La création de site internet ! Trouves les 1001 astuces",
+  description:
+    "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
+  keywords: [
+    "création site internet",
+    "développement web",
+    "site vitrine",
+    "e-commerce",
+    "SEO",
+    "optimisation site web",
+    "hébergement web",
+    "nom de domaine",
+    "WordPress",
+    "Wix",
+    "Webflow",
+    "Next.js",
+    "référencement naturel",
+    "conversion site web",
+    "sécurité site internet",
+    "vitesse site web",
+    "responsive design",
+    "UX design",
+    "landing page",
+    "portfolio web",
+    "blog professionnel",
+    "CMS",
+    "framework web",
+    "outils création site",
+    "budget site internet",
+    "coût site web",
+    "maintenance site",
+    "RGPD",
+    "certificat SSL",
+    "moteurs de recherche",
+  ],
+  authors: [{ name: "Guillaume Ganne" }],
+  creator: "Guillaume Ganne",
+  publisher: "Guillaume Ganne - Webdesigner Angoulême",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://guillaume-ganne.fr"),
+  alternates: {
+    canonical: "/blog/creation-site-internet-1001-astuces",
+  },
+  openGraph: {
+    title: "La création de site internet ! Trouves les 1001 astuces",
+    description:
+      "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
+    url: "https://guillaume-ganne.fr/blog/creation-site-internet-1001-astuces",
+    siteName: "Guillaume Ganne - Webdesigner Angoulême",
+    images: [
+      {
+        url: "/images/creation-site-vitrine-angouleme.webp",
+        width: 1200,
+        height: 630,
+        alt: "Création site internet - Guide complet avec 1001 astuces",
+      },
+    ],
+    locale: "fr_FR",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La création de site internet ! Trouves les 1001 astuces",
+    description:
+      "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
+    images: ["/images/creation-site-vitrine-angouleme.webp"],
+    creator: "@guillaume_ganne",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "votre-code-verification-google",
+  },
+  category: "Développement Web",
+  classification: "Guide pratique",
+  other: {
+    "article:published_time": "2024-01-15T10:00:00.000Z",
+    "article:modified_time": "2024-01-15T10:00:00.000Z",
+    "article:author": "Guillaume Ganne",
+    "article:section": "Développement Web",
+    "article:tag":
+      "création site internet, développement web, SEO, optimisation",
+  },
+};

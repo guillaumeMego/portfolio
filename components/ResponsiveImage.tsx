@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -53,7 +55,7 @@ export function ResponsiveImage({
               : "scale-100 blur-0 grayscale-0"
           }
         `}
-        onLoadingComplete={() => setLoading(false)}
+        onLoad={() => setLoading(false)}
         placeholder="blur"
         blurDataURL={blurSrc}
       />

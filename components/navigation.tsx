@@ -11,6 +11,7 @@ import {
   Mail,
   MapPin,
   CreditCard,
+  Book,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -35,6 +36,7 @@ export function Navigation() {
     { href: "/a-propos", label: "À Propos", icon: User },
     { href: "/tarif", label: "Mes tarifs", icon: CreditCard },
     { href: "/creation-site-web-angouleme", label: "Angoulême", icon: MapPin },
+    { href: "/blog", label: "Blog", icon: Book },
     { href: "/contact", label: "Contact", icon: Mail },
   ];
 
