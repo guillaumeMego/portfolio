@@ -45,11 +45,12 @@ export default function CreationSiteInternetGuide() {
               >
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
-                  src="https://www.youtube.com/embed/4QuqWmbPIpQ"
+                  src="https://www.youtube.com/embed/4QuqWmbPIpQ?enablejsapi=1&origin=https://www.guillaumeganne.com"
                   title="Guide complet création site internet"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  loading="lazy"
                 />
               </div>
             </div>
