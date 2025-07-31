@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://guillaume-ganne.fr"),
+  metadataBase: new URL("https://www.guillaumeganne.com"),
   alternates: {
     canonical: "/blog/creation-site-internet-1001-astuces",
   },
@@ -52,26 +52,40 @@ export const metadata: Metadata = {
     title: "La création de site internet ! Trouves les 1001 astuces",
     description:
       "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
-    url: "https://guillaume-ganne.fr/blog/creation-site-internet-1001-astuces",
+    url: "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces",
     siteName: "Guillaume Ganne - Webdesigner Angoulême",
     images: [
       {
-        url: "/images/creation-site-vitrine-angouleme.webp",
+        url: "https://www.guillaumeganne.com/images/creation-site-vitrine-angouleme.webp",
         width: 1200,
         height: 630,
         alt: "Création site internet - Guide complet avec 1001 astuces",
+        type: "image/webp",
       },
     ],
     locale: "fr_FR",
     type: "article",
+    publishedTime: "2024-01-15T10:00:00.000Z",
+    modifiedTime: "2024-01-15T10:00:00.000Z",
+    authors: ["Guillaume Ganne"],
+    section: "Développement Web",
+    tags: [
+      "création site internet",
+      "développement web",
+      "SEO",
+      "optimisation",
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "La création de site internet ! Trouves les 1001 astuces",
     description:
       "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
-    images: ["/images/creation-site-vitrine-angouleme.webp"],
+    images: [
+      "https://www.guillaumeganne.com/images/creation-site-vitrine-angouleme.webp",
+    ],
     creator: "@guillaume_ganne",
+    site: "@guillaume_ganne",
   },
   robots: {
     index: true,
