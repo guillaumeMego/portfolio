@@ -139,7 +139,14 @@ export default function CreationSiteInternetGuide() {
                 >
                   standards web du W3C
                 </a>
-                .
+                . Si vous cherchez un{" "}
+                <a
+                  href="/creation-site-web-angouleme"
+                  className="text-secondary underline font-medium"
+                >
+                  création site internet à Angoulême
+                </a>
+                , je peux vous accompagner dans votre projet.
               </p>
 
               {/* Carte vocabulaire */}
@@ -338,7 +345,13 @@ export default function CreationSiteInternetGuide() {
                   <p className="text-blue-700">
                     Présente votre entreprise, services, adresse et facilite la
                     prise de contact. Format le plus courant pour les petites
-                    entreprises locales.
+                    entreprises locales.{" "}
+                    <a
+                      href="/creation-site-web-angouleme"
+                      className="text-blue-600 underline font-medium"
+                    >
+                      site vitrine à Angoulême
+                    </a>
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">

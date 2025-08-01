@@ -1,5 +1,7 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://guillaumeganne.com',
-    generateRobotsTxt: true,
-    exclude: ['/plan-du-site-guillaume-ganne'],
+    siteUrl: 'https://www.guillaumeganne.com',
+    generateRobotsTxt: false,
+    changefreq: 'weekly',
+    priority: 0.7,
 }; 

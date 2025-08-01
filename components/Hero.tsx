@@ -44,7 +44,7 @@ export default function Hero() {
               },
             }}
           >
-            Création de site web sur mesure pour les pros exigeants
+            Sites web sur mesure pour pros exigeants
           </motion.h1>
           <motion.p
             className="text-base md:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed font-normal mb-6"
@@ -63,7 +63,13 @@ export default function Hero() {
             <span className="mt-2 block">
               Spécialisé en <em>création de site internet à Angoulême</em> :
               site vitrine, WordPress, e-commerce et applications sur-mesure,
-              optimisés SEO local.
+              optimisés SEO local.{" "}
+              <a
+                href="/creation-site-web-angouleme"
+                className="text-primary underline hover:text-primary/80 transition-colors"
+              >
+                création site internet à Angoulême
+              </a>
             </span>
           </motion.p>
           <motion.div

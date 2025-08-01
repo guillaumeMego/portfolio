@@ -46,6 +46,14 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Redirection des paramètres ?C= vers la page sans paramètres
+      {
+        source: '/:path*',
+        has: [{ type: 'query', key: 'C' }],
+        destination: '/:path*',
+        permanent: true,
+      },
+
       // Redirections avec host pour les domaines
       {
         source: '/:path*',

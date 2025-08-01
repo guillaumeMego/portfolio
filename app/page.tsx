@@ -1,20 +1,20 @@
 import HomeClient from "./HomeClient";
 
 export const metadata = {
-  title: "Création site web à Angoulême | Guillaume Ganne, dev & designer",
+  title: "Guillaume Ganne – Développeur web & web designer",
   description:
-    "Création de sites web à Angoulême : vitrines, e-commerce, apps sur-mesure, SEO local. Devis gratuit en 24h.",
-  keywords: [
-    "création site web angoulême",
-    "développeur web",
-    "web designer",
-    "site vitrine",
-    "site professionnel",
-    "SEO local",
-    "angoulême",
-  ],
+    "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
   alternates: { canonical: "https://www.guillaumeganne.com/" },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://www.guillaumeganne.com/",
+    title: "Guillaume Ganne – Développeur web & web designer",
+    description:
+      "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
+    siteName: "Guillaume Ganne",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function Home() {

@@ -23,46 +23,20 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.guillaumeganne.com"),
-  title: "création site web angoulême | guillaume ganne, dev & designer",
+  title: "Guillaume Ganne – Développeur web & web designer",
   description:
-    "Création de site web à Angoulême : vitrines, e-commerce et apps sur mesure avec SEO local. Devis gratuit en 24 h.",
-  keywords: [
-    "création site web angoulême",
-    "développeur web",
-    "web designer",
-    "full stack",
-    "wordpress",
-    "next.js",
-    "angoulême",
-  ],
+    "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
+  alternates: { canonical: "https://www.guillaumeganne.com/" },
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    locale: "fr_FR",
-    url: "https://www.guillaumeganne.com",
-    title: "création site web angoulême | guillaume ganne, dev & designer",
+    url: "https://www.guillaumeganne.com/",
+    title: "Guillaume Ganne – Développeur web & web designer",
     description:
-      "Création de site web à Angoulême : vitrines, e-commerce et apps sur mesure avec SEO local.",
+      "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
     siteName: "Guillaume Ganne",
-    images: "/og-image.webp",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "création site web angoulême | guillaume ganne, dev & designer",
-    description:
-      "Création de site web à Angoulême : vitrines, e-commerce et apps sur mesure avec SEO local.",
-    images: ["/og-image.webp"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

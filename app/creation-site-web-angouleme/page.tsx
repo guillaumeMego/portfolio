@@ -29,7 +29,7 @@ export default function CreationSiteWebAngouleme() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-8">
-              création de sites web à angoulême
+              Création de site internet à Angoulême
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
               Développeur freelance spécialisé dans la création de sites web
@@ -312,6 +312,62 @@ export default function CreationSiteWebAngouleme() {
 
       {/* CTA Section */}
       <CTASection />
+
+      {/* JSON-LD Schema LocalBusiness */}
+      <script type="application/ld+json" suppressHydrationWarning>
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Guillaume Ganne",
+          image: "https://www.guillaumeganne.com/og-image.webp",
+          url: "https://www.guillaumeganne.com/creation-site-web-angouleme",
+          telephone: "+33 6 00 00 00 00",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Angoulême",
+            addressCountry: "FR",
+          },
+          areaServed: "Angoulême, Charente",
+          sameAs: [
+            "https://www.linkedin.com/in/guillaume-ganne",
+            "https://github.com/GuillaumeG",
+          ],
+        })}
+      </script>
+
+      {/* JSON-LD Schema FAQ */}
+      <script type="application/ld+json" suppressHydrationWarning>
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Quel est le prix pour créer un site internet ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Site vitrine dès 1 200 € ; e-commerce dès 3 500 €. Devis gratuit en 24 h.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "En combien de temps ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "2 à 4 semaines pour un vitrine standard (selon contenus et retours).",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Proposez-vous la maintenance ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Oui : mises à jour, sauvegardes, sécurité, support.",
+              },
+            },
+          ],
+        })}
+      </script>
     </div>
   );
 }
