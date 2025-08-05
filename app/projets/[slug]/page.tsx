@@ -66,11 +66,7 @@ export default function ProjectPage({ params }: Props) {
   // Schema.org JSON-LD adapté selon le type de projet
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": isEcommerce
-      ? "WebSite"
-      : isWebApp
-      ? "SoftwareApplication"
-      : "WebSite",
+    "@type": "CreativeWork",
     name: project.schema.name,
     url: project.schema.url,
     creator: {
@@ -80,32 +76,21 @@ export default function ProjectPage({ params }: Props) {
       url: "https://www.guillaumeganne.com",
     },
     inLanguage: "fr",
-    datePublished: project.date + "-01",
+    datePublished: `${project.date}-01`,
     description: project.description,
     ...(isEcommerce && {
-      "@type": "WebSite",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${project.schema.url}/shop?s={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-      offers: {
-        "@type": "AggregateOffer",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/InStock",
+      about: {
+        "@type": "Thing",
+        name: "E-commerce",
       },
     }),
     ...(isWebApp && {
-      applicationCategory: "Game",
-      operatingSystem: "Web Browser",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "EUR",
+      about: {
+        "@type": "Thing",
+        name: "Application Web",
       },
     }),
     ...(isWebsite && {
-      "@type": "WebSite",
       about: {
         "@type": "Thing",
         name: project.h1,
@@ -119,18 +104,6 @@ export default function ProjectPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Head>
-        <title>{project.title} | Portfolio Guillaume Ganne</title>
-        <meta name="description" content={project.description} />
-        <meta property="og:title" content={project.title} />
-        <meta property="og:description" content={project.description} />
-        <meta property="og:image" content={project.image.src} />
-        <meta
-          property="og:url"
-          content={`https://guillaumeganne.com/projets/${project.slug}`}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
       <ProjectDetail project={project} />
     </>
   );

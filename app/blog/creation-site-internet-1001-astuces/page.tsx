@@ -3,7 +3,6 @@ import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { metadata } from "../metadata";
 import { schema } from "../schema";
 import ShareButtons from "@/components/blog/ShareButtons";
-import CanonicalHead from "@/components/CanonicalHead";
 
 export { metadata };
 
@@ -17,8 +16,7 @@ export default function CreationSiteInternetGuide() {
           __html: JSON.stringify(schema),
         }}
       />
-      {/* Canonical URL */}
-      <CanonicalHead path="/blog/creation-site-internet-1001-astuces" />
+
       <div className="min-h-screen">
         {/* Hero Section */}
         <div className="w-full py-36 px-4">

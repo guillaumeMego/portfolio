@@ -6,14 +6,14 @@ export const schema = {
     "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
   image: {
     "@type": "ImageObject",
-    url: "https://guillaume-ganne.fr/images/creation-site-vitrine-angouleme.webp",
+    url: "https://www.guillaumeganne.com/images/creation-site-vitrine-angouleme.webp",
     width: 1200,
     height: 630,
   },
   author: {
     "@type": "Person",
     name: "Guillaume Ganne",
-    url: "https://guillaume-ganne.fr",
+    url: "https://www.guillaumeganne.com",
     jobTitle: "Webdesigner",
     worksFor: {
       "@type": "Organization",
@@ -23,10 +23,10 @@ export const schema = {
   publisher: {
     "@type": "Organization",
     name: "Guillaume Ganne - Webdesigner Angoulême",
-    url: "https://guillaume-ganne.fr",
+    url: "https://www.guillaumeganne.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://guillaume-ganne.fr/logo-guillaume-ganne-webdesigner-angouleme.svg",
+      url: "https://www.guillaumeganne.com/logo-guillaume-ganne-webdesigner-angouleme.svg",
     },
   },
   datePublished: "2024-01-15T10:00:00.000Z",
@@ -34,7 +34,7 @@ export const schema = {
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id":
-      "https://guillaume-ganne.fr/blog/creation-site-internet-1001-astuces",
+      "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces",
   },
   articleSection: "Développement Web",
   keywords: [
@@ -73,20 +73,6 @@ export const schema = {
   timeRequired: "PT15M",
   inLanguage: "fr-FR",
   isAccessibleForFree: true,
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: ["h1", "h2", "h3", "p"],
-  },
-  video: {
-    "@type": "VideoObject",
-    name: "Guide complet création site internet",
-    description:
-      "Vidéo guide étape par étape pour créer un site internet professionnel",
-    thumbnailUrl: "https://img.youtube.com/vi/4QuqWmbPIpQ/maxresdefault.jpg",
-    uploadDate: "2024-01-15T10:00:00.000Z",
-    duration: "PT15M",
-    embedUrl: "https://www.youtube.com/embed/4QuqWmbPIpQ?si=3MWm1fVVmYkROUlX",
-  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -94,25 +80,25 @@ export const schema = {
         "@type": "ListItem",
         position: 1,
         name: "Accueil",
-        item: "https://guillaume-ganne.fr",
+        item: "https://www.guillaumeganne.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://guillaume-ganne.fr/blog",
+        item: "https://www.guillaumeganne.com/blog",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Création site internet : 1001 astuces",
-        item: "https://guillaume-ganne.fr/blog/creation-site-internet-1001-astuces",
+        item: "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces",
       },
     ],
   },
   potentialAction: {
     "@type": "ReadAction",
     target:
-      "https://guillaume-ganne.fr/blog/creation-site-internet-1001-astuces",
+      "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces",
   },
 };

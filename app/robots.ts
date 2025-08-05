@@ -17,7 +17,6 @@ export default function robots(): MetadataRoute.Robots {
           "/accessibilite", // Ancienne page
           "/plan-du-site-guillaume-ganne", // Ancienne page
           "/api/",
-          "/_next/",
           "/admin/",
         ],
       },

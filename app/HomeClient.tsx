@@ -317,76 +317,76 @@ export default function HomeClient() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: `{
-   "@context": "https://schema.org",
-   "@type": "FAQPage",
-   "mainEntity": [
-     {
-       "@type": "Question",
-       "name": "Quel est un budget raisonnable pour un site web à Angoulême ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Pour un site vitrine de 5 pages optimisé SEO local, pr'evoyez entre 1 200 € et 2 000 €..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Quel est le tarif d'hébergement d'un site internet ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Un hébergement mutualisé performant en France coûte environ 6 € HT par mois..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Quels sont les types de sites web et lequel me convient ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Site vitrine, site e-commerce ou application web..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Quel contenu doit comporter un site web professionnel ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Un message clair, design cohérent, CTA visibles, témoignages..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Où puis-je voir des exemples de sites que vous avez créés ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Rendez-vous sur guillaumeganne.com/projets pour voir un portfolio complet..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Comment accéder à mon site après la livraison ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Vous recevez un accès admin WordPress ou un dépôt Git..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Comment se connecter à l'interface d'administration ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "Via /wp-admin avec MFA et un guide PDF pas-à-pas..."
-       }
-     },
-     {
-       "@type": "Question",
-       "name": "Quelle est la différence entre le web et l'internet ?",
-       "acceptedAnswer": {
-         "@type": "Answer",
-         "text": "L'Internet est l'infrastructure ; le Web est l'un de ses services..."
-       }
-     }
-   ]
- }`,
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Quel est un budget raisonnable pour un site web à Angoulême ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Pour un site vitrine de 5 pages optimisé SEO local, prévoyez entre 1 200 € et 2 000 €...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Quel est le tarif d'hébergement d'un site internet ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Un hébergement mutualisé performant en France coûte environ 6 € HT par mois...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Quels sont les types de sites web et lequel me convient ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Site vitrine, site e-commerce ou application web...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Quel contenu doit comporter un site web professionnel ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Un message clair, design cohérent, CTA visibles, témoignages...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Où puis-je voir des exemples de sites que vous avez créés ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Rendez-vous sur guillaumeganne.com/projets pour voir un portfolio complet...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Comment accéder à mon site après la livraison ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Vous recevez un accès admin WordPress ou un dépôt Git...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Comment se connecter à l'interface d'administration ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Via /wp-admin avec MFA et un guide PDF pas-à-pas...",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Quelle est la différence entre le web et l'internet ?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "L'Internet est l'infrastructure ; le Web est l'un de ses services...",
+                },
+              },
+            ],
+          }),
         }}
       />
       <CTASection />
