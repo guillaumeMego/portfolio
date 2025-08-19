@@ -31,12 +31,36 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    // Formats d'images supportés pour l'optimisation (WebP prioritaire pour les performances)
+    formats: ["image/webp", "image/avif"],
+
+    // Tailles d'écrans pour l'optimisation responsive
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+
+    // Tailles d'images pour l'optimisation
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+
+    // Cache des images optimisées (1 an) - réduit les erreurs 400
     minimumCacheTTL: 31536000,
+
+    // Autoriser les SVG (nécessaire pour les logos)
     dangerouslyAllowSVG: true,
+
+    // Politique de sécurité pour les images
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+
+    // Configuration du domaine d'hébergement pour éviter les erreurs 400
+    domains: ["www.guillaumeganne.com"],
+
+    // Configuration des loaders d'images (par défaut)
+    loader: "default",
+
+    // OPTION : Désactiver complètement l'optimisation si nécessaire
+    // Décommentez la ligne suivante pour désactiver l'optimisation :
+    // unoptimized: true,
+
+    // Gestion des erreurs d'optimisation
+    contentDispositionType: "attachment",
   },
   optimizeFonts: true,
   trailingSlash: false,
