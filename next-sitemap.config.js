@@ -38,9 +38,7 @@ module.exports = {
                 ]
             }
         ],
-        additionalSitemaps: [
-            'https://www.guillaumeganne.com/sitemap.xml'
-        ]
+
     },
     additionalPaths: async (config) => {
         const result = [];
