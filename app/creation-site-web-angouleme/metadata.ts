@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Spécialiste de la création de sites web professionnels à Angoulême, optimisés pour le SEO local.",
   alternates: {
-    canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme",
+    canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme/",
   },
   robots: { index: true, follow: true },
   openGraph: {

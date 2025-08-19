@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description:
     "Contactez Guillaume Ganne pour un devis ou des informations sur la création de votre site web à Angoulême.",
   alternates: {
-    canonical: "https://www.guillaumeganne.com/contact",
+    canonical: "https://www.guillaumeganne.com/contact/",
   },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: "https://www.guillaumeganne.com/contact",
+    url: "https://www.guillaumeganne.com/contact/",
     title: "Contact | Guillaume Ganne",
     description:
       "Contactez Guillaume Ganne pour un devis ou des informations sur la création de votre site web à Angoulême.",

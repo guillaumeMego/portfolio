@@ -42,7 +42,7 @@ export const metadata = {
   description:
     "Comment vos données personnelles sont collectées, utilisées et protégées sur guillaumeganne.com.",
   alternates: {
-    canonical: "https://www.guillaumeganne.com/politique-confidentialite",
+    canonical: "https://www.guillaumeganne.com/politique-confidentialite/",
   },
   robots: { index: true, follow: true },
   openGraph: {

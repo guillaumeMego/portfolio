@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: project.title,
     description: project.description,
     alternates: {
-      canonical: `https://www.guillaumeganne.com/projets/${project.slug}`,
+      canonical: `https://www.guillaumeganne.com/projets/${project.slug}/`,
     },
     keywords: [
       "création site web angoulême",
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "article",
       locale: "fr_FR",
-      url: `https://www.guillaumeganne.com/projets/${project.slug}`,
+      url: `https://www.guillaumeganne.com/projets/${project.slug}/`,
       title: project.title,
       description: project.description,
       siteName: "Guillaume Ganne",

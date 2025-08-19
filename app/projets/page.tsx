@@ -20,11 +20,11 @@ export const metadata = {
   title: "Projets web & réalisations | Guillaume Ganne",
   description:
     "Découvrez mes réalisations web : sites vitrines, e-commerce, applications sur-mesure pour PME et entrepreneurs à Angoulême.",
-  alternates: { canonical: "https://www.guillaumeganne.com/projets" },
+  alternates: { canonical: "https://www.guillaumeganne.com/projets/" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: "https://www.guillaumeganne.com/projets",
+    url: "https://www.guillaumeganne.com/projets/",
     title: "Projets web & réalisations | Guillaume Ganne",
     description:
       "Découvrez mes réalisations web : sites vitrines, e-commerce, applications sur-mesure pour PME et entrepreneurs à Angoulême.",

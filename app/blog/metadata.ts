@@ -47,13 +47,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.guillaumeganne.com"),
   alternates: {
     canonical:
-      "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces",
+      "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces/",
   },
   openGraph: {
     title: "La création de site internet ! Trouves les 1001 astuces",
     description:
       "Création de site internet : 1001 astuces pratiques pour choisir vos outils, optimiser SEO et vitesse, sécuriser votre site et convertir davantage de visiteurs.",
-    url: "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces",
+    url: "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces/",
     siteName: "Guillaume Ganne - Webdesigner Angoulême",
     images: [
       {

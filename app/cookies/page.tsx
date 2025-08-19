@@ -25,7 +25,7 @@ export const metadata = {
   title: "Politique de cookies | Guillaume Ganne",
   description:
     "Politique de cookies du site guillaumeganne.com. Ce site n'utilise pas de cookies de suivi ou publicitaires.",
-  alternates: { canonical: "https://www.guillaumeganne.com/cookies" },
+  alternates: { canonical: "https://www.guillaumeganne.com/cookies/" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
