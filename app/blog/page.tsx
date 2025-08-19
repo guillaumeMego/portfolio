@@ -6,13 +6,17 @@ export const metadata: Metadata = {
   title: "Blog - Guillaume Ganne - Webdesigner Angoulême",
   description:
     "Articles et conseils sur la création de sites internet, le développement web et l'optimisation SEO.",
+  alternates: { canonical: "https://www.guillaumeganne.com/blog" },
+  robots: { index: true, follow: true },
   openGraph: {
+    type: "website",
+    url: "https://www.guillaumeganne.com/blog",
     title: "Blog - Guillaume Ganne - Webdesigner Angoulême",
     description:
       "Articles et conseils sur la création de sites internet, le développement web et l'optimisation SEO.",
-    url: "https://www.guillaumeganne.com/blog",
-    siteName: "Guillaume Ganne - Webdesigner Angoulême",
+    siteName: "Guillaume Ganne",
   },
+  twitter: { card: "summary_large_image" },
 };
 
 const articles = [

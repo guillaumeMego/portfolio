@@ -26,8 +26,6 @@ export const metadata: Metadata = {
   title: "Guillaume Ganne – Développeur web & web designer",
   description:
     "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
-  // Pas de canonical global pour éviter les doublons. Chaque page définit le sien.
-  // alternates: { canonical: "https://www.guillaumeganne.com" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",

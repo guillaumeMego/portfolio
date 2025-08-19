@@ -5,40 +5,19 @@ export const metadata: Metadata = {
   title: "Contact | Guillaume Ganne",
   description:
     "Contactez Guillaume Ganne pour un devis ou des informations sur la création de votre site web à Angoulême.",
-  keywords: ["contact", "devis site web", "angoulême", "guillaume ganne"],
   alternates: {
     canonical: "https://www.guillaumeganne.com/contact",
   },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Contact | Guillaume Création",
-    description:
-      "Discutons de votre projet web ou vidéo avec Guillaume Création, freelance à Angoulême.",
     type: "website",
-    locale: "fr_FR",
-    url: "https://guillaumecreation.com/contact",
-    siteName: "Guillaume Création",
-    images: [
-      {
-        url: "/images/og-contact.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Contactez Guillaume Création",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact | Guillaume Création",
+    url: "https://www.guillaumeganne.com/contact",
+    title: "Contact | Guillaume Ganne",
     description:
-      "Prenez contact avec Guillaume Création pour vos besoins en développement web, design UX/UI ou vidéo à Angoulême.",
+      "Contactez Guillaume Ganne pour un devis ou des informations sur la création de votre site web à Angoulême.",
+    siteName: "Guillaume Ganne",
   },
-  robots: {
-    index: true,
-    follow: true,
-    "max-video-preview": -1,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function ContactPage() {

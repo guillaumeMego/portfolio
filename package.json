@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:check": "linkinator https://www.guillaumeganne.com --recurse --timeout=60000 --skip '.*(linkedin|instagram|mailto).*'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
@@ -47,6 +48,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "jest": "^29.7.0",
+    "linkinator": "^6.1.4",
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",

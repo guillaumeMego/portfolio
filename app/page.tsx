@@ -1,6 +1,7 @@
 import HomeClient from "./HomeClient";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Guillaume Ganne – Développeur web & web designer",
   description:
     "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
