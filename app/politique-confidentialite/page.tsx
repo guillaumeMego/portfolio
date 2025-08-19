@@ -44,9 +44,14 @@ export const metadata = {
   alternates: {
     canonical: "https://www.guillaumeganne.com/politique-confidentialite",
   },
-  keywords: [
-    "politique de confidentialité",
-    "données personnelles",
-    "guillaume ganne",
-  ],
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://www.guillaumeganne.com/politique-confidentialite",
+    title: "Politique de confidentialité | Guillaume Ganne",
+    description:
+      "Comment vos données personnelles sont collectées, utilisées et protégées sur guillaumeganne.com.",
+    siteName: "Guillaume Ganne",
+  },
+  twitter: { card: "summary_large_image" },
 };

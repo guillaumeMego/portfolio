@@ -4,11 +4,17 @@ export const metadata: Metadata = {
   title: "Création site web à Angoulême | Guillaume Ganne",
   description:
     "Spécialiste de la création de sites web professionnels à Angoulême, optimisés pour le SEO local.",
+  alternates: {
+    canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme",
+  },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "création site web angoulême et agglomération | Guillaume Ganne",
-    description:
-      "Besoin d'un site web performant à Angoulême et son agglomération ? Je conçois sites vitrines, e-commerce et apps sur-mesure avec SEO local boosté. Devis gratuit !",
+    type: "website",
     url: "https://www.guillaumeganne.com/creation-site-web-angouleme",
+    title: "Création site web à Angoulême | Guillaume Ganne",
+    description:
+      "Spécialiste de la création de sites web professionnels à Angoulême, optimisés pour le SEO local.",
+    siteName: "Guillaume Ganne",
     images: [
       {
         url: "/images/creation-site-vitrine-angouleme.jpg",
@@ -17,26 +23,11 @@ export const metadata: Metadata = {
         alt: "création site web angoulême et agglomération – maquette responsive",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "création site web angoulême et agglomération | Guillaume Ganne",
+    title: "Création site web à Angoulême | Guillaume Ganne",
     description:
-      "Besoin d'un site web performant à Angoulême et son agglomération ? Je conçois sites vitrines, e-commerce et apps sur-mesure avec SEO local boosté. Devis gratuit !",
-    images: ["/images/creation-site-vitrine-angouleme.jpg"],
+      "Spécialiste de la création de sites web professionnels à Angoulême, optimisés pour le SEO local.",
   },
-  keywords: [
-    "création site web angoulême",
-    "développeur web",
-    "web designer",
-    "seo local",
-    "site vitrine",
-    "site professionnel",
-    "angoulême",
-  ],
-  alternates: {
-    canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme",
-  },
-  robots: { index: true, follow: true },
 };

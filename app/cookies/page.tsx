@@ -24,12 +24,16 @@ export default function Cookies() {
 export const metadata = {
   title: "Politique de cookies | Guillaume Ganne",
   description:
-    "Découvrez comment nous utilisons les cookies pour améliorer votre expérience sur notre site.",
+    "Politique de cookies du site guillaumeganne.com. Ce site n'utilise pas de cookies de suivi ou publicitaires.",
   alternates: { canonical: "https://www.guillaumeganne.com/cookies" },
-  keywords: [
-    "cookies",
-    "politique cookies",
-    "confidentialité",
-    "guillaume ganne",
-  ],
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: "https://www.guillaumeganne.com/cookies",
+    title: "Politique de cookies | Guillaume Ganne",
+    description:
+      "Politique de cookies du site guillaumeganne.com. Ce site n'utilise pas de cookies de suivi ou publicitaires.",
+    siteName: "Guillaume Ganne",
+  },
+  twitter: { card: "summary_large_image" },
 };
