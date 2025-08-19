@@ -46,7 +46,7 @@ export default function CTASection() {
             Réserver sur Calendly
           </a>
           <a
-            href="/contact"
+            href="/contact/"
             className="rounded-2xl border border-white px-8 py-4 font-semibold hover:bg-white hover:text-[#2C3E50]"
           >
             Envoyer un message

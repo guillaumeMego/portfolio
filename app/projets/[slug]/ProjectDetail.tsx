@@ -31,7 +31,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
         </p>
         <div className="flex flex-wrap items-stretch justify-center gap-4">
           <Link
-            href="/contact"
+            href="/contact/"
             className="bg-primary inline-flex items-center px-12 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30"
           >
             <CheckCircle2 className="w-5 h-5 mr-2" />
@@ -144,16 +144,14 @@ export default function ProjectDetail({ project }: { project: Project }) {
             </p>
             <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center px-12 py-4 bg-primary text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30"
               >
                 Parlons de votre projet
               </Link>
               <a
-                href="https://calendly.com/guillaume-ganne/30min?background_color=ecf0f1&text_color=0e141a&primary_color=2c3e50"
-                target="_blank"
-                rel="noopener"
-                className="inline-flex items-center px-12 py-4 border-2 border-primary text-primary rounded-full font-semibold font-montserrat hover:border-[#C25B0B] hover:text-[#C25B0B] transition-all duration-300 ease-in-out"
+                href="/contact/"
+                className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary border border-transparent rounded-md shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200"
               >
                 Réserver un appel gratuit
               </a>

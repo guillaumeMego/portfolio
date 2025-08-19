@@ -32,12 +32,12 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Accueil", icon: Home },
-    { href: "/projets", label: "Projets", icon: Briefcase },
-    { href: "/a-propos", label: "À Propos", icon: User },
-    { href: "/tarif", label: "Mes tarifs", icon: CreditCard },
-    { href: "/creation-site-web-angouleme", label: "Angoulême", icon: MapPin },
-    { href: "/blog", label: "Blog", icon: Book },
-    { href: "/contact", label: "Contact", icon: Mail },
+    { href: "/projets/", label: "Projets", icon: Briefcase },
+    { href: "/a-propos/", label: "À Propos", icon: User },
+    { href: "/tarif/", label: "Mes tarifs", icon: CreditCard },
+    { href: "/creation-site-web-angouleme/", label: "Angoulême", icon: MapPin },
+    { href: "/blog/", label: "Blog", icon: Book },
+    { href: "/contact/", label: "Contact", icon: Mail },
   ];
 
   return (

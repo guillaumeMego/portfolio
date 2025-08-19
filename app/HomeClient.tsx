@@ -173,7 +173,7 @@ export default function HomeClient() {
         </div>
         <div className="flex justify-center mt-8">
           <a
-            href="/projets"
+            href="/projets/"
             className="bg-primary inline-block px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30"
           >
             Voir tous les projets
@@ -199,7 +199,7 @@ export default function HomeClient() {
                   devis incluent maquettes Figma, développement
                   WordPress/Next.js, optimisation « création site web Angoulême
                   » et formation d&apos;une heure.{" "}
-                  <a href="/mes-tarifs">Voir les détails de mes tarifs</a>.
+                  <a href="/tarif/">Voir les détails de mes tarifs</a>.
                 </>
               ),
             },
@@ -254,7 +254,7 @@ export default function HomeClient() {
                 "Où puis-je voir des exemples de sites que vous avez créés ?",
               answer: (
                 <>
-                  Consultez mes <a href="/projets">projets récents</a> :
+                  Consultez mes <a href="/projets/">projets récents</a> :
                   portfolio photo animé, e-commerce de bougies bio « Les Créas
                   de Rose Bleue », etc. Chaque fiche détaille les technologies
                   et les résultats obtenus.

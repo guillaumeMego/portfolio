@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Blog - Guillaume Ganne - Webdesigner Angoulême",
   description:
     "Articles et conseils sur la création de sites internet, le développement web et l'optimisation SEO.",
-  alternates: { canonical: "https://www.guillaumeganne.com/blog" },
+  alternates: { canonical: "https://www.guillaumeganne.com/blog/" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "angoulême",
   ],
   alternates: {
-    canonical: "https://www.guillaumeganne.com/a-propos",
+    canonical: "https://www.guillaumeganne.com/a-propos/",
   },
   robots: { index: true, follow: true },
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Découvrez mon parcours en tant que développeur web freelance & designer UX/UI à Angoulême. Création de sites sur-mesure et SEO local optimisé.",
     type: "website",
     locale: "fr_FR",
-    url: "https://guillaumeganne.com/a-propos",
+    url: "https://www.guillaumeganne.com/a-propos/",
     siteName: "Guillaume Ganne",
   },
   twitter: {

@@ -157,7 +157,7 @@ export default function TarifClient() {
                     </div>
                     <p className="text-sm text-gray-600">Délai : {svc.delai}</p>
                     <Link
-                      href="/contact"
+                      href="/contact/"
                       className="w-full inline-block px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30 bg-primary text-center"
                     >
                       Demander un devis

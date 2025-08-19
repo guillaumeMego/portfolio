@@ -836,7 +836,7 @@ export default function CreationSiteInternetGuide() {
                 obtiendrez un site web durable, cohérent, et source régulière de
                 clients. Pour découvrir nos{" "}
                 <a
-                  href="/tarif"
+                  href="/tarif/"
                   className="text-secondary underline font-medium"
                 >
                   tarifs détaillés
@@ -855,7 +855,7 @@ export default function CreationSiteInternetGuide() {
                   professionnel.
                 </p>
                 <a
-                  href="/contact"
+                  href="/contact/"
                   className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Demander un devis

@@ -66,7 +66,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "Guillaume Ganne – Création site web Angoulême",
-              url: "https://www.guillaumeganne.com",
+              url: "https://www.guillaumeganne.com/",
               image:
                 "https://www.guillaumeganne.com/images/guillaume-ganne-portrait.webp",
               telephone: "+33-6-62-82-69-51",
@@ -94,7 +94,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Guillaume Ganne",
-              url: "https://www.guillaumeganne.com",
+              url: "https://www.guillaumeganne.com/",
               jobTitle: "Web designer & développeur full-stack",
               address: {
                 "@type": "PostalAddress",
@@ -103,7 +103,7 @@ export default function RootLayout({
               },
               telephone: "+33-6-62-82-69-51",
               sameAs: [
-                "https://www.linkedin.com/in/guillaume-ganne",
+                "https://www.linkedin.com/in/guillaume-ganne/",
                 "https://github.com/GuillaumeG",
               ],
             }),
@@ -120,13 +120,13 @@ export default function RootLayout({
                   "@type": "ListItem",
                   position: 1,
                   name: "Accueil",
-                  item: "https://www.guillaumeganne.com",
+                  item: "https://www.guillaumeganne.com/",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Projets",
-                  item: "https://www.guillaumeganne.com/projets",
+                  item: "https://www.guillaumeganne.com/projets/",
                 },
               ],
             }),

@@ -8,7 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "seo:check": "linkinator https://www.guillaumeganne.com --recurse --timeout=60000 --skip '.*(linkedin|instagram|mailto).*'"
+    "seo:links": "linkinator https://www.guillaumeganne.com --recurse --timeout=60000 --skip \".*(linkedin|instagram|youtube|mailto).*\""
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",

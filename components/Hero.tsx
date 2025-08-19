@@ -83,8 +83,8 @@ export default function Hero() {
             }}
           >
             <a
-              href="/contact"
-              className="bg-primary inline-block px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30"
+              href="/contact/"
+              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary border border-transparent rounded-md shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200"
             >
               Demander un devis
             </a>
