@@ -55,7 +55,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="msapplication-TileColor" content="#0f172a" />
-        <meta name="msapplication-TileImage" content="/icon-144.png" />
+        <meta name="msapplication-TileImage" content="/icon-192.png" />
         <meta name="theme-color" content="#0f172a" />
         <meta name="author" content="Guillaume Ganne" />
         <meta name="copyright" content="© 2024 Guillaume Ganne" />

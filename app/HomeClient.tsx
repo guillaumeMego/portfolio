@@ -148,7 +148,7 @@ export default function HomeClient() {
                     style={{ height: "auto" }}
                   />
                   <Image
-                    src="/images/logo/temps.svg"
+                    src="/images/logo/logo-client-3.svg"
                     alt="Logo client 3"
                     width={32}
                     height={32}
