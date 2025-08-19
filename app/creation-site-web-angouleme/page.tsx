@@ -398,43 +398,6 @@ export default function CreationSiteWebAngouleme() {
         </div>
       </section>
 
-      {/* Section CTA finale */}
-      <section className="relative z-10 bg-[#ECF0F1]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-[#2C3E50] mb-8">
-              prêt à lancer votre site web à angoulême ?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-              Ne perdez plus de temps avec un site lent ou mal référencé.
-              Boostez votre activité avec un site professionnel dès 990 €.
-            </p>
-            <p className="text-lg font-semibold text-[#2C3E50] mb-8">
-              👉 Réservez votre créneau en ligne ou contactez-moi dès maintenant
-              :
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="https://calendly.com/guillaume-ganne/30min?background_color=ecf0f1&text_color=0e141a&primary_color=2c3e50"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-semibold hover:bg-primary/80 transition-colors"
-              >
-                <Calendar className="w-5 h-5" />
-                Réserver sur Calendly
-              </a>
-              <a
-                href="/contact/"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                Envoyer un message
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <CTASection />
     </div>
