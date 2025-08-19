@@ -108,54 +108,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // 4) Redirections sans trailing slash vers avec trailing slash (normalisation)
-      {
-        source: '/tarif',
-        destination: '/tarif/',
-        permanent: true,
-      },
-      {
-        source: '/contact',
-        destination: '/contact/',
-        permanent: true,
-      },
-      {
-        source: '/a-propos',
-        destination: '/a-propos/',
-        permanent: true,
-      },
-      {
-        source: '/mentions-legales',
-        destination: '/mentions-legales/',
-        permanent: true,
-      },
-      {
-        source: '/politique-confidentialite',
-        destination: '/politique-confidentialite/',
-        permanent: true,
-      },
-      {
-        source: '/cookies',
-        destination: '/cookies/',
-        permanent: true,
-      },
-      {
-        source: '/creation-site-web-angouleme',
-        destination: '/creation-site-web-angouleme/',
-        permanent: true,
-      },
-      {
-        source: '/blog',
-        destination: '/blog/',
-        permanent: true,
-      },
-      {
-        source: '/projets',
-        destination: '/projets/',
-        permanent: true,
-      },
-
-      // 5) Redirections spécifiques pour les anciens projets (avec trailing slash)
+      // 4) Redirections spécifiques pour les anciens projets (avec trailing slash)
       {
         source: '/projects/1',
         destination: '/projets/creation-boutique-bougies-bio/',
@@ -182,11 +135,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/projects/3/',
-        destination: '/projets/audit-securite-seo-librexpression/',
-        permanent: true,
-      },
-      {
         source: '/projects/les-creas-de-rose-bleue',
         destination: '/projets/creation-boutique-bougies-bio/',
         permanent: true,
@@ -207,7 +155,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // 6) Redirections pour les pages 404 signalées (avec trailing slash)
+      // 5) Redirections pour les pages 404 signalées (avec trailing slash)
       {
         source: '/gallery',
         destination: '/projets/',
