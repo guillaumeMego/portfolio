@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   title: "Guillaume Ganne – Développeur web & web designer",
   description:
     "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
-  alternates: { canonical: "https://www.guillaumeganne.com" },
+  // Pas de canonical global pour éviter les doublons. Chaque page définit le sien.
+  // alternates: { canonical: "https://www.guillaumeganne.com" },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
@@ -47,7 +48,6 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://www.guillaumeganne.com" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link
           rel="icon"

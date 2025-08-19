@@ -2,7 +2,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Guillaume Ganne",
-  url: "https://guillaume-ganne.fr/creation-site-web-angouleme",
+  url: "https://www.guillaumeganne.com/creation-site-web-angouleme",
   areaServed: [
     {
       "@type": "City",
@@ -33,7 +33,7 @@ export const localBusinessSchema = {
       name: "Ruelle-sur-Touvre",
     },
   ],
-  image: "https://guillaume-ganne.fr/images/guillaume.png",
+  image: "https://www.guillaumeganne.com/images/guillaume.png",
   description:
     "Création de sites web à Angoulême et son agglomération : sites vitrines, e-commerce, apps sur-mesure, SEO local.",
   address: {
@@ -45,6 +45,6 @@ export const localBusinessSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
-    email: "contact@guillaume-ganne.fr",
+    email: "contact@guillaumeganne.com",
   },
 };

@@ -4,7 +4,7 @@ import React from "react";
 export default function ShareButtons() {
   const handleCopyLink = () => {
     navigator.clipboard.writeText(
-      "https://guillaume-ganne.fr/blog/creation-site-internet-1001-astuces"
+      "https://www.guillaumeganne.com/blog/creation-site-internet-1001-astuces"
     );
     // Notification plus élégante
     const button = event?.target as HTMLElement;
@@ -27,7 +27,7 @@ export default function ShareButtons() {
 
       {/* LinkedIn */}
       <a
-        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//guillaume-ganne.fr/blog/creation-site-internet-1001-astuces&title=La%20cr%C3%A9ation%20de%20site%20internet%20!%20Trouves%20les%201001%20astuces"
+        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//www.guillaumeganne.com/blog/creation-site-internet-1001-astuces&title=La%20cr%C3%A9ation%20de%20site%20internet%20!%20Trouves%20les%201001%20astuces"
         target="_blank"
         rel="noopener noreferrer"
         className="group inline-flex items-center justify-center w-10 h-10 border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-600 hover:text-gray-800 rounded-lg transition-all duration-200"
@@ -40,7 +40,7 @@ export default function ShareButtons() {
 
       {/* X (Twitter) */}
       <a
-        href="https://twitter.com/intent/tweet?text=La%20cr%C3%A9ation%20de%20site%20internet%20!%20Trouves%20les%201001%20astuces%20-%20Guide%20complet%20avec%201001%20astuces%20pratiques&url=https%3A//guillaume-ganne.fr/blog/creation-site-internet-1001-astuces&via=guillaume_ganne"
+        href="https://twitter.com/intent/tweet?text=La%20cr%C3%A9ation%20de%20site%20internet%20!%20Trouves%20les%201001%20astuces%20-%20Guide%20complet%20avec%201001%20astuces%20pratiques&url=https%3A//www.guillaumeganne.com/blog/creation-site-internet-1001-astuces&via=guillaume_ganne"
         target="_blank"
         rel="noopener noreferrer"
         className="group inline-flex items-center justify-center w-10 h-10 border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-600 hover:text-gray-800 rounded-lg transition-all duration-200"
@@ -53,7 +53,7 @@ export default function ShareButtons() {
 
       {/* Facebook */}
       <a
-        href="https://www.facebook.com/sharer/sharer.php?u=https%3A//guillaume-ganne.fr/blog/creation-site-internet-1001-astuces"
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.guillaumeganne.com/blog/creation-site-internet-1001-astuces"
         target="_blank"
         rel="noopener noreferrer"
         className="group inline-flex items-center justify-center w-10 h-10 border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-600 hover:text-gray-800 rounded-lg transition-all duration-200"

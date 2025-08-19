@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "création site web angoulême et agglomération | Guillaume Ganne",
     description:
       "Besoin d'un site web performant à Angoulême et son agglomération ? Je conçois sites vitrines, e-commerce et apps sur-mesure avec SEO local boosté. Devis gratuit !",
-    url: "https://guillaume-ganne.fr/creation-site-web-angouleme",
+    url: "https://www.guillaumeganne.com/creation-site-web-angouleme",
     images: [
       {
         url: "/images/creation-site-vitrine-angouleme.jpg",
