@@ -19,6 +19,10 @@ const securityHeaders = [
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
+
+  // 🎯 CONVENTION URL : Forcer le trailing slash partout pour la cohérence
+  trailingSlash: true,
+
   async headers() {
     return [
       {
@@ -27,9 +31,11 @@ const nextConfig = {
       },
     ];
   },
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
   images: {
     // Formats d'images supportés pour l'optimisation (WebP prioritaire pour les performances)
     formats: ["image/webp", "image/avif"],
@@ -62,23 +68,27 @@ const nextConfig = {
     // Gestion des erreurs d'optimisation
     contentDispositionType: "attachment",
   },
+
   optimizeFonts: true,
-  trailingSlash: false,
+
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ["lucide-react"],
   },
+
   async redirects() {
     return [
-      // Redirection des paramètres ?C= vers la page sans paramètres
+      // 🚀 REDIRECTIONS DE NORMALISATION DES URLS
+
+      // 1) Redirection des paramètres ?C= vers la page sans paramètres
       {
         source: '/:path*',
         has: [{ type: 'query', key: 'C' }],
-        destination: '/:path*',
+        destination: '/:path*/',
         permanent: true,
       },
 
-      // Redirections avec host pour les domaines
+      // 2) Redirections avec host pour les domaines (non-www → www)
       {
         source: '/:path*',
         has: [
@@ -87,120 +97,125 @@ const nextConfig = {
             value: 'guillaumeganne.com',
           },
         ],
-        destination: 'https://www.guillaumeganne.com/:path*',
+        destination: 'https://www.guillaumeganne.com/:path*/',
         permanent: true,
       },
 
-      // Redirections /projects/ vers /projets/
+      // 3) Redirections /projects/ vers /projets/ (avec trailing slash)
       {
         source: '/projects/:slug*',
-        destination: '/projets/:slug*',
+        destination: '/projets/:slug*/',
         permanent: true,
       },
 
-      // Redirections avec trailing slash vers sans trailing slash
+      // 4) Redirections sans trailing slash vers avec trailing slash (normalisation)
       {
-        source: '/tarif/',
-        destination: '/tarif',
+        source: '/tarif',
+        destination: '/tarif/',
         permanent: true,
       },
       {
-        source: '/contact/',
-        destination: '/contact',
+        source: '/contact',
+        destination: '/contact/',
         permanent: true,
       },
       {
-        source: '/a-propos/',
-        destination: '/a-propos',
+        source: '/a-propos',
+        destination: '/a-propos/',
         permanent: true,
       },
       {
-        source: '/mentions-legales/',
-        destination: '/mentions-legales',
+        source: '/mentions-legales',
+        destination: '/mentions-legales/',
         permanent: true,
       },
       {
-        source: '/politique-confidentialite/',
-        destination: '/politique-confidentialite',
+        source: '/politique-confidentialite',
+        destination: '/politique-confidentialite/',
         permanent: true,
       },
       {
-        source: '/cookies/',
-        destination: '/cookies',
+        source: '/cookies',
+        destination: '/cookies/',
         permanent: true,
       },
       {
-        source: '/creation-site-web-angouleme/',
-        destination: '/creation-site-web-angouleme',
+        source: '/creation-site-web-angouleme',
+        destination: '/creation-site-web-angouleme/',
         permanent: true,
       },
       {
-        source: '/blog/',
-        destination: '/blog',
+        source: '/blog',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/projets',
+        destination: '/projets/',
         permanent: true,
       },
 
-      // Redirections spécifiques pour les anciens projets
+      // 5) Redirections spécifiques pour les anciens projets (avec trailing slash)
       {
         source: '/projects/1',
-        destination: '/projets/creation-boutique-bougies-bio',
+        destination: '/projets/creation-boutique-bougies-bio/',
         permanent: true,
       },
       {
         source: '/projects/1/',
-        destination: '/projets/creation-boutique-bougies-bio',
+        destination: '/projets/creation-boutique-bougies-bio/',
         permanent: true,
       },
       {
         source: '/projects/2',
-        destination: '/projets/refonte-site-association-soupopotes',
+        destination: '/projets/refonte-site-association-soupopotes/',
         permanent: true,
       },
       {
         source: '/projects/2/',
-        destination: '/projets/refonte-site-association-soupopotes',
+        destination: '/projets/refonte-site-association-soupopotes/',
         permanent: true,
       },
       {
         source: '/projects/3',
-        destination: '/projets/audit-securite-seo-librexpression',
+        destination: '/projets/audit-securite-seo-librexpression/',
         permanent: true,
       },
       {
         source: '/projects/3/',
-        destination: '/projets/audit-securite-seo-librexpression',
+        destination: '/projets/audit-securite-seo-librexpression/',
         permanent: true,
       },
       {
         source: '/projects/les-creas-de-rose-bleue',
-        destination: '/projets/creation-boutique-bougies-bio',
+        destination: '/projets/creation-boutique-bougies-bio/',
         permanent: true,
       },
       {
         source: '/projects/soup-o-potes',
-        destination: '/projets/refonte-site-association-soupopotes',
+        destination: '/projets/refonte-site-association-soupopotes/',
         permanent: true,
       },
       {
         source: '/projects/soup-o-potes/',
-        destination: '/projets/refonte-site-association-soupopotes',
+        destination: '/projets/refonte-site-association-soupopotes/',
         permanent: true,
       },
       {
         source: '/projects/pendu-pokemon',
-        destination: '/projets/jeu-pendu-pokemon-react',
+        destination: '/projets/jeu-pendu-pokemon-react/',
         permanent: true,
       },
 
-      // Redirections pour les pages 404 signalées
+      // 6) Redirections pour les pages 404 signalées (avec trailing slash)
       {
         source: '/gallery',
-        destination: '/projets',
+        destination: '/projets/',
         permanent: true,
       },
       {
         source: '/accessibilite',
-        destination: '/mentions-legales',
+        destination: '/mentions-legales/',
         permanent: true,
       },
       {
