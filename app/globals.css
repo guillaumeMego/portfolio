@@ -20,9 +20,9 @@
 @layer base {
   :root {
     /* Couleurs principales (HSL) */
-    --background: 207 13% 94%;
-    /* #ECF0F1 */
-    --card: 207 13% 94%;
+    --background: 220 14% 96%;
+    /* #F5F6F8 */
+    --card: 220 14% 96%;
     /* même valeur que background pour un fond opaque sur les cards */
     --foreground: 213 31% 10%;
     /* #0E141A */

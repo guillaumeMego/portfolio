@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 export default function Hero() {
   return (
     <motion.div
-      className="w-full -mt-8 md:mt-12 min-h-[70vh] flex flex-col justify-center"
+      className="w-full -mt-8 md:mt-12 min-h-[80vh] flex flex-col justify-center items-center"
       initial="hidden"
       animate="visible"
       variants={{
@@ -15,7 +15,7 @@ export default function Hero() {
         visible: { opacity: 1, transition: { duration: 1 } },
       }}
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-0 md:gap-10 mb-4 w-[90%] mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 mb-4 max-w-6xl mx-auto">
         <div className="flex-shrink-0 flex items-center md:self-start justify-center h-full">
           <Image
             src="/images/mascotte/mascotte-guillaume-ganne-webdesigner.webp"
@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-col items-center md:items-start justify-center w-full text-center md:text-left min-h-[220px] md:min-h-[340px]">
           <motion.h1
-            className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 text-[2.5rem] md:text-5xl font-bold mb-4"
+            className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 text-[2.5rem] md:text-5xl font-bold mb-4 max-w-2xl mx-auto md:mx-0"
             variants={{
               hidden: { opacity: 0, filter: "blur(10px)" },
               visible: {

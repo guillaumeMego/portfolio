@@ -38,7 +38,7 @@ export default function CreationSiteWebAngouleme() {
             <div className="inline-flex items-center px-6 py-3 bg-[#CC5500]/10 rounded-full text-[#CC5500] font-semibold text-sm mb-6">
               🎯 Expert local Angoulême
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight max-w-4xl mx-auto">
               Création de site web à Angoulême –<br />
               <span className="text-[#CC5500]">freelance dès 990 €</span>
             </h1>

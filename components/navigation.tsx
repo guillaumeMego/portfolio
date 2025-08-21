@@ -58,13 +58,10 @@ export function Navigation() {
             <Image
               src="/logo-guillaume-ganne-webdesigner-angouleme.svg"
               alt="Logo Guillaume Ganne"
-              width={70}
-              height={70}
+              width={150}
+              height={150}
               style={{ height: "auto" }}
             />
-            <span className="hidden md:block text-xl font-bold font-montserrat">
-              Guillaume Création
-            </span>
           </Link>
 
           <div className="hidden md:flex space-x-8" role="menubar">
