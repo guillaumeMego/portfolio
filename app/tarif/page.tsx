@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import TarifClient from "./TarifClient";
 
 export const metadata: Metadata = {
-  title: "Tarifs création site web | Guillaume Ganne",
+  title:
+    "Tarifs création site internet vitrine & e-commerce | Prix transparents",
   description:
-    "Forfaits clairs pour sites vitrines, e-commerce et solutions sur-mesure. Développeur web freelance à Angoulême. TVA non applicable, art. 293 B du CGI.",
+    "Tarifs création site internet transparents : site vitrine dès 990€, e-commerce 2490€. Développeur web freelance Angoulême. Devis gratuit 24h, sans frais cachés.",
   alternates: {
     canonical: "https://www.guillaumeganne.com/tarif/",
   },
@@ -12,9 +13,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.guillaumeganne.com/tarif/",
-    title: "Tarifs création site web | Guillaume Ganne",
+    title:
+      "Tarifs création site internet vitrine & e-commerce | Prix transparents",
     description:
-      "Forfaits clairs pour sites vitrines, e-commerce et solutions sur-mesure. Développeur web freelance à Angoulême. TVA non applicable, art. 293 B du CGI.",
+      "Tarifs création site internet transparents : site vitrine dès 990€, e-commerce 2490€. Développeur web freelance Angoulême. Devis gratuit 24h, sans frais cachés.",
     siteName: "Guillaume Ganne",
   },
   twitter: { card: "summary_large_image" },

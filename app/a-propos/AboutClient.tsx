@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Code, Palette, ChevronRight } from "lucide-react";
+import AboutFAQ from "@/components/AboutFAQ";
 
 export default function AboutClient() {
   return (
@@ -18,18 +19,32 @@ export default function AboutClient() {
           {/* Introduction SEO-rich */}
           <section className="space-y-6">
             <h1 className="text-4xl md:text-5xl text-center font-extrabold text-primary mb-8 mt-8">
-              À propos de moi
+              Guillaume Ganne – Développeur web freelance à Angoulême
             </h1>
             <p className="text-base md:text-lg leading-relaxed font-normal">
               Basé à Angoulême, je suis <strong>Guillaume Ganne</strong>,
               développeur web full stack et designer UX/UI, passionné par la
-              création de
-              <br className="hidden md:block" /> solutions digitales
-              performantes. Avec plusieurs années d&apos;expérience,
-              j&apos;accompagne artisans, PME et créateurs dans la réalisation
-              de sites internet sur-mesure, optimisés pour le SEO local et la
-              conversion client.
+              création de solutions digitales performantes. Avec plusieurs
+              années d&apos;expérience, j&apos;accompagne artisans, PME et
+              créateurs dans la réalisation de sites internet sur-mesure,
+              optimisés pour le SEO local et la conversion client.
             </p>
+
+            {/* Boutons d'action stylisés */}
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-8">
+              <Link
+                href="/projets"
+                className="inline-flex items-center px-8 py-4 text-base font-medium text-white bg-[#CC5500] border border-transparent rounded-xl shadow-lg hover:bg-[#B8440F] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
+              >
+                Voir mon portfolio
+              </Link>
+              <Link
+                href="/tarif"
+                className="inline-flex items-center px-8 py-4 text-base font-medium text-[#CC5500] bg-white border-2 border-[#CC5500] rounded-xl shadow-lg hover:bg-[#CC5500] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
+              >
+                Consulter mes tarifs
+              </Link>
+            </div>
           </section>
 
           {/* Section Bio & Image */}
@@ -38,29 +53,44 @@ export default function AboutClient() {
               <div className="relative h-[300px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/guillaume-ganne-portrait.webp"
-                  alt="Portrait de Guillaume Ganne"
+                  alt="Développeur web freelance à Angoulême – Guillaume Ganne"
                   fill
                   className="object-cover"
                 />
               </div>
+              <p className="text-sm text-muted-foreground text-center italic">
+                Guillaume, concepteur de sites web en Charente depuis 2019
+              </p>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="mb-4 leading-relaxed">
                   Depuis mes débuts, j&apos;ai travaillé sur des sites vitrines,
                   boutiques en ligne et applications métier. Je maîtrise
                   Next.js, React et WordPress, en appliquant les standards
-                  Opquast pour garantir accessibilité et performance.
+                  Opquast pour garantir accessibilité et performance. Spécialisé
+                  dans la création site web à Angoulême, j'interviens aussi dans
+                  toute la région.
                 </p>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed mb-6">
                   Mon objectif : transformer votre idée en un site unique, qui
                   reflète votre identité et génère des résultats concrets
                   (trafic, leads, ventes).
                 </p>
-                <a
-                  href="/contact/"
-                  className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary border border-transparent rounded-md shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200"
-                >
-                  Discutons de votre projet
-                </a>
+
+                {/* Boutons d'action dans la bio */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/creation-site-web-angouleme"
+                    className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#CC5500] border border-transparent rounded-xl shadow-lg hover:bg-[#B8440F] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
+                  >
+                    Création site Angoulême
+                  </Link>
+                  <a
+                    href="/contact/"
+                    className="inline-flex items-center px-6 py-3 text-base font-medium text-[#CC5500] bg-white border-2 border-[#CC5500] rounded-xl shadow-lg hover:bg-[#CC5500] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
+                  >
+                    Discutons de votre projet
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -193,6 +223,9 @@ export default function AboutClient() {
               ))}
             </div>
           </section>
+
+          {/* FAQ spécifique À propos */}
+          <AboutFAQ />
         </motion.div>
       </div>
     </>
