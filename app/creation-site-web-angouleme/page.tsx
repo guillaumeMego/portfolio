@@ -23,6 +23,9 @@ import ProjectCard from "@/components/ProjectCard";
 const CTASection = dynamic(() => import("@/components/CTASection"), {
   ssr: true,
 });
+const LocalFAQ = dynamic(() => import("@/components/LocalFAQ"), {
+  ssr: true,
+});
 
 export default function CreationSiteWebAngouleme() {
   return (
@@ -32,19 +35,19 @@ export default function CreationSiteWebAngouleme() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-8">
-              création de site web à angoulême dès 990 €
+              Création de site web à Angoulême – freelance dès 990 €
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               un expert local pour booster votre visibilité
             </p>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12">
-              Basé à Angoulême, je suis développeur web freelance spécialisé
-              dans la création de sites internet performants pour les
-              entrepreneurs, artisans et PME de la région.
-              <br />
-              Mon objectif est simple : vous aider à attirer de nouveaux clients
-              grâce à un site qui vous ressemble et qui vous fait gagner en
-              visibilité locale.
+              Je suis Guillaume Ganne, développeur web full‑stack et web
+              designer freelance basé à Angoulême. J’accompagne les
+              entrepreneurs, artisans et PME de la région dans la{" "}
+              <strong>création de site web à Angoulême</strong>
+              performante, rapide et optimisée pour le référencement local. Mon
+              objectif&nbsp;: concevoir un site qui vous ressemble, qui se
+              charge vite et qui vous apporte des contacts qualifiés.
             </p>
             <div className="relative inline-block">
               <Image
@@ -59,66 +62,70 @@ export default function CreationSiteWebAngouleme() {
         </div>
       </section>
 
-      {/* Section Pourquoi choisir un freelance local */}
+      {/* Section Expertise locale */}
       <section className="relative z-10 bg-[#ECF0F1]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#2C3E50] mb-8">
-              pourquoi choisir un freelance local plutôt qu'une agence ?
+              une expertise locale au service de votre visibilité
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Contrairement à une agence impersonnelle, je vous propose :
+              Sites sur‑mesure, performance, sécurité et technologies
+              modernes&nbsp;: tout est pensé pour votre visibilité à Angoulême
+              et en Charente.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-start gap-3 mb-4">
-                <Users className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
+                <CheckCircle className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-lg">
-                    Un accompagnement humain et personnalisé
-                  </h3>
+                  <h3 className="font-semibold text-lg">Sites sur‑mesure</h3>
                   <p className="text-muted-foreground">
-                    Un seul interlocuteur du début à la fin.
+                    Sites vitrines, e‑commerce ou applications web&nbsp;: chaque
+                    projet est unique et aligné sur vos objectifs.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-start gap-3 mb-4">
-                <TrendingUp className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
+                <Zap className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg">
-                    Des tarifs accessibles
+                    Performance garantie
                   </h3>
                   <p className="text-muted-foreground">
-                    Des sites vitrines professionnels dès 990 €.
+                    Sites rapides, notés 90+ sur Google PageSpeed et optimisés
+                    pour Angoulême et la Charente.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="flex items-start gap-3 mb-4">
+                <Shield className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold text-lg">
+                    Sécurité & conformité
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Protection des données, conformité RGPD et mises à jour
+                    régulières.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="flex items-start gap-3 mb-4">
                 <Code className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg">
-                    Une expertise polyvalente
+                    Technologies modernes
                   </h3>
                   <p className="text-muted-foreground">
-                    Design, développement, référencement, optimisation.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-[#AD5100] flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    Une proximité géographique
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Rendez-vous rapides à Angoulême et son agglomération.
+                    Next.js, React, WordPress… Des outils puissants pour des
+                    sites évolutifs et durables.
                   </p>
                 </div>
               </div>
@@ -132,7 +139,7 @@ export default function CreationSiteWebAngouleme() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#2C3E50] mb-8">
-              mes prestations
+              tarifs – dès 990 €
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -141,20 +148,20 @@ export default function CreationSiteWebAngouleme() {
                 site vitrine dès 990 €
               </h3>
               <p className="text-muted-foreground mb-6">
-                Un site moderne, rapide, optimisé pour présenter votre activité
-                et générer des contacts.
+                Un site moderne, rapide et optimisé SEO local pour présenter
+                votre activité et générer des contacts.
               </p>
               <div className="text-3xl font-bold text-[#2C3E50]">990 €</div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
               <h3 className="text-2xl font-bold text-primary mb-4">
-                site e-commerce dès 1800 €
+                site e-commerce dès 1 490 €
               </h3>
               <p className="text-muted-foreground mb-6">
-                Une boutique en ligne performante avec paiement sécurisé et
-                gestion des produits.
+                Une boutique en ligne performante avec paiement sécurisé,
+                gestion des produits et pages optimisées pour la conversion.
               </p>
-              <div className="text-3xl font-bold text-[#2C3E50]">1800 €</div>
+              <div className="text-3xl font-bold text-[#2C3E50]">1 490 €</div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg text-center">
               <h3 className="text-2xl font-bold text-primary mb-4">
@@ -169,6 +176,10 @@ export default function CreationSiteWebAngouleme() {
               </div>
             </div>
           </div>
+          <p className="text-center text-muted-foreground max-w-3xl mx-auto mt-6">
+            Chaque projet inclut l’hébergement, le design, l’optimisation SEO
+            local et un accompagnement personnalisé.
+          </p>
         </div>
       </section>
 
@@ -221,12 +232,12 @@ export default function CreationSiteWebAngouleme() {
         </div>
       </section>
 
-      {/* Section Ma méthode en 5 étapes */}
+      {/* Section Ma méthode de travail */}
       <section className="relative z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#2C3E50] mb-8">
-              ma méthode en 5 étapes
+              ma méthode de travail
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -235,27 +246,33 @@ export default function CreationSiteWebAngouleme() {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4">
                   1
                 </div>
-                <h3 className="font-semibold mb-2">Écoute & conseil</h3>
+                <h3 className="font-semibold mb-2">
+                  Écoute & conseil personnalisé
+                </h3>
                 <p className="text-sm text-muted-foreground">
-                  on définit ensemble vos objectifs.
+                  On définit ensemble vos besoins précis.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4">
                   2
                 </div>
-                <h3 className="font-semibold mb-2">Maquettes Figma</h3>
+                <h3 className="font-semibold mb-2">
+                  Maquettes sur‑mesure (Figma)
+                </h3>
                 <p className="text-sm text-muted-foreground">
-                  aperçu visuel avant développement.
+                  Design clair et moderne avant développement.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4">
                   3
                 </div>
-                <h3 className="font-semibold mb-2">Développement optimisé</h3>
+                <h3 className="font-semibold mb-2">
+                  Développement & optimisation
+                </h3>
                 <p className="text-sm text-muted-foreground">
-                  Next.js, React, WordPress.
+                  Code propre, SEO friendly, 100% responsive.
                 </p>
               </div>
               <div className="text-center">
@@ -264,7 +281,7 @@ export default function CreationSiteWebAngouleme() {
                 </div>
                 <h3 className="font-semibold mb-2">Tests & mise en ligne</h3>
                 <p className="text-sm text-muted-foreground">
-                  validation qualité et performance.
+                  Vérifications techniques et sécurité.
                 </p>
               </div>
               <div className="text-center">
@@ -275,7 +292,7 @@ export default function CreationSiteWebAngouleme() {
                   Formation & accompagnement
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  vous prenez la main facilement.
+                  Je vous rends autonome pour gérer votre site.
                 </p>
               </div>
             </div>
@@ -319,11 +336,12 @@ export default function CreationSiteWebAngouleme() {
                 ))}
               </div>
               <p className="text-lg text-gray-700 mb-6 italic">
-                &ldquo;Je recommande à 100% ! Très à l'écoute, réactif et
-                professionnel. Mon site attire enfin de nouveaux clients.&rdquo;
+                &ldquo;Je recommande à 100 % ! Guillaume a été incroyable du
+                début à la fin. Très à l'écoute, professionnel, réactif et
+                surtout investi.&rdquo;
               </p>
               <div>
-                <p className="font-semibold">Mélanie L., Angoulême</p>
+                <p className="font-semibold">Mélanie Le Goff (juin 2024)</p>
               </div>
             </div>
 
@@ -338,12 +356,14 @@ export default function CreationSiteWebAngouleme() {
                 ))}
               </div>
               <p className="text-lg text-gray-700 mb-6 italic">
-                &ldquo;Guillaume a su me conseiller et développer un site
-                e-commerce rapide et optimisé. Un vrai plus pour mon
-                activité.&rdquo;
+                &ldquo;Je ne remercierai jamais assez Guillaume pour son
+                professionnalisme et ses conseils de qualité. Sans lui, mon site
+                ne serait pas aussi performant !&rdquo;
               </p>
               <div>
-                <p className="font-semibold">Les Créas de Rose Bleue</p>
+                <p className="font-semibold">
+                  Les Créas de Rose Bleue (février 2024)
+                </p>
               </div>
             </div>
           </div>
@@ -355,7 +375,7 @@ export default function CreationSiteWebAngouleme() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="relative">
             <h2 className="text-3xl font-bold text-[#2C3E50] mb-12 text-center">
-              zone d'intervention
+              zone d’intervention à angoulême
             </h2>
             <Image
               src="/images/mascotte/carte-angouleme-france.webp"
@@ -367,14 +387,18 @@ export default function CreationSiteWebAngouleme() {
           </div>
           <div className="text-center mb-8">
             <p className="text-lg text-muted-foreground">
-              Je travaille avec des clients sur tout le Grand Angoulême :
+              Intervention à Angoulême et Grand Angoulême, avec possibilité
+              d’accompagnement à distance.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/80 p-6 rounded-xl shadow-sm text-center">
-              <h3 className="text-lg font-semibold mb-4">Centre-ville</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                Centre-ville et quartiers
+              </h3>
               <ul className="space-y-2 text-muted-foreground">
                 <li>Saint-Cybard</li>
+                <li>La Grand-Font</li>
                 <li>Ma Campagne</li>
                 <li>Bel-Air</li>
               </ul>
@@ -385,18 +409,28 @@ export default function CreationSiteWebAngouleme() {
                 <li>Soyaux</li>
                 <li>La Couronne</li>
                 <li>Saint-Yrieix</li>
+                <li>Gond-Pontouvre</li>
+                <li>Ruelle-sur-Touvre</li>
+                <li>L’Isle d’Espagnac</li>
               </ul>
             </div>
             <div className="bg-white/80 p-6 rounded-xl shadow-sm text-center">
-              <h3 className="text-lg font-semibold mb-4">Périphérie</h3>
+              <h3 className="text-lg font-semibold mb-4">À distance</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>Gond-Pontouvre</li>
-                <li>Ruelle-sur-Touvre</li>
+                <li>Charente</li>
+                <li>Nouvelle-Aquitaine</li>
               </ul>
             </div>
           </div>
+          <p className="text-center text-muted-foreground max-w-3xl mx-auto mt-6">
+            Disponible aussi à distance dans toute la Charente et la
+            Nouvelle‑Aquitaine.
+          </p>
         </div>
       </section>
+
+      {/* Section FAQ */}
+      <LocalFAQ />
 
       {/* CTA Section */}
       <CTASection />

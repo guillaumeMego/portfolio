@@ -17,20 +17,21 @@ export default function TarifClient() {
         "Design responsive adapté à votre image",
         "Optimisation SEO locale Angoulême",
         "Formulaire de contact sécurisé",
-        "Formation à la mise à jour",
+        "Formation pour gérer vos contenus",
         "Hébergement offert 1 an",
       ],
-      price: "1500€",
-      delai: "2-3 semaines",
+      price: "990 €",
+      delai: "2–3 semaines",
       src: "/images/creation-site-vitrine-angouleme.webp",
       blurSrc: "/images/creation-site-vitrine-angouleme.blur.webp",
       popular: false,
+      cta: "Créer mon site vitrine",
     },
     {
       title: "Site Vitrine Premium",
       subtitle: "Pour les PME & Commerces",
       description:
-        "Une présence web professionnelle avec maquette sur-mesure et stratégie SEO complète.",
+        "Une présence web professionnelle avec stratégie SEO complète pour être visible dès le lancement.",
       features: [
         "Maquette Figma personnalisée",
         "Optimisation SEO avancée",
@@ -38,11 +39,12 @@ export default function TarifClient() {
         "Suivi analytics détaillé",
         "Support technique 6 mois",
       ],
-      price: "2200€",
-      delai: "3-4 semaines",
+      price: "1 490 €",
+      delai: "3–4 semaines",
       src: "/images/vitrine.webp",
       blurSrc: "/images/vitrine.blur.webp",
       popular: true,
+      cta: "Choisir l'offre Premium",
     },
     {
       title: "E-commerce Starter",
@@ -56,11 +58,12 @@ export default function TarifClient() {
         "Formation vendeur 2h",
         "Maintenance 1 an incluse",
       ],
-      price: "2800€",
-      delai: "4-6 semaines",
+      price: "2 490 €",
+      delai: "4–6 semaines",
       src: "/images/ecommerce-woocommerce-charente.webp",
       blurSrc: "/images/ecommerce-woocommerce-charente.blur.webp",
       popular: false,
+      cta: "Lancer ma boutique",
     },
     {
       title: "Application Sur-Mesure",
@@ -74,11 +77,12 @@ export default function TarifClient() {
         "Formation équipe incluse",
         "Maintenance évolutive",
       ],
-      price: "3500€",
-      delai: "8-12 semaines",
+      price: "À partir de 3 500 €",
+      delai: "8–12 semaines",
       src: "/images/developpement-webapp-react.webp",
       blurSrc: "/images/developpement-webapp-react.blur.webp",
       popular: false,
+      cta: "Discuter de mon projet",
     },
   ];
 
@@ -96,12 +100,15 @@ export default function TarifClient() {
             Solutions Web Professionnelles
           </h1>
           <p className="text-lg text-gray-700 mb-4">
-            Des forfaits adaptés à votre budget pour développer votre activité
-            en ligne
+            Des forfaits clairs et adaptés à votre budget pour développer votre
+            activité en ligne
           </p>
-          <p className="text-base text-gray-600">
-            Tous mes projets incluent : design responsive, optimisation SEO,
-            hébergement sécurisé et support personnalisé
+          <p className="text-base text-gray-600 mb-2">
+            Tous mes projets incluent : design responsive, optimisation SEO
+            locale, hébergement sécurisé et support personnalisé
+          </p>
+          <p className="text-sm text-gray-500 italic">
+            TVA non applicable, art. 293 B du CGI
           </p>
         </motion.div>
 
@@ -117,7 +124,7 @@ export default function TarifClient() {
                 transition={{ delay: idx * 0.2 }}
               >
                 {svc.popular && (
-                  <div className="absolute top-6 right-6 bg-primary/90 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-[0_4px_12px_0_rgba(0,0,0,0.15)] z-10">
+                  <div className="absolute top-6 right-6 bg-[#E67E22] backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-[0_4px_12px_0_rgba(230,126,34,0.3)] z-10">
                     Recommandé
                   </div>
                 )}
@@ -153,14 +160,16 @@ export default function TarifClient() {
                       <span className="text-3xl font-bold text-primary">
                         {svc.price}
                       </span>
-                      <span className="text-sm text-gray-600">HT</span>
                     </div>
+                    <p className="text-xs text-gray-500 italic mb-2">
+                      TVA non applicable, art. 293 B du CGI
+                    </p>
                     <p className="text-sm text-gray-600">Délai : {svc.delai}</p>
                     <Link
                       href="/contact/"
-                      className="w-full inline-block px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30 bg-primary text-center"
+                      className="w-full inline-block px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-[#B8440F] hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-[#CC5500]/50 hover:shadow-[#CC5500]/30 bg-[#CC5500] text-center"
                     >
-                      Demander un devis
+                      {svc.cta}
                     </Link>
                   </div>
                 </div>
@@ -200,7 +209,7 @@ export default function TarifClient() {
                     description:
                       "Site vitrine optimisé SEO local pour TPE & Artisans",
                   },
-                  price: "1500",
+                  price: "990",
                   priceCurrency: "EUR",
                 },
                 {
@@ -211,7 +220,7 @@ export default function TarifClient() {
                     description:
                       "Site vitrine sur-mesure avec stratégie SEO complète",
                   },
-                  price: "2200",
+                  price: "1490",
                   priceCurrency: "EUR",
                 },
                 {
@@ -221,7 +230,7 @@ export default function TarifClient() {
                     name: "E-commerce Starter",
                     description: "Boutique en ligne sécurisée avec paiement CB",
                   },
-                  price: "2800",
+                  price: "2490",
                   priceCurrency: "EUR",
                 },
                 {

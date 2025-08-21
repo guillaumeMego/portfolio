@@ -36,7 +36,7 @@ export default function HomeClient() {
   }, []);
 
   return (
-    <div className="pt-28 pb-8 text-foreground relative">
+    <div className="min-h-screen pt-28 pb-0 text-foreground relative">
       <Hero />
 
       <section className="bg-white pt-24 pb-12">
@@ -57,7 +57,7 @@ export default function HomeClient() {
               <span className="text-[#CC5500]">Freelance</span> vs Agence :
               pourquoi me choisir ?
             </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               En tant que <strong>développeur web freelance à Angoulême</strong>
               , je vous offre tous les avantages d'une agence avec la proximité
               et la transparence en plus.
@@ -108,7 +108,7 @@ export default function HomeClient() {
                 </ul>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+                <h3 className="text-2xl font-bold text-gray-600 mb-6 text-center">
                   🏢 Agence classique
                 </h3>
                 <ul className="space-y-4">
@@ -319,7 +319,7 @@ export default function HomeClient() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight text-[#2C3E50]">
             Projets récents
           </h2>
-          <p className="text-center text-lg text-gray-800 mb-8 max-w-3xl mx-auto">
+          <p className="text-center text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
             Découvrez quelques réalisations de{" "}
             <strong>création site internet Angoulême</strong> : sites vitrines
             et e-commerce qui génèrent des résultats concrets pour mes clients
@@ -379,7 +379,7 @@ export default function HomeClient() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
               Ils m'ont fait confiance
             </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
               <strong>15+ clients satisfaits</strong> à Angoulême et en Charente
               depuis 2019. J'ai accompagné artisans, associations et PME locales
               avec des sites performants, sécurisés et visibles sur Google. Mon
@@ -423,67 +423,101 @@ export default function HomeClient() {
                 </div>
               </div>
             </div>
-
-            {/* Lien vers les avis Google */}
-            <div className="text-center mb-12 relative z-10">
-              <a
-                href="https://www.google.com/search?sca_esv=f59e2138defda713&tbm=lcl&q=Guillaume+Cr%C3%A9ation+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MTExN7UwNjIyNTY1MzE0NbEw3sDI-IpRwr00MycnsTQ3VcG56PDKxJLM_DwFx7LM4kWsOKUAnU8o11AAAAA&rldimm=4447583225356415483&hl=fr-FR&sa=X&ved=2ahUKEwjA5-DC15uPAxWlQ6QEHVdmOlwQ9fQKegQIUhAF&biw=1421&bih=849&dpr=2#lkt=LocalPoiReviews"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 text-[#CC5500] bg-white border-2 border-[#CC5500] rounded-xl shadow-lg hover:bg-[#CC5500] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300 relative z-10"
-              >
-                <span>📍</span>
-                Voir tous les avis Google
-              </a>
-            </div>
           </div>
-          {/* Logos clients statiques */}
-          <div className="flex flex-wrap justify-center items-center gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300">
-              <Image
-                src="/images/logo/logo-client-soupe-o-potes.png"
-                alt="Logo Soup'Ô Potes"
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-full object-contain"
-              />
-              <span className="text-sm font-medium text-gray-700">
-                Soup'Ô Potes
-              </span>
-            </div>
-            <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300">
-              <Image
-                src="/images/logo/logo-client-2.svg"
-                alt="Logo client artisan"
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-full object-contain"
-              />
-              <span className="text-sm font-medium text-gray-700">
-                Artisan local
-              </span>
-            </div>
-            <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300">
-              <Image
-                src="/images/logo/logo-client-3.svg"
-                alt="Logo PME Charente"
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-full object-contain"
-              />
-              <span className="text-sm font-medium text-gray-700">
-                PME Charente
-              </span>
-            </div>
-            <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md hover:shadow-lg transition-all duration-300">
-              <div className="w-10 h-10 rounded-full bg-[#CC5500]/10 flex items-center justify-center">
-                <span className="text-[#CC5500] font-bold">+</span>
+          {/* Carrousel auto-scroll */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll-infinite gap-12 items-center justify-center">
+              {/* Premier set de logos */}
+              <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 min-w-fit">
+                <Image
+                  src="/images/logo/logo-client-soupe-o-potes.png"
+                  alt="Logo Soup'Ô Potes"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  Soup'Ô Potes
+                </span>
               </div>
-              <span className="text-sm font-medium text-gray-700">
-                Et bien d'autres...
-              </span>
+              <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 min-w-fit">
+                <Image
+                  src="/images/logo/logo-client-2.svg"
+                  alt="Logo client artisan"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  Artisan local
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 min-w-fit">
+                <Image
+                  src="/images/logo/logo-client-3.svg"
+                  alt="Logo PME Charente"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  PME Charente
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 min-w-fit">
+                <div className="w-12 h-12 rounded-full bg-[#CC5500]/10 flex items-center justify-center">
+                  <span className="text-[#CC5500] font-bold text-lg">+</span>
+                </div>
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  Et bien d'autres...
+                </span>
+              </div>
+
+              {/* Duplication pour l'effet infini */}
+              <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 min-w-fit">
+                <Image
+                  src="/images/logo/logo-client-soupe-o-potes.png"
+                  alt="Logo Soup'Ô Potes"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  Soup'Ô Potes
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-white/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 min-w-fit">
+                <Image
+                  src="/images/logo/logo-client-2.svg"
+                  alt="Logo client artisan"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                  Artisan local
+                </span>
+              </div>
             </div>
           </div>
+
+          {/* CSS pour l'animation */}
+          <style jsx>{`
+            @keyframes scroll-infinite {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .animate-scroll-infinite {
+              animation: scroll-infinite 20s linear infinite;
+            }
+            .animate-scroll-infinite:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
         </div>
       </motion.section>
       <ProcessSection />
@@ -496,7 +530,8 @@ export default function HomeClient() {
           <div className="space-y-4">
             {[
               {
-                question: "💰 Quel budget pour un site web à Angoulême ?",
+                question:
+                  "💰 Quel est un budget raisonnable pour un site web à Angoulême ?",
                 answer: (
                   <>
                     Un site vitrine professionnel démarre à partir de{" "}
@@ -516,7 +551,8 @@ export default function HomeClient() {
                 ),
               },
               {
-                question: "🌍 Comment être visible localement à Angoulême ?",
+                question:
+                  "🌍 Comment être visible localement avec un site internet à Angoulême ?",
                 answer: (
                   <>
                     Le référencement local repose sur plusieurs leviers :
@@ -550,7 +586,8 @@ export default function HomeClient() {
                 ),
               },
               {
-                question: "🕒 Quels délais pour créer un site internet ?",
+                question:
+                  "🕒 Quels sont les délais pour la création d'un site internet ?",
                 answer: (
                   <>
                     Un <strong>site vitrine</strong> simple peut être livré en{" "}
@@ -577,7 +614,7 @@ export default function HomeClient() {
               },
               {
                 question:
-                  "🧑‍💻 Pourquoi choisir un freelance plutôt qu'une agence ?",
+                  "🧑‍💻 Pourquoi choisir un développeur web freelance à Angoulême plutôt qu'une agence ?",
                 answer: (
                   <>
                     Avec un <strong>freelance local</strong>, vous bénéficiez :

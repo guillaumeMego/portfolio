@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Création de site web à Angoulême dès 990 € | Guillaume Ganne",
+  title: "Création site web Angoulême – Freelance dès 990 €",
   description:
-    "Développeur web freelance à Angoulême. Création de sites vitrines, e-commerce et applications dès 990 €. Performance, SEO local et design moderne.",
+    "Développeur web freelance à Angoulême. Sites vitrines, e-commerce & apps sur-mesure dès 990 €. Performance, SEO local, sécurité.",
   alternates: {
     canonical: "https://www.guillaumeganne.com/creation-site-web-angouleme/",
   },
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.guillaumeganne.com/creation-site-web-angouleme/",
-    title: "Création de site web à Angoulême dès 990 € | Guillaume Ganne",
+    title: "Création site web Angoulême – Freelance dès 990 €",
     description:
-      "Développeur web freelance à Angoulême. Création de sites vitrines, e-commerce et applications dès 990 €. Performance, SEO local et design moderne.",
+      "Développeur web freelance à Angoulême. Sites vitrines, e-commerce & apps sur-mesure dès 990 €. Performance, SEO local, sécurité.",
     siteName: "Guillaume Ganne",
     images: [
       {
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Création de site web à Angoulême dès 990 € | Guillaume Ganne",
+    title: "Création site web Angoulême – Freelance dès 990 €",
     description:
-      "Développeur web freelance à Angoulême. Création de sites vitrines, e-commerce et applications dès 990 €. Performance, SEO local et design moderne.",
+      "Développeur web freelance à Angoulême. Sites vitrines, e-commerce & apps sur-mesure dès 990 €. Performance, SEO local, sécurité.",
   },
 };

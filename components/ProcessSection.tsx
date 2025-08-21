@@ -20,32 +20,32 @@ export default function ProcessSection() {
       title: "1. Rendez-vous & écoute",
       icon: Handshake,
       description:
-        "Un café à Angoulême ou en visio : j'apprends votre histoire, vos objectifs et vos clients afin de bâtir un projet qui vous ressemble vraiment.",
+        "Un café à Angoulême ou en visio : j'apprends votre histoire, vos objectifs et vos clients afin de bâtir un projet qui vous ressemble vraiment. Cette phase d'écoute est cruciale pour adapter votre futur site aux spécificités de votre secteur en Charente. Suivi humain garanti : vous avez mon numéro direct pour toute question.",
     },
     {
       title: "2. Co-création design",
       icon: Lightbulb,
       description:
-        "Atelier Figma en live : maquettes interactives et aller-retour rapides jusqu'à ce que vous disiez 'c'est exactement ça !'.",
+        "Atelier Figma en live : maquettes interactives et aller-retour rapides jusqu'à ce que vous disiez 'c'est exactement ça !'. Je conçois des interfaces qui reflètent votre identité et optimisent l'expérience utilisateur pour votre clientèle locale. Révisions illimitées jusqu'à validation complète.",
     },
     {
       title: "3. Développement sur-mesure",
       icon: Laptop2,
       description:
-        "Je m'occupe de tout le code (WordPress / Next.js), du SEO local et de la sécurité pour que votre site charge en <2 s et reste protégé 24/7.",
+        "Je m'occupe de tout le code (WordPress / Next.js), du SEO local et de la sécurité pour que votre site charge en <2 s et reste protégé 24/7. Optimisation technique poussée et intégration des outils analytics pour mesurer les performances de votre site. Points d'avancement hebdomadaires par email.",
     },
     {
       title: "4. Lancement & suivi",
       icon: Rocket,
       description:
-        "Formation vidéo, hotline directe et point trimestriel : votre site vit, évolue et continue de convertir vos visiteurs en clients.",
+        "Formation vidéo personnalisée, hotline directe et point trimestriel : votre site vit, évolue et continue de convertir vos visiteurs en clients. Support technique inclus pendant 3 mois, conseils personnalisés et accès prioritaire pour les évolutions futures.",
     },
   ];
 
   return (
     <section
       id="process"
-      className="bg-[#ECF0F1] py-20 font-sans text-[#0E141A] scroll-mt-20"
+      className="bg-gray-50 py-20 font-sans text-[#0E141A] scroll-mt-20"
     >
       <div className="container mx-auto px-4">
         <motion.h2
@@ -58,9 +58,19 @@ export default function ProcessSection() {
           Une méthode claire, basée sur la confiance
         </motion.h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-center text-lg opacity-80">
+        <p className="mx-auto mt-4 mb-12 max-w-2xl text-center text-lg text-gray-700">
           Vous savez toujours où nous en sommes, du premier rendez-vous au suivi
-          après mise en ligne.
+          après mise en ligne. Ma méthode de{" "}
+          <strong>création site internet Angoulême</strong> privilégie la
+          transparence et l'accompagnement humain pour que votre projet soit une
+          réussite. Découvrez{" "}
+          <a
+            href="/tarif/"
+            className="text-[#CC5500] underline hover:text-[#B8440F] transition-colors font-semibold"
+          >
+            mes tarifs transparents
+          </a>{" "}
+          pour votre projet.
         </p>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -127,9 +137,9 @@ export default function ProcessSection() {
         <div className="mt-16 flex justify-center">
           <a
             href="https://calendly.com/guillaume-ganne/30min?background_color=ecf0f1&text_color=0e141a&primary_color=2c3e50"
-            className="bg-primary px-10 py-4 text-white rounded-full font-semibold font-montserrat hover:bg-primary/80 hover:text-white transition-all duration-300 ease-in-out shadow-lg shadow-primary/50 hover:shadow-primary/30 flex items-center gap-3"
+            className="inline-flex items-center px-8 py-4 text-base font-medium text-white bg-[#CC5500] border border-transparent rounded-xl shadow-lg hover:bg-[#B8440F] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-5 h-5 mr-2" />
             Réservez votre appel gratuit
           </a>
         </div>

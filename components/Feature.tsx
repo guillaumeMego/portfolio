@@ -15,15 +15,19 @@ export default function Feature({ icon, title, description }: FeatureProps) {
   return (
     <div className="flex flex-col items-center text-center p-6">
       {/* Conteneur de l'icône avec fond dégradé et ombre */}
-      <div className="relative w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#E67E22] to-[#F39C12] shadow-lg mb-4">
+      <div className="relative w-16 h-16 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#CC5500] to-[#E67E22] shadow-xl hover:shadow-2xl hover:shadow-[#CC5500]/30 hover:scale-110 transition-all duration-300 mb-6">
         {/* Icône en blanc */}
-        <div className="text-white">{icon}</div>
+        <div className="text-white transform hover:scale-110 transition-transform duration-200">
+          {icon}
+        </div>
         {/* Effet de brillance */}
-        <div className="absolute inset-0 rounded-2xl bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       {/* Titre */}
-      <h3 className="text-lg font-semibold text-primary mb-2">{title}</h3>
+      <h3 className="text-xl font-bold text-[#CC5500] mb-3 hover:text-[#B8440F] transition-colors duration-200">
+        {title}
+      </h3>
 
       {/* Description */}
       <p className="text-gray-700 text-sm">{description}</p>
@@ -41,7 +45,11 @@ export function Features() {
           </h2>
           <p className="text-base text-gray-700 max-w-2xl mx-auto">
             Je crée des sites web performants et élégants qui répondent
-            parfaitement à vos besoins
+            parfaitement à vos besoins. En tant que{" "}
+            <strong>développeur web freelance à Angoulême</strong>, je
+            privilégie la qualité et la proximité pour chaque projet de{" "}
+            <strong>création site vitrine Angoulême</strong> ou boutique
+            e-commerce.
           </p>
         </div>
 
@@ -49,17 +57,17 @@ export function Features() {
           <Feature
             icon={<RocketLaunchIcon className="w-6 h-6" />}
             title="Performance optimale"
-            description="Des sites web rapides et réactifs qui offrent une expérience utilisateur exceptionnelle"
+            description="90+ sur Google PageSpeed, hébergement optimisé et sécurité HTTPS stricte. Temps de chargement < 2s garanti, 3x plus rapide que la moyenne des sites web."
           />
           <Feature
             icon={<PresentationChartLineIcon className="w-6 h-6" />}
-            title="SEO avancé"
-            description="Optimisation poussée pour une meilleure visibilité dans les moteurs de recherche"
+            title="SEO local Charente"
+            description="Optimisation locale testée et validée sur Google Business. Référencement Angoulême et Charente avec résultats mesurables : top 5 garanti sur vos mots-clés métier. Spécialisé dans le référencement de site e-commerce Charente."
           />
           <Feature
             icon={<SparklesIcon className="w-6 h-6" />}
-            title="Design moderne"
-            description="Des interfaces élégantes et intuitives qui mettent en valeur votre marque"
+            title="Design sur-mesure"
+            description="Interfaces modernes comparables aux meilleures agences, mais avec prix freelance. Maquettes Figma personnalisées et design qui convertit 2x mieux que la moyenne."
           />
         </div>
       </div>

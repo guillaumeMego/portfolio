@@ -21,21 +21,23 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       prefetch={false}
       aria-label={`Voir les détails du projet : ${project.title}`}
     >
-      <article className="group rounded-lg overflow-hidden cursor-pointer shadow-xl min-h-[460px] h-full border border-[#AD5100]/20 flex flex-col">
-        <div className="relative w-full h-[300px] flex items-center justify-center">
+      <article className="group rounded-2xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl hover:shadow-[#CC5500]/20 min-h-[460px] h-full border border-[#CC5500]/20 hover:border-[#CC5500]/40 flex flex-col transform hover:scale-[1.02] transition-all duration-500 hover:-translate-y-2">
+        <div className="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
           <Image
             src={webpSrc}
             alt={project.image.alt}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain transition-transform duration-500"
+            className="object-contain transition-transform duration-700 group-hover:scale-110"
             placeholder="blur"
             blurDataURL={blurSrc}
           />
+          {/* Overlay au hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#CC5500]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         <div className="p-6 bg-background flex flex-col flex-1">
           <div className="flex items-center gap-2 mb-2">
-            <h3 className="text-xl font-semibold text-foreground">
+            <h3 className="text-xl font-semibold text-foreground group-hover:text-[#CC5500] transition-colors duration-300">
               {project.title}
             </h3>
           </div>

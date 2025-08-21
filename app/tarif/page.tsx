@@ -4,7 +4,7 @@ import TarifClient from "./TarifClient";
 export const metadata: Metadata = {
   title: "Tarifs création site web | Guillaume Ganne",
   description:
-    "Consultez les tarifs pour la création de sites web, e-commerce et prestations vidéo à Angoulême.",
+    "Forfaits clairs pour sites vitrines, e-commerce et solutions sur-mesure. Développeur web freelance à Angoulême. TVA non applicable, art. 293 B du CGI.",
   alternates: {
     canonical: "https://www.guillaumeganne.com/tarif/",
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://www.guillaumeganne.com/tarif/",
     title: "Tarifs création site web | Guillaume Ganne",
     description:
-      "Consultez les tarifs pour la création de sites web, e-commerce et prestations vidéo à Angoulême.",
+      "Forfaits clairs pour sites vitrines, e-commerce et solutions sur-mesure. Développeur web freelance à Angoulême. TVA non applicable, art. 293 B du CGI.",
     siteName: "Guillaume Ganne",
   },
   twitter: { card: "summary_large_image" },
