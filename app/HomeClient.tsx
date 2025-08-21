@@ -9,15 +9,26 @@ import { MapPin, Zap, Users, TrendingUp, Leaf } from "lucide-react";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { Features } from "@/components/Feature";
 import Hero from "@/components/Hero";
 
 // Import dynamique des composants lourds
+const Features = dynamic(
+  () =>
+    import("@/components/Feature").then((mod) => ({ default: mod.Features })),
+  {
+    ssr: true,
+    loading: () => <div className="h-32 bg-gray-50 animate-pulse rounded-lg" />,
+  }
+);
+
 const ProcessSection = dynamic(() => import("@/components/ProcessSection"), {
   ssr: true,
+  loading: () => <div className="h-64 bg-gray-50 animate-pulse rounded-lg" />,
 });
+
 const CTASection = dynamic(() => import("@/components/CTASection"), {
   ssr: true,
+  loading: () => <div className="h-32 bg-gray-50 animate-pulse rounded-lg" />,
 });
 
 export default function HomeClient() {
@@ -25,14 +36,27 @@ export default function HomeClient() {
 
   useEffect(() => {
     // Sticky CTA mobile : affiché après passage de la section why-angouleme
-    const handleScroll = () => {
-      const section = document.getElementById("why-angouleme");
-      if (!section) return;
-      const rect = section.getBoundingClientRect();
-      setShowStickyCTA(rect.top <= 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Optimisation : utiliser IntersectionObserver au lieu de getBoundingClientRect
+    const section = document.getElementById("why-angouleme");
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // CTA visible quand la section sort du viewport par le haut
+          setShowStickyCTA(
+            !entry.isIntersecting && entry.boundingClientRect.top < 0
+          );
+        });
+      },
+      {
+        rootMargin: "0px 0px -100% 0px", // Trigger quand la section sort complètement
+        threshold: 0,
+      }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -184,6 +208,7 @@ export default function HomeClient() {
                     height={600}
                     className="w-80 h-80 md:w-full md:max-w-[600px] md:h-auto object-contain drop-shadow-2xl"
                     sizes="(max-width: 767px) 320px, 600px"
+                    loading="lazy"
                   />
 
                   {/* Badge expertise locale */}
@@ -290,6 +315,7 @@ export default function HomeClient() {
                     width={32}
                     height={32}
                     className="w-8 h-8 rounded-full object-contain"
+                    loading="lazy"
                   />
                   <Image
                     src="/images/logo/logo-client-2.svg"
@@ -298,6 +324,7 @@ export default function HomeClient() {
                     height={32}
                     className="w-8 h-8 rounded-full object-contain"
                     style={{ height: "auto" }}
+                    loading="lazy"
                   />
                   <Image
                     src="/images/logo/logo-client-3.svg"
@@ -305,6 +332,7 @@ export default function HomeClient() {
                     width={32}
                     height={32}
                     className="w-8 h-8 rounded-full object-contain"
+                    loading="lazy"
                   />
                 </div>
               </a>
@@ -446,6 +474,7 @@ export default function HomeClient() {
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full object-contain"
+                loading="lazy"
               />
               <span className="text-sm font-medium text-gray-700">
                 Soup'Ô Potes
@@ -458,6 +487,7 @@ export default function HomeClient() {
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full object-contain"
+                loading="lazy"
               />
               <span className="text-sm font-medium text-gray-700">
                 Artisan local
@@ -470,6 +500,7 @@ export default function HomeClient() {
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full object-contain"
+                loading="lazy"
               />
               <span className="text-sm font-medium text-gray-700">
                 PME Charente

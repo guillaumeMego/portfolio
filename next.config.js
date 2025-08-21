@@ -19,6 +19,8 @@ const securityHeaders = [
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
 
   // 🎯 CONVENTION URL : Forcer le trailing slash partout pour la cohérence
   trailingSlash: true,
@@ -29,6 +31,36 @@ const nextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      // Cache agressif pour les assets statiques Next.js
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Cache pour les images optimisées
+      {
+        source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // Cache pour les assets publics
+      {
+        source: "/(favicon|manifest|robots|sitemap).(ico|webmanifest|txt|xml)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400",
+          },
+        ],
+      },
     ];
   },
 
@@ -37,8 +69,8 @@ const nextConfig = {
   },
 
   images: {
-    // Formats d'images supportés pour l'optimisation (WebP prioritaire pour les performances)
-    formats: ["image/webp", "image/avif"],
+    // Formats d'images supportés pour l'optimisation (AVIF en priorité pour de meilleures performances)
+    formats: ["image/avif", "image/webp"],
 
     // Tailles d'écrans pour l'optimisation responsive
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
@@ -61,10 +93,6 @@ const nextConfig = {
     // Configuration des loaders d'images (par défaut)
     loader: "default",
 
-    // OPTION : Désactiver complètement l'optimisation si nécessaire
-    // Décommentez la ligne suivante pour désactiver l'optimisation :
-    // unoptimized: true,
-
     // Gestion des erreurs d'optimisation
     contentDispositionType: "attachment",
   },
@@ -74,6 +102,28 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ["lucide-react"],
+  },
+
+  // Configuration webpack pour l'optimisation
+  webpack: (config, { dev, isServer }) => {
+    // Optimisations de build uniquement en production
+    if (!dev && !isServer) {
+      // Optimisation des chunks
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
+          },
+        },
+      };
+    }
+    return config;
   },
 
   async redirects() {

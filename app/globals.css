@@ -14,6 +14,17 @@
   }
 }
 
+/* Optimisations GPU pour les animations */
+.anim-gpu {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Container pour isoler les layouts */
+.layout-contain {
+  contain: layout paint size;
+}
+
 /*--------------------------------------------------
   Charte graphique et typographies (Figma)
 --------------------------------------------------*/

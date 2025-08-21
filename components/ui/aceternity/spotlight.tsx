@@ -11,7 +11,10 @@ export const Spotlight = ({
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [position, setPosition] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
@@ -20,13 +23,20 @@ export const Spotlight = ({
 
   useEffect(() => {
     if (isMounted) {
+      let rafId: number;
+
       const handleMouseMove = (e: MouseEvent) => {
         if (!divRef.current) return;
 
-        const div = divRef.current;
-        const rect = div.getBoundingClientRect();
+        // Optimisation : utiliser requestAnimationFrame pour éviter les forced layouts
+        if (rafId) cancelAnimationFrame(rafId);
 
-        setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        rafId = requestAnimationFrame(() => {
+          if (!divRef.current) return;
+          const div = divRef.current;
+          const rect = div.getBoundingClientRect();
+          setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+        });
       };
 
       const handleMouseEnter = () => {
@@ -45,6 +55,7 @@ export const Spotlight = ({
       }
 
       return () => {
+        if (rafId) cancelAnimationFrame(rafId);
         if (element) {
           element.removeEventListener("mousemove", handleMouseMove);
           element.removeEventListener("mouseenter", handleMouseEnter);

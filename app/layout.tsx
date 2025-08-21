@@ -12,6 +12,7 @@ const inter = Inter({
   display: "swap",
   preload: true,
   variable: "--font-inter",
+  fallback: ["system-ui", "arial"],
 });
 
 const montserrat = Montserrat({
@@ -19,6 +20,7 @@ const montserrat = Montserrat({
   display: "swap",
   weight: ["400", "700"],
   variable: "--font-montserrat",
+  fallback: ["system-ui", "arial"],
 });
 
 export const metadata: Metadata = {
@@ -46,6 +48,22 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        {/* Préconnections DNS pour améliorer les performances */}
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+        {/* Préchargement de l'image LCP (à ajuster selon votre hero) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/fond.webp"
+          type="image/webp"
+        />
+
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link
           rel="icon"
@@ -134,7 +152,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} ${montserrat.variable}`}>
-        <Script src="/js/main.js" strategy="lazyOnload" />
+        <Script src="/js/main.js" strategy="afterInteractive" />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
