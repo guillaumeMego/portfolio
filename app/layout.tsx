@@ -79,16 +79,7 @@ export default function RootLayout({
           type="image/webp"
         />
 
-        {/* Préchargement du CSS non-critique */}
-        <link
-          rel="preload"
-          href="/_next/static/css/app/globals.css"
-          as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
-        />
-        <noscript>
-          <link rel="stylesheet" href="/_next/static/css/app/globals.css" />
-        </noscript>
+        {/* CSS non-critique sera chargé automatiquement par Next.js */}
 
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link
@@ -192,11 +183,7 @@ export default function RootLayout({
         </ThemeProvider>
 
         {/* Scripts non-critiques chargés après le rendu */}
-        <Script
-          src="/js/main.js"
-          strategy="lazyOnload"
-          onLoad={() => console.log("Main script loaded")}
-        />
+        <Script src="/js/main.js" strategy="lazyOnload" />
       </body>
     </html>
   );
