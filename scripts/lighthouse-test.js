@@ -5,7 +5,7 @@
  * Utilisation: node scripts/lighthouse-test.js [url]
  */
 
-const lighthouse = require('lighthouse');
+const lighthouse = require('lighthouse').default;
 const chromeLauncher = require('chrome-launcher');
 const fs = require('fs');
 const path = require('path');
