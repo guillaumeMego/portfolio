@@ -7,28 +7,31 @@ import { ChevronDown } from "lucide-react";
 export default function Hero() {
   return (
     <motion.div
-      className="w-full -mt-8 md:mt-12 min-h-[80vh] flex flex-col justify-center items-center"
+      className="hero-container will-change-transform"
       initial="hidden"
       animate="visible"
       variants={{
         hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 1 } },
+        visible: { opacity: 1, transition: { duration: 0.8 } },
       }}
     >
-      <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 mb-4 max-w-6xl mx-auto">
-        <div className="flex-shrink-0 flex items-center md:self-start justify-center h-full">
+      <div className="hero-content">
+        <div className="hero-image">
           <Image
             src="/images/mascotte/mascotte-guillaume-ganne-webdesigner.webp"
             alt="Mascotte Guillaume Ganne"
             width={500}
             height={500}
-            className="w-96 h-96 md:w-[28rem] md:h-[28rem] object-contain drop-shadow-xl"
+            className="w-96 h-96 md:w-[28rem] md:h-[28rem] object-contain drop-shadow-xl transform-gpu"
             priority
+            sizes="(max-width: 767px) 384px, 448px"
+            placeholder="blur"
+            blurDataURL="data:image/webp;base64,UklGRnoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbwuP2B2IQWfcgKqcIeYREYiI2B5IpvKe+UQUCwg8RK7rCRvvDUgGtfrEBCMQVlA4TDIAAABwAQCdASoQAAgAAgA0JaQAA3AA/vuUAAA="
           />
         </div>
-        <div className="flex flex-col items-center md:items-start justify-center w-full text-center md:text-left min-h-[220px] md:min-h-[340px]">
+        <div className="hero-text">
           <motion.h1
-            className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 text-[2.5rem] md:text-5xl font-bold mb-4 max-w-2xl mx-auto md:mx-0"
+            className="hero-title"
             variants={{
               hidden: { opacity: 0, filter: "blur(10px)" },
               visible: {
@@ -41,7 +44,7 @@ export default function Hero() {
             Sites web sur mesure à Angoulême pour pros exigeants
           </motion.h1>
           <motion.p
-            className="text-base md:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed font-normal mb-6"
+            className="hero-description"
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -49,7 +52,6 @@ export default function Hero() {
                 transition: { duration: 0.8, delay: 0.2 },
               },
             }}
-            style={{ minHeight: "4.5rem" }}
           >
             Je suis <strong className="font-semibold">Guillaume</strong>,{" "}
             <strong>développeur web freelance à Angoulême</strong> depuis 5 ans.
@@ -85,7 +87,7 @@ export default function Hero() {
             et optimisés pour convertir vos visiteurs en clients.
           </motion.p>
           <motion.div
-            className="mt-0 mb-24 flex flex-col sm:flex-row gap-4 items-center md:items-start"
+            className="hero-cta"
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -94,17 +96,14 @@ export default function Hero() {
               },
             }}
           >
-            <a
-              href="/contact/"
-              className="inline-flex items-center px-8 py-4 text-base font-medium text-white bg-[#CC5500] border border-transparent rounded-xl shadow-lg hover:bg-[#B8440F] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
-            >
+            <a href="/contact/" className="btn-primary">
               Demander un devis
             </a>
             <a
               href="https://calendly.com/guillaume-ganne/30min?background_color=ecf0f1&text_color=0e141a&primary_color=2c3e50"
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center px-8 py-4 text-base font-medium text-[#CC5500] bg-white border-2 border-[#CC5500] rounded-xl shadow-lg hover:bg-[#CC5500] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#CC5500] transition-colors duration-300"
+              className="btn-secondary"
             >
               Réserver un appel gratuit
             </a>

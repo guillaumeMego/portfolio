@@ -79,9 +79,10 @@ async function runLighthouse() {
         console.log('============================');
 
         const validations = [
-            { test: results.score >= 95, label: 'Performance ≥ 95', value: `${results.score}/100` },
-            { test: parseFloat(results.lcp) < 1.8, label: 'LCP < 1.8s', value: results.lcp },
+            { test: results.score >= 99, label: 'Performance ≥ 99', value: `${results.score}/100` },
+            { test: parseFloat(results.lcp) < 1.5, label: 'LCP < 1.5s', value: results.lcp },
             { test: parseFloat(results.cls) < 0.01, label: 'CLS < 0.01', value: results.cls },
+            { test: parseFloat(results.fcp) < 1.0, label: 'FCP < 1.0s', value: results.fcp },
             { test: results.renderBlocking, label: 'Pas de CSS bloquant', value: results.renderBlocking ? 'OK' : 'KO' },
         ];
 
@@ -92,7 +93,7 @@ async function runLighthouse() {
         console.log(`\n📄 Rapport détaillé sauvegardé: ${reportPath}`);
 
         // Code de sortie basé sur le score
-        process.exit(results.score >= 95 ? 0 : 1);
+        process.exit(results.score >= 99 ? 0 : 1);
 
     } catch (error) {
         console.error('❌ Erreur lors du test Lighthouse:', error);

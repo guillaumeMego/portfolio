@@ -101,7 +101,9 @@ const nextConfig = {
 
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ["lucide-react"],
+    optimizePackageImports: ["lucide-react", "@radix-ui/react-avatar", "@radix-ui/react-dropdown-menu", "framer-motion"],
+    webVitalsAttribution: ["CLS", "LCP", "FCP", "FID", "TTFB"],
+    serverComponentsExternalPackages: ["sharp"],
   },
 
   // Configuration webpack pour l'optimisation
@@ -113,16 +115,52 @@ const nextConfig = {
         ...config.optimization,
         splitChunks: {
           chunks: 'all',
+          minSize: 20000,
+          maxSize: 244000,
           cacheGroups: {
+            default: {
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true,
+            },
             vendor: {
               test: /[\\/]node_modules[\\/]/,
               name: 'vendors',
+              priority: -10,
+              chunks: 'all',
+            },
+            react: {
+              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+              name: 'react',
+              priority: 10,
+              chunks: 'all',
+            },
+            framer: {
+              test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+              name: 'framer-motion',
+              priority: 5,
               chunks: 'all',
             },
           },
         },
       };
     }
+
+    // Optimisation des images
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            publicPath: '/_next/static/images/',
+            outputPath: 'static/images/',
+            esModule: false,
+          },
+        },
+      ],
+    });
+
     return config;
   },
 

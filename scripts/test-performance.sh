@@ -79,3 +79,4 @@ echo "✅ RequestAnimationFrame pour les animations"
 echo "✅ Headers de cache agressifs"
 echo "✅ Optimisations webpack et chunks"
 echo "✅ Formats d'images AVIF/WebP prioritaires"
+
