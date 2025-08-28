@@ -17,6 +17,7 @@ import {
   Mail,
   Calendar,
   ExternalLink,
+  ImageIcon,
 } from "lucide-react";
 import dynamic from "next/dynamic";
 
@@ -276,7 +277,7 @@ export default function SiteLentPerteClients() {
               <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#CC5500] hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start gap-3 mb-4">
                   <div className="w-12 h-12 bg-[#CC5500]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Image className="w-6 h-6 text-[#CC5500]" />
+                    <ImageIcon className="w-6 h-6 text-[#CC5500]" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-gray-900">

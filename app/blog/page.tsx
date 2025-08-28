@@ -21,6 +21,25 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "site-moche-clients-fuient",
+    title: "Site moche = clients qui fuient : pourquoi et comment y remédier",
+    description:
+      "Un site daté ou mal conçu fait fuir vos clients en 3 secondes. Découvrez comment une refonte moderne et optimisée SEO peut doubler vos conversions.",
+    date: "2024-12-20",
+    readTime: "8 min",
+    image: "/images/vitrine.webp",
+  },
+  {
+    slug: "site-joli-mais-invisible",
+    title:
+      "Ton site est joli mais invisible ? Voici pourquoi et comment y remédier",
+    description:
+      "Un beau site ne suffit pas. Découvrez pourquoi votre site reste invisible et comment booster votre visibilité sur Google.",
+    date: "2024-12-20",
+    readTime: "10 min",
+    image: "/images/creation-site-vitrine-angouleme.webp",
+  },
+  {
     slug: "site-lent-perte-clients",
     title: "Pourquoi un site lent tue vos ventes (et comment l'éviter)",
     description:
