@@ -122,17 +122,16 @@ export default function SiteMocheClientsFuient() {
                 le mauvais signal.
               </p>
 
-              {/* Vidéo YouTube intégrée - utilise une vidéo générique pour l'instant */}
+              {/* Vidéo YouTube intégrée */}
               <div className="max-w-sm mx-auto mb-8">
                 <div className="relative aspect-[9/16] rounded-xl overflow-hidden shadow-lg">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#CC5500]/20 to-[#CC5500]/10 flex items-center justify-center">
-                    <div className="text-center">
-                      <Monitor className="w-12 h-12 text-[#CC5500] mx-auto mb-2" />
-                      <p className="text-[#CC5500] font-semibold">
-                        Design moderne
-                      </p>
-                    </div>
-                  </div>
+                  <iframe
+                    src="https://www.youtube.com/embed/ONPhAw9P_8E"
+                    title="Site moche - Impact sur les conversions"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  ></iframe>
                 </div>
                 <p className="text-sm text-gray-500 mt-2 text-center">
                   L'impact d'un design moderne sur vos conversions
