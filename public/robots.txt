@@ -1,22 +1,10 @@
-# *
-User-agent: *
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.ico$
-Allow: /_next/static/*
-Allow: /_next/image*
-Disallow: /api/*
-Disallow: /admin/*
-Disallow: /private/*
+User-Agent: *
+Allow: /
 
-# Host
-Host: https://www.guillaumeganne.com
+Disallow: /gallery
+Disallow: /accessibilite
+Disallow: /plan-du-site-guillaume-ganne
+Disallow: /api/
+Disallow: /admin/
 
-# Sitemaps
 Sitemap: https://www.guillaumeganne.com/sitemap.xml

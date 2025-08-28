@@ -21,6 +21,15 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "site-lent-perte-clients",
+    title: "Pourquoi un site lent tue vos ventes (et comment l'éviter)",
+    description:
+      "Chaque seconde de chargement en plus = 20% de clients en moins. Découvrez pourquoi Google déteste les sites lents et comment sauver vos ventes.",
+    date: "2024-12-20",
+    readTime: "12 min",
+    image: "/images/developpement-webapp-react.webp",
+  },
+  {
     slug: "creation-site-internet-1001-astuces",
     title: "La création de site internet ! Trouves les 1001 astuces",
     description:
