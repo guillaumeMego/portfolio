@@ -2,10 +2,10 @@
 
 import { projects } from "@/data/projects";
 import React from "react";
-import Head from "next/head";
 import ProjectDetail from "./ProjectDetail";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { generatePageMetadata } from "@/lib/metadata-helpers";
 
 type Props = {
   params: { slug: string };
@@ -15,41 +15,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = projects.find((p) => p.slug === params.slug);
   if (!project) return {};
 
-  return {
+  return generatePageMetadata({
     title: project.title,
     description: project.description,
-    alternates: {
-      canonical: `https://www.guillaumeganne.com/projets/${project.slug}/`,
-    },
+    pathname: `/projets/${project.slug}`,
+    type: "article",
     keywords: [
       "création site web angoulême",
       "développeur web freelance",
       "seo local",
       ...project.technologies.map((t) => t.toLowerCase()),
     ],
-    openGraph: {
-      type: "article",
-      locale: "fr_FR",
-      url: `https://www.guillaumeganne.com/projets/${project.slug}/`,
-      title: project.title,
-      description: project.description,
-      siteName: "Guillaume Ganne",
-      images: [
-        {
-          url: project.image.src,
-          width: project.image.width,
-          height: project.image.height,
-          alt: project.image.alt,
-        },
-      ],
+    image: {
+      url: project.image.src,
+      width: project.image.width,
+      height: project.image.height,
+      alt: project.image.alt,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: project.title,
-      description: project.description,
-      images: [project.image.src],
-    },
-  };
+  });
 }
 
 export default function ProjectPage({ params }: Props) {

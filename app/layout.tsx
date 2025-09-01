@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   description:
     "Sites vitrines & e-commerce performants. SEO, vitesse, sécurité. Devis en 24 h.",
   robots: { index: true, follow: true },
+  // URL canonique auto-référente pour la page d'accueil
+  alternates: {
+    canonical: "https://www.guillaumeganne.com/",
+  },
   openGraph: {
     type: "website",
     url: "https://www.guillaumeganne.com/",
