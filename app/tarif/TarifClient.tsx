@@ -27,6 +27,10 @@ export default function TarifClient() {
       blurSrc: "/images/creation-site-vitrine-angouleme.blur.webp",
       popular: false,
       cta: "Créer mon site vitrine",
+      // Offre exceptionnelle
+      promoPrice: "500 €",
+      promoLabel: "Offre exceptionnelle • Clé en main",
+      promoNote: "Offre limitée – se termine bientôt",
     },
     {
       title: "Site Vitrine Premium",
@@ -290,11 +294,32 @@ export default function TarifClient() {
                     ))}
                   </div>
                   <div className="mt-auto space-y-6">
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-3xl font-bold text-primary">
-                        {svc.price}
-                      </span>
-                    </div>
+                    {svc.promoPrice ? (
+                      <div className="flex flex-col items-start gap-2">
+                        <div className="inline-flex items-center gap-2">
+                          <span className="text-lg text-gray-500 line-through">
+                            {svc.price}
+                          </span>
+                          <span className="text-3xl font-extrabold text-[#CC5500]">
+                            {svc.promoPrice}
+                          </span>
+                        </div>
+                        <div className="inline-flex items-center gap-2">
+                          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#CC5500]/10 text-[#CC5500]">
+                            {svc.promoLabel}
+                          </span>
+                          <span className="text-xs text-gray-600">
+                            {svc.promoNote}
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex items-baseline gap-1.5">
+                        <span className="text-3xl font-bold text-primary">
+                          {svc.price}
+                        </span>
+                      </div>
+                    )}
                     <p className="text-xs text-gray-500 italic mb-2">
                       TVA non applicable, art. 293 B du CGI
                     </p>
@@ -519,7 +544,7 @@ export default function TarifClient() {
                     description:
                       "Site vitrine optimisé SEO local pour TPE & Artisans",
                   },
-                  price: "990",
+                  price: "500",
                   priceCurrency: "EUR",
                 },
                 {

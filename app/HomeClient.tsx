@@ -63,6 +63,27 @@ export default function HomeClient() {
     <div className="pt-28 pb-8 text-foreground relative">
       <Hero />
 
+      {/* Bandeau offre exceptionnelle */}
+      <section className="bg-gradient-to-r from-[#CC5500]/10 to-[#D35400]/10 py-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-center">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#CC5500] text-white">
+              Offre exceptionnelle
+            </span>
+            <div className="flex items-center gap-2 text-lg md:text-xl">
+              <span className="text-gray-500 line-through">990 €</span>
+              <span className="font-extrabold text-[#CC5500] text-2xl md:text-3xl">
+                500 €
+              </span>
+              <span className="text-gray-700">site vitrine clé en main</span>
+            </div>
+            <span className="text-xs text-gray-600">
+              Offre limitée – se termine bientôt
+            </span>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white pt-24 pb-12">
         <Features />
       </section>
