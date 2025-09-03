@@ -12,7 +12,7 @@ const securityHeaders = [
   // Politique de sécurité du contenu
   {
     key: "Content-Security-Policy",
-    value: "default-src 'self'; img-src 'self' data: https://*.ytimg.com https://*.youtube.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://assets.calendly.com https://*.youtube.com https://*.ytimg.com; style-src 'self' 'unsafe-inline' https://*.youtube.com; object-src 'none'; frame-src 'self' https://*.youtube.com https://www.youtube.com; frame-ancestors 'none';",
+    value: "default-src 'self'; img-src 'self' data: https://*.ytimg.com https://*.youtube.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://assets.calendly.com https://*.youtube.com https://*.ytimg.com; style-src 'self' 'unsafe-inline' https://*.youtube.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; object-src 'none'; frame-src 'self' https://*.youtube.com https://www.youtube.com; frame-ancestors 'none';",
   },
 ];
 
